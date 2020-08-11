@@ -378,14 +378,14 @@
 <td align="center">块级标签，默认换行</td>
 </tr>
 </tbody></table>
-<p>页面中显示的数据放在目标页面/XXX.js的data中<br><code>test.js</code></p>
+<p>页面中显示的数据放在目标页面/XXX.js的data中<br>== test.js ==</p>
 <pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// pages/test/test.js</span>
 <span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
     data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     msg<span class="token punctuation">:</span><span class="token string">"hello!world"</span><span class="token punctuation">,</span>
     num<span class="token punctuation">:</span><span class="token number">10000</span><span class="token punctuation">,</span>
     isBoy<span class="token punctuation">:</span><span class="token boolean">false</span>，
-    person<span class="token punctuation">{</span>
+    person<span class="token punctuation">:</span><span class="token punctuation">{</span>
         age<span class="token punctuation">:</span><span class="token number">74</span><span class="token punctuation">,</span>
         height<span class="token punctuation">:</span><span class="token number">145</span><span class="token punctuation">,</span>
         weight<span class="token punctuation">:</span><span class="token number">45</span><span class="token punctuation">,</span> 
@@ -394,24 +394,97 @@
     ischecked<span class="token punctuation">:</span><span class="token boolean">false</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <p><code>test.wxml</code></p>
-<pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>pages<span class="token operator">/</span>test<span class="token operator">/</span>test<span class="token punctuation">.</span>wxml<span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>字符串<span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>view<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>msg<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>数字类型<span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>view<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>num<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>bool类型<span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>view<span class="token operator">></span>是否是女同学：<span class="token punctuation">{</span><span class="token punctuation">{</span>isBoy<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>object类型<span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>view<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>person<span class="token punctuation">.</span>age<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">></span>
-<span class="token operator">&lt;</span>view<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>person<span class="token punctuation">.</span>height<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">></span>
-<span class="token operator">&lt;</span>view<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>person<span class="token punctuation">.</span>weight<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">></span>
-<span class="token operator">&lt;</span>view<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>person<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>在标签的属性中使用<span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>view data<span class="token operator">-</span>num<span class="token operator">=</span><span class="token string">"{{num}}"</span><span class="token operator">></span>自定义属性<span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>使用bool类型充当属性 checked<span class="token operator">--</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>view<span class="token operator">></span>
-<span class="token operator">&lt;</span>checkbox checked<span class="token operator">=</span><span class="token string">"{{ischecked}"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>checkbox<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">></span></code></pre>
+<pre class=" language-html"><code class="language-html"><span class="token comment" spellcheck="true">&lt;!--pages/test/test.wxml--></span>
+<span class="token comment" spellcheck="true">&lt;!--字符串--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>{{msg}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!--数字类型--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>{{num}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!--bool类型--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>是否是女同学：{{isBoy}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!--object类型--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>{{person.age}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>{{person.height}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>{{person.weight}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>{{person.name}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!--在标签的属性中使用--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name">data-num</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{num}}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>自定义属性<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!--使用bool类型充当属性 checked--></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>checkbox</span> <span class="token attr-name">checked</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{ischecked}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>checkbox</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>
+```
+## 运算
+* 数字加减
+* 字符串拼接
+* 三元表达式
+
+``` js
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>{{1+1}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>{{'1'+'1'}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>{{10%2==0} ? '偶数' : '奇数'}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span>
+```
+
+## 数组和对象循环
+### 列表循环
+`wx:for="{{数组或对象}}"`
+`wx:for-item="循环项的名称"`
+`wx:for-index="循环项的索引"`
+``` js
+// pages/test/test.js
+Page({
+
+    data: {
+        list:[
+            {
+                id:0,
+                name:"小李"
+            },
+            {
+                id:1,
+                name:"amy"
+            },
+            {
+                id:3,
+                name:"tony"
+            }
+        ]
+    }
+})
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>checkbox</span><span class="token punctuation">></span></span></code></pre>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name"><span class="token namespace">wx:</span>for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{list}}<span class="token punctuation">"</span></span> 
+    <span class="token attr-name"><span class="token namespace">wx:</span>for-item</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span> 
+    <span class="token attr-name"><span class="token namespace">wx:</span>for-index</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>index<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    索引：{{index}}
+    --
+    值：{{item.name}}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span></code></pre>
+<p><code>wx:key</code>=”唯一的值”提高列表渲染的性能<br>1 <code>wx:key</code>绑定个普通的字符串的时候 那么这个字符串名称肯定是循环数组中的对象的 唯一属性<br>2 <code>wx:key =&quot;*this&quot;</code> 就表示I你的数组是一个普通的数组 *this 表示是循环项<br>普通数组[1,2,3,44,5]</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name"><span class="token namespace">wx:</span>for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{list}}<span class="token punctuation">"</span></span> 
+    <span class="token attr-name"><span class="token namespace">wx:</span>for-item</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span> 
+    <span class="token attr-name"><span class="token namespace">wx:</span>for-index</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>index<span class="token punctuation">"</span></span>
+    <span class="token attr-name"><span class="token namespace">wx:</span>key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>id<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    索引：{{index}}
+    --
+    值：{{item.name}}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span></code></pre>
+<p>3当出现数组的嵌套循环的时候尤其要注意 以下绑定的名称不要重名<br><code>wx:for- item=”item&quot; wx : for- index=”index&quot;</code><br>4默认情况下我们不写<br><code>Wx: for- item=&quot; item&quot; WX : for - index=”index&quot;</code><br>小程序也会把循环项的名称和索引的名称item 和index<br>只有一层循环的话(<code>wx :for item=&quot; item&quot; wx: for- index=&quot;index&quot;</code>) 可以省略</p>
+<h3 id="对象循环"><a href="#对象循环" class="headerlink" title="对象循环"></a>对象循环</h3><p><code>Wx :for=&quot;&quot; wx:for-item=&quot;对 象的值&quot; wX : for- index=&quot;对象的属性”</code><br>==循环对象的时候最好把item和index的名称都修改一下==<br>wx: for-item= “value”<br>WX : for- index= “key’</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>对象循环<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name"><span class="token namespace">wx:</span>for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{person}}<span class="token punctuation">"</span></span> 
+    <span class="token attr-name"><span class="token namespace">wx:</span>for-item</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>value<span class="token punctuation">"</span></span> 
+    <span class="token attr-name"><span class="token namespace">wx:</span>for-index</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>key<span class="token punctuation">"</span></span>
+    <span class="token attr-name"><span class="token namespace">wx:</span>key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>age<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        属性：{{key}}
+        --
+        值：{{value}}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span></code></pre>
 
             </div>
             <hr/>
