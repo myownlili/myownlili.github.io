@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="微信小程序1, 小李·博客">
+    <meta name="keywords" content="微信小程序2, 小李·博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>微信小程序1 | 小李·博客</title>
+    <title>微信小程序2 | 小李·博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -223,12 +223,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">微信小程序1</h1>
+                    <h1 class="description center-align post-title">微信小程序2</h1>
                 </div>
             </div>
         </div>
@@ -275,7 +275,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-11
+                    2020-08-12
                 </div>
                 
 
@@ -297,161 +297,114 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p><strong>视频课程：<a href="https://www.bilibili.com/video/BV1nE41117BQ?p=17" target="_blank" rel="noopener">【WEB前端】零基础玩转微信小程序</a></strong></p>
+<p>**视频课程：<a href="https://www.bilibili.com/video/BV1nE41117BQ?p=24" target="_blank" rel="noopener">【WEB前端】零基础玩转微信小程序</a></p>
 </blockquote>
-<h1 id="微信小程序-1"><a href="#微信小程序-1" class="headerlink" title="微信小程序-1"></a>微信小程序-1</h1><h2 id="原生框架的目录结构"><a href="#原生框架的目录结构" class="headerlink" title="原生框架的目录结构"></a>原生框架的目录结构</h2><ul>
-<li><p><strong>pages</strong></p>
+<h1 id="微信小程序-2"><a href="#微信小程序-2" class="headerlink" title="微信小程序-2"></a>微信小程序-2</h1><h2 id="1-条件渲染"><a href="#1-条件渲染" class="headerlink" title="1 条件渲染"></a>1 条件渲染</h2><blockquote>
+<p>当标签不是平凡切换显示，优先使用wx:if;频繁切换使用hidden</p>
+</blockquote>
+<h3 id="1-1-wx-if"><a href="#1-1-wx-if" class="headerlink" title="1.1 wx:if"></a>1.1 wx:if</h3><p><img src="/2020/08/12/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F2/1.PNG" alt></p>
+<h2 id="1-2-hidden"><a href="#1-2-hidden" class="headerlink" title="1.2 hidden"></a>1.2 hidden</h2><p>1.在标签中直接加入属性：hidden<br>2.<code>hidden=&quot;true&quot;</code><br>3.hidden属性不要和样式display一起使用<br><img src="/2020/08/12/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F2/2.PNG" alt></p>
+<h2 id="2-事件绑定"><a href="#2-事件绑定" class="headerlink" title="2 事件绑定"></a>2 事件绑定</h2><p>1 需要给input标签绑定input事件<br>绑定关键字bindinput<br>2 如何获取输入框的值<br>通过事件源对象来扶取<br><code>e.detail.value</code><br>3 把输入框的值赋值到data当中<br>正确的写法</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">this</span> <span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+num<span class="token punctuation">:</span>e<span class="token punctuation">.</span>detai1<span class="token punctuation">.</span>value
+<span class="token punctuation">)</span><span class="token punctuation">)</span> </code></pre>
+<p>4 需要加入一个点击事件</p>
 <ul>
-<li><strong>index</strong>：存放首页的页面文件<ul>
-<li><em>index.js</em> ：逻辑</li>
-<li><em>index.json</em>：配置项</li>
-<li><em>index.wxml</em>：便签嵌套</li>
-<li><em>index.wxss</em>：样式</li>
-</ul>
+<li><p>bindtap</p>
 </li>
-<li><strong>logs</strong>：日志页面相关文件</li>
-</ul>
+<li><p>无法在小程序当中的事件中直按传参</p>
 </li>
-<li><p><strong>utils</strong>：可要可不要，帮助文档相关JS</p>
+<li><p>通过白定义属性的方式来传递参数</p>
 </li>
-<li><p><strong>app.js</strong>：本小程序的入口文件和全局文件</p>
-</li>
-<li><p><strong>app.json</strong>：全局配置文件，如整个项目的标题名称</p>
-</li>
-<li><p><strong>app.wxss</strong>:全局样式文件</p>
-</li>
-<li><p><strong>project.config.json</strong>：基础配置、环境配置</p>
-</li>
-<li><p><strong>sitemap.json</strong>：配置小程序及其页面是否循序被微信索引</p>
-<h2 id="小程序配置文件"><a href="#小程序配置文件" class="headerlink" title="小程序配置文件"></a>小程序配置文件</h2><h3 id="app-json"><a href="#app-json" class="headerlink" title="app.json"></a>app.json</h3><h4 id="“pages”"><a href="#“pages”" class="headerlink" title="“pages”"></a><strong>“pages”</strong></h4><blockquote>
-<p>本小程序有哪些页面<br>一 一对应pages文件夹中的路径 </p>
-</blockquote>
-<h4 id="“window”"><a href="#“window”" class="headerlink" title="“window”"></a><strong>“window”</strong></h4><blockquote>
-<p>定义小程序所有页面的顶部背景颜色、文字颜色定义等</p>
-</blockquote>
-<p>-<em>backgroundTextstyle</em> ：下拉刷新的所展现的文字颜色<br>-<em>navigationBarBackgroundColor</em> ：导航栏背景颜色<br>-<em>navigationBarTitleText</em> ：导航栏标题名称<br>-<em>navigationBarTextstyle</em> ：导航栏文字颜色（<code>black or white</code>）<br>-<em>enablePullDownRefresh</em> ：全局下拉刷新</p>
+<li><p>事件源中获取自定义属性<br><img src="/2020/08/12/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F2/3.PNG" alt></p>
+<pre class=" language-js"><code class="language-js"><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+
+  data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      num<span class="token punctuation">:</span><span class="token number">0</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">//输入框input事件的执行</span>
+  <span class="token function">handleinput</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+              num<span class="token punctuation">:</span>e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">handletap</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+      <span class="token keyword">const</span> operation<span class="token operator">=</span>e<span class="token punctuation">.</span>currentTarget<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>operation<span class="token punctuation">;</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          num<span class="token punctuation">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">.</span>num<span class="token operator">+</span>operation
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
 </li>
 </ul>
-<pre><code>      enablePullDownRefresh:true</code></pre><p>  -<em>backgroundColor</em>  ：下拉刷新页面的背景颜色</p>
-<h4 id="“tabbar”"><a href="#“tabbar”" class="headerlink" title="“tabbar”"></a>“tabbar”</h4><p>类似淘宝底部页面的切换<br>在<code>app.josn</code>中添加：输入tabBar回车自动生成如下代码</p>
-<pre class=" language-json"><code class="language-json"><span class="token property">"tabBar"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"list"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
-      <span class="token property">"pagePath"</span><span class="token operator">:</span> <span class="token string">","</span><span class="token punctuation">,</span> //要跳转页面的页面路径
-      <span class="token property">"text"</span><span class="token operator">:</span> <span class="token string">"text"</span><span class="token punctuation">,</span> //标题
-      <span class="token property">"iconPath"</span><span class="token operator">:</span> <span class="token string">"iconPath"</span><span class="token punctuation">,</span> //未选中图标
-      <span class="token property">"selectedIconPath"</span><span class="token operator">:</span> <span class="token string">"selectedIconPath"</span> //已选中图标
-    <span class="token punctuation">}</span><span class="token punctuation">]</span>
-  <span class="token punctuation">}</span></code></pre>
-<p><code>&lt;app.josn&gt;</code><br>如何改变此处<strong>标题颜色</strong>？<code>在list的同级下编写</code></p>
-<pre class=" language-json"><code class="language-json">  <span class="token property">"tabBar"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"list"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
-      ...
-    <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"color"</span><span class="token operator">:</span><span class="token string">"#0094ff"</span><span class="token punctuation">,</span>
-    <span class="token property">"selectedColor"</span><span class="token operator">:</span> <span class="token string">"#000000"</span>//只能使用<span class="token number">16</span>进制
-  <span class="token punctuation">}</span></code></pre>
-<p><code>&lt;app.josn&gt;</code><br>如何改变<strong>相对位置</strong>？</p>
-<pre class=" language-json"><code class="language-json">  <span class="token property">"tabBar"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"list"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>...<span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"color"</span><span class="token operator">:</span><span class="token string">"#0094ff"</span><span class="token punctuation">,</span>
-    <span class="token property">"selectedColor"</span><span class="token operator">:</span> <span class="token string">"#000000"</span><span class="token punctuation">,</span>
-    <span class="token property">"position"</span><span class="token operator">:</span><span class="token string">"top"</span> //未设置的话默认在bottom，tabbar在顶部时默认不显示图标
-  <span class="token punctuation">}</span></code></pre>
-<p><code>&lt;app.josn&gt;</code></p>
-<h3 id="page-json"><a href="#page-json" class="headerlink" title="page.json"></a>page.json</h3><blockquote>
-<p>独立定义每一个页面的一些属性，如颜色等</p>
-</blockquote>
-<p>page.json用法与app.json中的Windo类似，其他使用参考小程序文档</p>
-<h3 id="sitemap-json"><a href="#sitemap-json" class="headerlink" title="sitemap.json"></a>sitemap.json</h3><blockquote>
-<p>了解即可</p>
-</blockquote>
-<h2 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h2><h3 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h3><table>
+<h2 id="3-样式wxss"><a href="#3-样式wxss" class="headerlink" title="3 样式wxss"></a>3 样式wxss</h2><h3 id="3-1-导入"><a href="#3-1-导入" class="headerlink" title="3.1 导入"></a>3.1 导入</h3><ul>
+<li>引入的代码是通过 @import来引入</li>
+<li>路径 只能写相对路径<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@import</span><span class="token string">"../../styles/common.wxss"</span><span class="token punctuation">;</span></span></code></pre>
+<h2 id="4-选择器与less"><a href="#4-选择器与less" class="headerlink" title="4 选择器与less"></a>4 选择器与less</h2></li>
+<li>略*<h2 id="5-常见组件"><a href="#5-常见组件" class="headerlink" title="5 常见组件"></a>5 常见组件</h2><h3 id="5-1-view"><a href="#5-1-view" class="headerlink" title="5.1 view"></a>5.1 view</h3><table>
 <thead>
 <tr>
-<th align="left">标签</th>
-<th align="center">作用</th>
+<th>属性</th>
+<th>类型</th>
+<th>默认值</th>
+<th>必填</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">text</td>
-<td align="center">行内标签，默认不换行</td>
+<td>hover-class</td>
+<td>string</td>
+<td>none</td>
+<td>否</td>
+<td>指定按下去的样式类。当 hover-class=”none” 时，没有点击态效果</td>
 </tr>
 <tr>
-<td align="left">view</td>
-<td align="center">块级标签，默认换行</td>
+<td>hover-stop-propagation</td>
+<td>boolean</td>
+<td>false</td>
+<td>否</td>
+<td>指定是否阻止本节点的祖先节点出现点击态</td>
+</tr>
+<tr>
+<td>hover-start-time</td>
+<td>number</td>
+<td>50</td>
+<td>否</td>
+<td>按住后多久出现点击态，单位毫秒</td>
+</tr>
+<tr>
+<td>hover-stay-time</td>
+<td>number</td>
+<td>400</td>
+<td>否</td>
+<td>手指松开后点击态保留时间，单位毫秒</td>
 </tr>
 </tbody></table>
-<p>页面中显示的数据放在目标页面/XXX.js的data中</p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// pages/test/test.js</span>
-<span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-    data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    msg<span class="token punctuation">:</span><span class="token string">"hello!world"</span><span class="token punctuation">,</span>
-    num<span class="token punctuation">:</span><span class="token number">10000</span><span class="token punctuation">,</span>
-    isBoy<span class="token punctuation">:</span><span class="token boolean">false</span>，
-    person<span class="token punctuation">:</span><span class="token punctuation">{</span>
-        age<span class="token punctuation">:</span><span class="token number">74</span><span class="token punctuation">,</span>
-        height<span class="token punctuation">:</span><span class="token number">145</span><span class="token punctuation">,</span>
-        weight<span class="token punctuation">:</span><span class="token number">45</span><span class="token punctuation">,</span> 
-        name<span class="token punctuation">:</span><span class="token string">"小王"</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    ischecked<span class="token punctuation">:</span><span class="token boolean">false</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
-<p><code>test.wxml</code><br><img src="/2020/08/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F1/1.PNG" alt></p>
-<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><p>1.数字加减<br>2.字符串拼接<br>3.三元表达式<br><img src="/2020/08/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F1/2.PNG" alt></p>
-<h2 id="数组和对象循环"><a href="#数组和对象循环" class="headerlink" title="数组和对象循环"></a>数组和对象循环</h2><h3 id="列表循环"><a href="#列表循环" class="headerlink" title="列表循环"></a>列表循环</h3><p>wx:for=“”<br>wx:for-item=”循环项的名称”<br>wx:for-index=”循环项的索引”</p>
-<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// pages/test/test.js</span>
-<span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-
-    data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        list<span class="token punctuation">:</span><span class="token punctuation">[</span>
-            <span class="token punctuation">{</span>
-                id<span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">,</span>
-                name<span class="token punctuation">:</span><span class="token string">"小李"</span>
-            <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token punctuation">{</span>
-                id<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span>
-                name<span class="token punctuation">:</span><span class="token string">"amy"</span>
-            <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token punctuation">{</span>
-                id<span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">,</span>
-                name<span class="token punctuation">:</span><span class="token string">"tony"</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">]</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name"><span class="token namespace">wx:</span>for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{list}}<span class="token punctuation">"</span></span> 
-    <span class="token attr-name"><span class="token namespace">wx:</span>for-item</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span> 
-    <span class="token attr-name"><span class="token namespace">wx:</span>for-index</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>index<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    索引：{{index}}
-    --
-    值：{{item.name}}
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span></code></pre>
-<p><code>wx:key</code>=”唯一的值”提高列表渲染的性能<br>1 <code>wx:key</code>绑定个普通的字符串的时候 那么这个字符串名称肯定是循环数组中的对象的 唯一属性<br>2 <code>wx:key =&quot;*this&quot;</code> 就表示I你的数组是一个普通的数组 *this 表示是循环项<br>普通数组[1,2,3,44,5]</p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name"><span class="token namespace">wx:</span>for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{list}}<span class="token punctuation">"</span></span> 
-    <span class="token attr-name"><span class="token namespace">wx:</span>for-item</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span> 
-    <span class="token attr-name"><span class="token namespace">wx:</span>for-index</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>index<span class="token punctuation">"</span></span>
-    <span class="token attr-name"><span class="token namespace">wx:</span>key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>id<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    索引：{{index}}
-    --
-    值：{{item.name}}
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span></code></pre>
-<p>3当出现数组的嵌套循环的时候尤其要注意 以下绑定的名称不要重名<br><code>wx:for- item=”item&quot; wx : for- index=”index&quot;</code><br>4默认情况下我们不写<br><code>Wx: for- item=&quot; item&quot; WX : for - index=”index&quot;</code><br>小程序也会把循环项的名称和索引的名称item 和index<br>只有一层循环的话(<code>wx :for item=&quot; item&quot; wx: for- index=&quot;index&quot;</code>) 可以省略</p>
-<h3 id="对象循环"><a href="#对象循环" class="headerlink" title="对象循环"></a>对象循环</h3><p><code>Wx :for=&quot;&quot; wx:for-item=&quot;对 象的值&quot; wX : for- index=&quot;对象的属性”</code><br>==循环对象的时候最好把item和index的名称都修改一下==<br>wx: for-item= “value”<br>WX : for- index= “key’</p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span><span class="token punctuation">></span></span>对象循环<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>view</span> <span class="token attr-name"><span class="token namespace">wx:</span>for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{{person}}<span class="token punctuation">"</span></span> 
-    <span class="token attr-name"><span class="token namespace">wx:</span>for-item</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>value<span class="token punctuation">"</span></span> 
-    <span class="token attr-name"><span class="token namespace">wx:</span>for-index</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>key<span class="token punctuation">"</span></span>
-    <span class="token attr-name"><span class="token namespace">wx:</span>key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>age<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        属性：{{key}}
-        --
-        值：{{value}}
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>view</span><span class="token punctuation">></span></span></code></pre>
+</li>
+</ul>
+<h3 id="5-2-text"><a href="#5-2-text" class="headerlink" title="5.2 text"></a>5.2 text</h3><p>1.文本标签<br>2只能嵌喜text<br>3.长技文字可以复制(有该标签有这个功能)<br>4.可以对空格回车进行编码</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>默认值</th>
+<th>必填</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>selectable</td>
+<td>Boolean</td>
+<td>false</td>
+<td>文本是否可选</td>
+</tr>
+<tr>
+<td>decode</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否解码</td>
+</tr>
+</tbody></table>
 
             </div>
             <hr/>
@@ -791,9 +744,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/08/12/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F2/">
                     <div class="card-image">
@@ -811,9 +765,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -826,6 +780,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -844,31 +799,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/10/%E5%85%AB%E6%9C%88%E7%87%A5%E7%83%AD%E8%AE%B0/">
+                <a href="/2020/08/11/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F1/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="八月燥热记">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="微信小程序1">
                         
-                        <span class="card-title">八月燥热记</span>
+                        <span class="card-title">微信小程序1</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            抓住20年的那一只蝉
+                            学习微信小程序的第一天
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%97%A5%E5%B8%B8/" class="post-category">
-                                    日常
+                            <a href="/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
+                                    微信小程序
                                 </a>
                             
                             
@@ -878,12 +833,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%B0%8F%E7%BB%93/">
-                        <span class="chip bg-color">小结</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%89%93%E5%8D%A1/">
-                        <span class="chip bg-color">学习打卡</span>
+                    <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                        <span class="chip bg-color">微信小程序</span>
                     </a>
                     
                 </div>
