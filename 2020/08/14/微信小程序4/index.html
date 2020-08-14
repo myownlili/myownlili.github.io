@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="微信小程序3, 小李·博客">
+    <meta name="keywords" content="微信小程序4, 小李·博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>微信小程序3 | 小李·博客</title>
+    <title>微信小程序4 | 小李·博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -223,12 +223,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/source/images/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">微信小程序3</h1>
+                    <h1 class="description center-align post-title">微信小程序4</h1>
                 </div>
             </div>
         </div>
@@ -275,7 +275,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-13
+                    2020-08-14
                 </div>
                 
 
@@ -299,10 +299,94 @@
                 <blockquote>
 <p><strong>视频课程：<a href="https://www.bilibili.com/video/BV1nE41117BQ?p=28" target="_blank" rel="noopener">【WEB前端】零基础玩转微信小程序</a></strong></p>
 </blockquote>
-<h1 id="微信小程序-3"><a href="#微信小程序-3" class="headerlink" title="微信小程序-3"></a>微信小程序-3</h1><h2 id="1-image图片标签"><a href="#1-image图片标签" class="headerlink" title="1 image图片标签"></a>1 image图片标签</h2><ul>
-<li>src 指定路径</li>
-<li>mode 决定图片内容和图片标签宽高做适配</li>
+<h1 id="微信小程序-4"><a href="#微信小程序-4" class="headerlink" title="微信小程序-4"></a>微信小程序-4</h1><h2 id="1-rich-text富文本标签"><a href="#1-rich-text富文本标签" class="headerlink" title="1 rich-text富文本标签"></a>1 rich-text富文本标签</h2><ul>
+<li>标签字符串</li>
 </ul>
+<p><code>&lt;rich-text nodes=&quot;&quot;&gt;&lt;/rich-text&gt;</code></p>
+<ul>
+<li>对象数组</li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+
+    <span class="token comment" spellcheck="true">/**
+     * 页面的初始数据
+     */</span>
+    data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        html<span class="token punctuation">:</span><span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//div标签 name属性来指定</span>
+                name<span class="token punctuation">:</span><span class="token string">"div"</span><span class="token punctuation">,</span>
+                <span class="token comment" spellcheck="true">//标签有哪些属性</span>
+                attrs<span class="token punctuation">:</span><span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">//标签的属性class style</span>
+                    <span class="token keyword">class</span><span class="token punctuation">:</span><span class="token string">"my_div"</span><span class="token punctuation">,</span>
+                    style<span class="token punctuation">:</span><span class="token string">"color:red;"</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token comment" spellcheck="true">//子节点children要接收的数据类型和nodes第二种渲染方式的数据类型一致 </span>
+                children<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span>  
+                    name<span class="token punctuation">:</span><span class="token string">"p"</span><span class="token punctuation">,</span>
+                    attrs<span class="token punctuation">:</span><span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token comment" spellcheck="true">//放文本</span>
+                    children<span class="token punctuation">:</span><span class="token punctuation">[</span>
+                        <span class="token punctuation">{</span>
+                            type<span class="token punctuation">:</span><span class="token string">"text"</span><span class="token punctuation">,</span>
+                            text<span class="token punctuation">:</span><span class="token string">"hello"</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">]</span>
+                <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<h2 id="2-button"><a href="#2-button" class="headerlink" title="2 button"></a>2 button</h2><h3 id="2-1-外观属性"><a href="#2-1-外观属性" class="headerlink" title="2.1 外观属性"></a>2.1 外观属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+<th>合法值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>size</td>
+<td>string</td>
+<td>default</td>
+<td>按钮的大小</td>
+<td>default：<strong>默认大小</strong>，mini：<strong>小尺寸</strong></td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>default</td>
+<td>按钮的样式类型</td>
+<td>primary    <strong>绿色</strong>    default    <strong>白色</strong> warn    <strong>红色</strong></td>
+</tr>
+<tr>
+<td>plain</td>
+<td>boolean</td>
+<td>false</td>
+<td>按钮是否镂空，背景色透明</td>
+<td></td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>boolean</td>
+<td>false</td>
+<td>是否禁用</td>
+<td></td>
+</tr>
+<tr>
+<td>loading</td>
+<td>boolean</td>
+<td>false</td>
+<td>名称前是否带 loading 图标</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>代码：<br><img src="/2020/08/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F4/0.PNG" alt><br>效果：<br><img src="/2020/08/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F4/1.PNG" alt></p>
+<h3 id="2-2-开发能力"><a href="#2-2-开发能力" class="headerlink" title="2.2 开发能力"></a>2.2 开发能力</h3><h4 id="2-2-1-open-type"><a href="#2-2-1-open-type" class="headerlink" title="2.2.1 open-type"></a>2.2.1 open-type</h4><p>open-type 的合法值</p>
 <table>
 <thead>
 <tr>
@@ -311,176 +395,208 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>scaleToFill</td>
-<td>缩放模式，不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素</td>
+<td>contact</td>
+<td>打开客服会话，如果用户在会话中点击消息卡片后返回小程序，可以从 bindcontact 回调中获得具体信息，具体说明</td>
 </tr>
 <tr>
-<td>aspectFit(<strong>轮播图常用</strong>)</td>
-<td>缩放模式，保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。</td>
+<td>share</td>
+<td>触发用户转发，使用前建议先阅读使用指引</td>
 </tr>
 <tr>
-<td>aspectFill</td>
-<td>缩放模式，保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。</td>
+<td>getPhoneNumber</td>
+<td>获取用户手机号，可以从bindgetphonenumber回调中获取到用户信息，具体说明</td>
 </tr>
 <tr>
-<td>widthFix</td>
-<td>缩放模式，宽度不变，高度自动变化，保持原图宽高比不变</td>
+<td>getUserInfo</td>
+<td>获取用户信息，可以从bindgetuserinfo回调中获取到用户信息</td>
 </tr>
 <tr>
-<td>heightFix</td>
-<td>缩放模式，高度不变，宽度自动变化，保持原图宽高比不变</td>
+<td>launchApp</td>
+<td>打开APP，可以通过app-parameter属性设定向APP传的参数具体说明</td>
 </tr>
 <tr>
-<td>top</td>
-<td>裁剪模式，不缩放图片，只显示图片的顶部区域</td>
+<td>openSetting</td>
+<td>打开授权设置页</td>
 </tr>
 <tr>
-<td>bottom</td>
-<td>裁剪模式，不缩放图片，只显示图片的底部区域</td>
-</tr>
-<tr>
-<td>center</td>
-<td>裁剪模式，不缩放图片，只显示图片的中间区域</td>
-</tr>
-<tr>
-<td>left</td>
-<td>裁剪模式，不缩放图片，只显示图片的左边区域</td>
-</tr>
-<tr>
-<td>right</td>
-<td>裁剪模式，不缩放图片，只显示图片的右边区域</td>
-</tr>
-<tr>
-<td>top left</td>
-<td>裁剪模式，不缩放图片，只显示图片的左上边区域</td>
-</tr>
-<tr>
-<td>top right</td>
-<td>裁剪模式，不缩放图片，只显示图片的右上边区域</td>
-</tr>
-<tr>
-<td>bottom left</td>
-<td>裁剪模式，不缩放图片，只显示图片的左下边区域</td>
-</tr>
-<tr>
-<td>bottom right</td>
-<td>裁剪模式，不缩放图片，只显示图片的右下边区域</td>
+<td>feedback</td>
+<td>打开“意见反馈”页面，用户可提交反馈内容并上传日志，开发者可以登录小程序管理后台后进入左侧菜单“客服反馈”页面获取到反馈内容</td>
 </tr>
 </tbody></table>
-<ul>
-<li>小程序中的图片支持懒加载 lazy_load</li>
+<p><img src="/2020/08/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F4/2.PNG" alt></p>
+<pre class=" language-js"><code class="language-js"><span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token function">getphonenumber</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">getuserinfo</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<h2 id="3-icon"><a href="#3-icon" class="headerlink" title="3 icon"></a>3 icon</h2><p>|属性    |类型    |默认值    |必填    |说明|<br>|—|—|—|—|—|—|<br>|type    |string    |    |是    |icon的类型，有效值：success, success_no_circle, info, warn, waiting, cancel, download, search, clear    |<br>|size    |number/string    |23    |否    |icon的大小    |<br>|color    |string    |    |否    |icon的颜色，同css的color    |</p>
+<p>代码：<br><img src="/2020/08/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F4/3.PNG" alt><br>效果：<br><img src="/2020/08/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F4/4.PNG" alt></p>
+<h2 id="4-radio-单选框"><a href="#4-radio-单选框" class="headerlink" title="4 radio 单选框"></a>4 radio 单选框</h2><ul>
+<li>必须与父元素 radio-group来使用</li>
+<li>需要给radio-group绑定change事件</li>
+<li>在页面中显示选中的值</li>
 </ul>
-<p><code>&lt;image src=&quot;../image/333.jpg&quot; mode=&quot;widthFix&quot; lazy-load=&quot;&quot;&gt;&lt;/image&gt;</code></p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">image</span><span class="token punctuation">{</span>
-    <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
-    <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">2</span>px solid black<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">700</span>rpx<span class="token punctuation">;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">350</span>rpx<span class="token punctuation">;</span>
-
-<span class="token punctuation">}</span></code></pre>
-<h2 id="2-swiper轮播图组件"><a href="#2-swiper轮播图组件" class="headerlink" title="2 swiper轮播图组件"></a>2 swiper轮播图组件</h2><ul>
-<li>先找出来原图的宽度和高度等比例给swiper 定宽度和高度<br>原图的宽度和高度1125 * 352 px<br>swiper宽度/swiper高度=原图的宽度/原图的高度<br>swiper高度 = swiper 宽度*原图的高度 /原图的宽度<br>height: 100vw * 352 / 1125</li>
-</ul>
-<p><img src="/2020/08/13/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F3/0.PNG" alt></p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">swiper</span><span class="token punctuation">{</span>
-     <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">100%</span><span class="token punctuation">;</span>
-     <span class="token property">height</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token number">100</span>vw*<span class="token number">394</span>/<span class="token number">640</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token selector">image</span><span class="token punctuation">{</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
 <table>
 <thead>
 <tr>
 <th>属性</th>
 <th>类型</th>
 <th>默认值</th>
-<th>必填</th>
 <th>说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>indicator-dots</td>
-<td>boolean</td>
-<td>false</td>
-<td>否</td>
-<td>是否显示面板指示点</td>
+<td>value</td>
+<td>string</td>
+<td></td>
+<td>radio 标识。当该radio 选中时，radio-group 的 change 事件会携带radio的value</td>
 </tr>
 <tr>
-<td>indicator-color</td>
+<td>checked</td>
+<td>boolean</td>
+<td>false</td>
+<td>当前是否选中</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>boolean</td>
+<td>false</td>
+<td>是否禁用</td>
+</tr>
+<tr>
 <td>color</td>
-<td>rgba(0, 0, 0, .3)</td>
-<td>否</td>
-<td>指示点颜色</td>
-</tr>
-<tr>
-<td>indicator-active-color</td>
-<td>color</td>
-<td>#000000</td>
-<td>否</td>
-<td>当前选中的指示点颜色</td>
-</tr>
-<tr>
-<td>autoplay</td>
-<td>boolean</td>
-<td>false</td>
-<td>否</td>
-<td>是否自动切换</td>
-</tr>
-<tr>
-<td>interval</td>
-<td>number</td>
-<td>5000</td>
-<td>否</td>
-<td>自动切换时间间隔</td>
-</tr>
-<tr>
-<td>circular</td>
-<td>boolean</td>
-<td>false</td>
-<td>否</td>
-<td>是否采用衔接滑动</td>
+<td>string</td>
+<td>#09BB07</td>
+<td>radio的颜色，同css的color</td>
 </tr>
 </tbody></table>
-<p><img src="/2020/08/13/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F3/1.PNG" alt></p>
-<h2 id="3-navigator超链接标签"><a href="#3-navigator超链接标签" class="headerlink" title="3 navigator超链接标签"></a>3 navigator超链接标签</h2><ul>
-<li>url 目标页面的路径</li>
-<li>target在那个目标上发生跳转，默认当前小程序，可选值self(默认自己）/miniProgram（其他小程序页面）</li>
-<li>open-type跳转的方式</li>
-</ul>
-<p><strong>open-type 的合法值：</strong></p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>navigate</td>
-<td>保留当前页面，跳转到应用内的某个页面，但是不能跳转到tabbbar页面</td>
-</tr>
-<tr>
-<td>redirect</td>
-<td>关闭当前页面，台哦转到应用内的某个页面，但是不允许跳转到tabbar页面</td>
-</tr>
-<tr>
-<td>switchTab</td>
-<td>跳转到tabbar页面，并关闭其他非tabbar页面</td>
-</tr>
-<tr>
-<td>reLaunch</td>
-<td>关闭所有页面，打开应用内的某个页面</td>
-</tr>
-<tr>
-<td>navigateBack</td>
-<td>关闭当前页面，返回上一页面或多级页面，可通过getCurrentPages()获取当前的页面栈，决定需要返回几层</td>
-</tr>
-<tr>
-<td>exit</td>
-<td>退出小程序target=”miniProgram”时生效</td>
-</tr>
-</tbody></table>
+<p>WXML代码：<br><img src="/2020/08/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F4/5.PNG" alt><br>数据绑定：</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// pages/06/06.js</span>
+<span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token function">handlechange</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> num<span class="token operator">=</span>e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            num
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        num<span class="token punctuation">:</span><span class="token string">""</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<p>效果：<br><img src="/2020/08/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F4/6.PNG" alt></p>
+<h2 id="5-checkbox复选标签"><a href="#5-checkbox复选标签" class="headerlink" title="5 checkbox复选标签"></a>5 checkbox复选标签</h2><p>WXML代码：<br><img src="/2020/08/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F4/7.PNG" alt><br>数据绑定：</p>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// pages/07/07.js</span>
+<span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token function">handItemChange</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+        <span class="token keyword">const</span> checkedList<span class="token operator">=</span>e<span class="token punctuation">.</span>detail<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span>
+            <span class="token punctuation">{</span>
+                checkedList
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        list<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span>
+            id<span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">,</span>
+            name<span class="token punctuation">:</span><span class="token string">"香蕉"</span><span class="token punctuation">,</span>
+            value<span class="token punctuation">:</span><span class="token string">"banana"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            id<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+            name<span class="token punctuation">:</span><span class="token string">"苹果"</span><span class="token punctuation">,</span>
+            value<span class="token punctuation">:</span><span class="token string">"apple"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            id<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span>
+            name<span class="token punctuation">:</span><span class="token string">"葡萄"</span><span class="token punctuation">,</span>
+            value<span class="token punctuation">:</span><span class="token string">"grape"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        checkedList<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<p>效果：<br><img src="/2020/08/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F4/8.PNG" alt></p>
+<h2 id="6-自定义组件"><a href="#6-自定义组件" class="headerlink" title="6 自定义组件"></a>6 自定义组件</h2><p>1 新增组件：新建文件夹components-再其中新建文件夹Tabs(组件名)-右键Tabs,再选择新建Component<br>2 新增页面：略<br>3 连接：在新增的页面的json文件中编写如下代码</p>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"usingComponents"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"Tabs"</span><span class="token operator">:</span><span class="token string">"../../components/Tabs/Tabs"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>最后在新建页面的wxml文件中编写<code>&lt;Tabs&gt;&lt;/Tabs&gt;</code>查看是否连接成功</p>
+<h3 id="6-1-小实践"><a href="#6-1-小实践" class="headerlink" title="6.1 小实践"></a>6.1 小实践</h3><h4 id="6-1-1-样式设计优化"><a href="#6-1-1-样式设计优化" class="headerlink" title="6.1.1 样式设计优化"></a>6.1.1 样式设计优化</h4><p>wxml代码<br><img src="/2020/08/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F4/9.PNG" alt></p>
+<pre class=" language-js"><code class="language-js"> data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        tabs<span class="token punctuation">:</span><span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                id<span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">,</span>
+                name<span class="token punctuation">:</span><span class="token string">"首页"</span><span class="token punctuation">,</span>
+                isActive<span class="token punctuation">:</span><span class="token boolean">true</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                id<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+                name<span class="token punctuation">:</span><span class="token string">"原创"</span><span class="token punctuation">,</span>
+                isActive<span class="token punctuation">:</span><span class="token boolean">false</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                id<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span>
+                name<span class="token punctuation">:</span><span class="token string">"分类"</span><span class="token punctuation">,</span>
+                isActive<span class="token punctuation">:</span><span class="token boolean">false</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                id<span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">,</span>
+                name<span class="token punctuation">:</span><span class="token string">"关于"</span><span class="token punctuation">,</span>
+                isActive<span class="token punctuation">:</span><span class="token boolean">false</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.tabs</span></span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.tabs_title</span></span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">10</span>rpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.title_item</span></span><span class="token punctuation">{</span>
+    <span class="token property">flex</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/* 文字水平对齐 */</span>
+    <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>  
+    <span class="token comment" spellcheck="true">/* 文字垂直对齐 */</span>
+    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">/* 选中效果 */</span>
+<span class="token selector"><span class="token class">.active</span></span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+    <span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">10</span>rpx solid navy<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.tabs_content</span></span><span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
+<p>效果：<br><img src="/2020/08/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F4/10.PNG" alt></p>
+<h4 id="6-1-2-标题选中激活"><a href="#6-1-2-标题选中激活" class="headerlink" title="6.1.2 标题选中激活"></a>6.1.2 标题选中激活</h4><p><strong>在组件.js中存放事件回调函数是在methods中</strong></p>
+<p>wxml中的相关代码:<br><img src="/2020/08/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F4/11.PNG" alt></p>
+<p>js中相关代码:</p>
+<pre class=" language-js"><code class="language-js">methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token function">handleItemTap</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 1 绑定点击事件</span>
+            <span class="token comment" spellcheck="true">// 2 获取被点击的索引</span>
+            <span class="token comment" spellcheck="true">// 3 获取原数组</span>
+            <span class="token comment" spellcheck="true">// 4 对数组循环</span>
+            <span class="token comment" spellcheck="true">//     1 对每一个循环项 选中属性 改为false</span>
+            <span class="token comment" spellcheck="true">//     2 给当前的索引项添加激活选中效果</span>
+            <span class="token comment" spellcheck="true">//获取索引</span>
+            <span class="token keyword">const</span> <span class="token punctuation">{</span>index<span class="token punctuation">}</span><span class="token operator">=</span>e<span class="token punctuation">.</span>currentTarget<span class="token punctuation">.</span>dataset<span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//获取data中的数组</span>
+            <span class="token comment" spellcheck="true">//let tabs=this.data.tabs同样的效果</span>
+            <span class="token keyword">let</span> <span class="token punctuation">{</span>tabs<span class="token punctuation">}</span><span class="token operator">=</span><span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//4 循环数组</span>
+            <span class="token comment" spellcheck="true">//[].forEach 遍历数组 遍历时，v被修改，也会导致原数组被修改</span>
+            tabs<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span>i<span class="token operator">===</span>index<span class="token operator">?</span>v<span class="token punctuation">.</span>isActive<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">:</span>v<span class="token punctuation">.</span>isActive<span class="token operator">=</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                tabs
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span></code></pre>
 
             </div>
             <hr/>
@@ -820,9 +936,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/08/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F4/">
                     <div class="card-image">
@@ -839,9 +956,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -854,6 +971,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -872,24 +990,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/12/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F2/">
+                <a href="/2020/08/13/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="微信小程序2">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="微信小程序3">
                         
-                        <span class="card-title">微信小程序2</span>
+                        <span class="card-title">微信小程序3</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            学习微信小程序的第一天
+                            学习微信小程序的第三天
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-13
                             </span>
                         <span class="publish-author">
                             
