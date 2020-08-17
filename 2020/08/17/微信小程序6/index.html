@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="微信小程序5, 小李·博客">
+    <meta name="keywords" content="微信小程序6, 小李·博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>微信小程序5 | 小李·博客</title>
+    <title>微信小程序6 | 小李·博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -223,12 +223,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/source/images/xxx.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">微信小程序5</h1>
+                    <h1 class="description center-align post-title">微信小程序6</h1>
                 </div>
             </div>
         </div>
@@ -275,7 +275,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-16
+                    2020-08-17
                 </div>
                 
 
@@ -297,155 +297,107 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p><strong>视频课程：<a href="https://www.bilibili.com/video/BV1nE41117BQ?p=42" target="_blank" rel="noopener">【WEB前端】零基础玩转微信小程序</a></strong></p>
+<p><strong><a href="https://www.bilibili.com/video/BV1WQ4y1T7D8?p=20" target="_blank" rel="noopener">2020最新微信小程序开发零基础入门+项目案例【新视觉实训】</a></strong></p>
 </blockquote>
-<h1 id="微信小程序-5"><a href="#微信小程序-5" class="headerlink" title="微信小程序-5"></a>微信小程序-5</h1><h2 id="1-父向子传递数据"><a href="#1-父向子传递数据" class="headerlink" title="1.父向子传递数据"></a>1.父向子传递数据</h2><p>1.父组件（页面）向子组件传递数据使通过标签属性的方式传递的</p>
-<ul>
-<li>在子组件上进行接收</li>
-<li>把这个数据当成data中的数据即可</li>
-</ul>
-<p><strong>08.wxml</strong></p>
-<p><code>&lt;Tabs aaa=&quot;123&quot;&gt;&lt;/Tabs&gt;</code></p>
-<p><strong>Tab.js</strong></p>
-<pre class=" language-js"><code class="language-js">    properties<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 要接收数据名称</span>
-        aaa<span class="token punctuation">:</span><span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">// type要接收的数组类型</span>
-            type<span class="token punctuation">:</span>String<span class="token punctuation">,</span>
-            <span class="token comment" spellcheck="true">// value默认值</span>
-            value<span class="token punctuation">:</span><span class="token string">""</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
-<p><strong>Tabs.wxml</strong></p>
-<p><img src="/2020/08/16/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F5/0.PNG" alt></p>
-<p><em>删去Tabs.js中的tabs:[…]中的数据</em></p>
-<p><strong>08.js</strong></p>
-<pre class=" language-js"><code class="language-js">data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        tabs<span class="token punctuation">:</span><span class="token punctuation">[</span>
-            <span class="token punctuation">{</span>
-                id<span class="token punctuation">:</span><span class="token number">0</span><span class="token punctuation">,</span>
-                name<span class="token punctuation">:</span><span class="token string">"首页"</span><span class="token punctuation">,</span>
-                isActive<span class="token punctuation">:</span><span class="token boolean">true</span>
-            <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token punctuation">{</span>
-                id<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span>
-                name<span class="token punctuation">:</span><span class="token string">"原创"</span><span class="token punctuation">,</span>
-                isActive<span class="token punctuation">:</span><span class="token boolean">false</span>
-            <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token punctuation">{</span>
-                id<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span>
-                name<span class="token punctuation">:</span><span class="token string">"分类"</span><span class="token punctuation">,</span>
-                isActive<span class="token punctuation">:</span><span class="token boolean">false</span>
-            <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token punctuation">{</span>
-                id<span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">,</span>
-                name<span class="token punctuation">:</span><span class="token string">"关于"</span><span class="token punctuation">,</span>
-                isActive<span class="token punctuation">:</span><span class="token boolean">false</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">]</span>
-   <span class="token punctuation">}</span></code></pre>
-<p><strong>08.wxml</strong><br><code>&lt;Tabs tabs=&quot;&quot;&gt;&lt;/Tabs&gt;</code></p>
-<p><strong>Tab.js</strong></p>
-<pre class=" language-js"><code class="language-js">properties<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-
-        tabs<span class="token punctuation">:</span><span class="token punctuation">{</span>
-            type<span class="token punctuation">:</span>Array<span class="token punctuation">,</span>
-            value<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
-<h2 id="2-子向父传递数据"><a href="#2-子向父传递数据" class="headerlink" title="2 子向父传递数据"></a>2 子向父传递数据</h2><blockquote>
-<p>点击事件触发后 触发父组件中的自定义事件 同时传递数据给父组件</p>
-</blockquote>
-<ul>
-<li>在子组件的标签上加入一个自定义事件</li>
-</ul>
-<p><strong>08.wxml</strong><br><img src="/2020/08/16/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F5/1.PNG" alt></p>
-<p><strong>Tab.js</strong></p>
-<pre class=" language-js"><code class="language-js">    methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-        <span class="token function">handleItemTap</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
-             <span class="token keyword">const</span> <span class="token punctuation">{</span>index<span class="token punctuation">}</span><span class="token operator">=</span>e<span class="token punctuation">.</span>currentTarget<span class="token punctuation">.</span>dataset<span class="token punctuation">;</span>
-             <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">triggerEvent</span><span class="token punctuation">(</span><span class="token string">"itemChange"</span><span class="token punctuation">,</span><span class="token punctuation">{</span>index<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span></code></pre>
-<p><strong>08.js/data</strong></p>
-<pre class=" language-js"><code class="language-js">    <span class="token function">handleItemChenge</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 接收传递过来的参数</span>
-        <span class="token keyword">const</span> <span class="token punctuation">{</span>index<span class="token punctuation">}</span><span class="token operator">=</span>e<span class="token punctuation">.</span>detail<span class="token punctuation">;</span>
-        <span class="token keyword">let</span> <span class="token punctuation">{</span>tabs<span class="token punctuation">}</span><span class="token operator">=</span><span class="token keyword">this</span><span class="token punctuation">.</span>data<span class="token punctuation">;</span>
-        tabs<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span>i<span class="token operator">===</span>index<span class="token operator">?</span>v<span class="token punctuation">.</span>isActive<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">:</span>v<span class="token punctuation">.</span>isActive<span class="token operator">=</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-             tabs
-         <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span></code></pre>
-<h2 id="3-自定义组件-slot"><a href="#3-自定义组件-slot" class="headerlink" title="3 自定义组件-slot"></a>3 自定义组件-slot</h2><blockquote>
-<p>slot标签 其实是占位符或者插槽</p>
-</blockquote>
-<p>等到父组件调用子组件的时候再传递标签过来最终这些被传递的标签就会替换slot插槽的位置<br>主要作用让每一页面显示不同的内容<br><img src="/2020/08/16/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F5/3.PNG" alt="Tabs.wxml"><br><img src="/2020/08/16/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F5/2.PNG" alt="08.wxml"></p>
-<h2 id="组件的其他属性"><a href="#组件的其他属性" class="headerlink" title="组件的其他属性"></a>组件的其他属性</h2><table>
+<h1 id="微信小程序6-API篇"><a href="#微信小程序6-API篇" class="headerlink" title="微信小程序6-API篇"></a>微信小程序6-API篇</h1><h2 id="1-Object-wx-getSystemInfoSync"><a href="#1-Object-wx-getSystemInfoSync" class="headerlink" title="1 Object wx.getSystemInfoSync()"></a>1 Object wx.getSystemInfoSync()</h2><p><strong><a href="https://developers.weixin.qq.com/miniprogram/dev/api/base/system/system-info/wx.getSystemInfoSync.html" target="_blank" rel="noopener">wx.getSystemInfoSync()官方文档</a></strong></p>
+<table>
 <thead>
 <tr>
-<th>定义段</th>
+<th>属性</th>
 <th>类型</th>
-<th>是否必填</th>
-<th>描述</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>properties</td>
-<td>Object Map</td>
-<td>否</td>
-<td>组件的对外属性，是属性名到属性设置的映射表</td>
+<td>brand</td>
+<td>string</td>
+<td>设备品牌</td>
 </tr>
 <tr>
-<td>data</td>
-<td>Object</td>
-<td>否</td>
-<td>组件的内部数据，和properties一同用于组件的模板渲染</td>
+<td>model</td>
+<td>string</td>
+<td>设备型号</td>
 </tr>
 <tr>
-<td>observers</td>
-<td>Object</td>
-<td>否</td>
-<td>组件数据字段监听器，用于监听properties和data的变化</td>
+<td>pixelRatio</td>
+<td>number</td>
+<td>设备像素比</td>
 </tr>
 <tr>
-<td>methods</td>
-<td>Object</td>
-<td>否</td>
-<td>组件的方法，包括事件响应函数和任意的自定义方法</td>
+<td>screenWidth</td>
+<td>number</td>
+<td>屏幕宽度，单位px</td>
 </tr>
 <tr>
-<td>created</td>
-<td>Function</td>
-<td>否</td>
-<td>组件生命周期函数，在组件实例刚刚被创建时执行，注意此时不能调用setData</td>
+<td>screenHeight</td>
+<td>number</td>
+<td>屏幕高度，单位px</td>
 </tr>
 <tr>
-<td>attached</td>
-<td>Function</td>
-<td>否</td>
-<td>组件生命周期函数，在组件实例进入页面节点树时执行</td>
+<td>windowWidth</td>
+<td>number</td>
+<td>可使用窗口宽度，单位px</td>
 </tr>
 <tr>
-<td>ready</td>
-<td>Function</td>
-<td>否</td>
-<td>组件生命周期函数，在组件布局完成后执行,</td>
+<td>windowHeight</td>
+<td>number</td>
+<td>可使用窗口高度，单位px</td>
 </tr>
 <tr>
-<td>moved</td>
-<td>Function</td>
-<td>否</td>
-<td>组件生命周期函数，在组件实例被移动到节点树另一个位置执行</td>
+<td>statusBarHeight</td>
+<td>number</td>
+<td>状态栏的高度，单位px</td>
 </tr>
 <tr>
-<td>detached</td>
-<td>Function</td>
-<td>否</td>
-<td>组件生命周期函数，在组件实例被从页面节点树移除时执行</td>
+<td>language</td>
+<td>string</td>
+<td>微信设置的语言</td>
+</tr>
+<tr>
+<td>version</td>
+<td>string</td>
+<td>微信版本号</td>
+</tr>
+<tr>
+<td>system</td>
+<td>string</td>
+<td>操作系统及版本</td>
+</tr>
+<tr>
+<td>platform</td>
+<td>string</td>
+<td>客户端平台</td>
 </tr>
 </tbody></table>
-
+<pre class=" language-js"><code class="language-js">onLoad<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>wx<span class="token punctuation">.</span><span class="token function">getSystemInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<h2 id="2-wx-showLoading-Object-object"><a href="#2-wx-showLoading-Object-object" class="headerlink" title="2 wx.showLoading(Object object)"></a>2 wx.showLoading(Object object)</h2><p><strong><a href="https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showLoading.html" target="_blank" rel="noopener">wx.showLoading官方文档</a></strong></p>
+<p><strong>注意</strong></p>
+<ul>
+<li>wx.showLoading 和 wx.showToast 同时只能显示一个</li>
+<li>wx.showLoading 应与 wx.hideLoading 配对使用</li>
+</ul>
+<p><strong>Object object</strong><br>|属性    |类型    |默认值    |必填    |说明|<br>|—|—|—|—|—|<br>|title    |string    |    |是|    提示的内容|<br>|mask    |boolean    |false    |否|    是否显示透明蒙层，防止触摸穿透|<br>|success    |function|        |否    |接口调用成功的回调函数|<br>|fail    |function    |    |否|    接口调用失败的回调函数|<br>|complete    |function|        |否|    接口调用结束的回调函数（调用成功、失败都会执行）|</p>
+<pre class=" language-js"><code class="language-js">onLoad<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// console.log(wx.getSystemInfo())</span>
+        wx<span class="token punctuation">.</span><span class="token function">showLoading</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          title<span class="token punctuation">:</span> <span class="token string">'加载中'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            wx<span class="token punctuation">.</span><span class="token function">hideLoading</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<h2 id="3-wx-showToast-Object-object"><a href="#3-wx-showToast-Object-object" class="headerlink" title="3 wx.showToast(Object object)"></a>3 wx.showToast(Object object)</h2><p><strong><a href="https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html" target="_blank" rel="noopener">wx.showToast官方文档</a></strong></p>
+<p><strong>Object object</strong><br>|属性    |类型    |默认值    |必填|说明    |<br>|—|—|—|—|—|<br>|title    |string    |    |是|提示的内容|<br>|icon    |string|’success’|    否|    图标    |<br>|image    |string    |    |否    |自定义图标的本地路径，image 的优先级高于 icon|<br>|duration    |number    |1500    |否    |提示的延迟时间    |<br>|mask    |boolean    |false    |否    |是否显示透明蒙层，防止触摸穿透    |<br>|success    |function|        |否    |接口调用成功的回调函数    |<br>|fail    |function    |    |否    |接口调用失败的回调函数    |<br>|complete    |function|        |否    |接口调用结束的回调函数（调用成功、失败都会执行）|</p>
+<pre class=" language-js"><code class="language-js">    onLoad<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        wx<span class="token punctuation">.</span><span class="token function">showToast</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            title<span class="token punctuation">:</span> <span class="token string">'终于成功'</span><span class="token punctuation">,</span>
+            icon<span class="token punctuation">:</span> <span class="token string">'success'</span><span class="token punctuation">,</span>
+            duration<span class="token punctuation">:</span> <span class="token number">2000</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre>
+<h2 id="4-API-路由方法"><a href="#4-API-路由方法" class="headerlink" title="4 API-路由方法"></a>4 API-路由方法</h2>
             </div>
             <hr/>
 
@@ -784,9 +736,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/08/17/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F6/">
                     <div class="card-image">
@@ -803,9 +756,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -818,6 +771,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -836,24 +790,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/14/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F4/">
+                <a href="/2020/08/16/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F5/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="微信小程序4">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="微信小程序5">
                         
-                        <span class="card-title">微信小程序4</span>
+                        <span class="card-title">微信小程序5</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            学习微信小程序的第四天
+                            学习微信小程序的第五天
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-16
                             </span>
                         <span class="publish-author">
                             
