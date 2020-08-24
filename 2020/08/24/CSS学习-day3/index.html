@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CSS学习-day2, 小李·博客">
+    <meta name="keywords" content="CSS学习-day3, 小李·博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CSS学习-day2 | 小李·博客</title>
+    <title>CSS学习-day3 | 小李·博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -223,12 +223,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CSS学习-day2</h1>
+                    <h1 class="description center-align post-title">CSS学习-day3</h1>
                 </div>
             </div>
         </div>
@@ -275,7 +275,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-22
+                    2020-08-24
                 </div>
                 
 
@@ -296,63 +296,118 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="id-选择器"><a href="#id-选择器" class="headerlink" title="id 选择器"></a>id 选择器</h2><p>id 选择器以 “#” 来定义</p>
-<h2 id="CSS背景"><a href="#CSS背景" class="headerlink" title="CSS背景"></a>CSS背景</h2><h3 id="背景色"><a href="#背景色" class="headerlink" title="背景色"></a>背景色</h3><pre class=" language-css"><code class="language-css"><span class="token selector">page</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">/* 全景背景色 */</span>
-    <span class="token property">background-color</span><span class="token punctuation">:</span> blanchedalmond<span class="token punctuation">;</span>
+                <h2 id="CSS-框模型"><a href="#CSS-框模型" class="headerlink" title="CSS 框模型"></a>CSS 框模型</h2><p><img src="/2020/08/24/CSS%E5%AD%A6%E4%B9%A0-day3/0.PNG" alt></p>
+<h2 id="CSS-内边距"><a href="#CSS-内边距" class="headerlink" title="CSS 内边距"></a>CSS 内边距</h2><p><strong>padding</strong> 属性定义元素的内边距</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">view</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/* 设置各边边距 */</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">50</span>rpx<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.no1</span></span><span class="token punctuation">{</span>
-    <span class="token property">background-color</span><span class="token punctuation">:</span> blueviolet<span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">/* 设置内边距 */</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">20</span>rpx<span class="token punctuation">;</span>
+<p>另一种设置方式</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">view</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/* 上、右、下、左 */</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span><span class="token number">10</span>px <span class="token number">0.25</span>em <span class="token number">2</span>ex <span class="token number">20%</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<h3 id="CSS-文本"><a href="#CSS-文本" class="headerlink" title="CSS 文本"></a>CSS 文本</h3><pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.no2</span></span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">/* 文字缩进 */</span>
-    <span class="token property">text-indent</span><span class="token punctuation">:</span> <span class="token number">2</span>em<span class="token punctuation">;</span>
+<h2 id="CSS-边框"><a href="#CSS-边框" class="headerlink" title="CSS 边框"></a>CSS 边框</h2><p><strong>border-style</strong></p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>属性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>none</td>
+<td>定义无边框。</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>与 “none” 相同。不过应用于表时除外，对于表，hidden 用于解决边框冲突。</td>
+</tr>
+<tr>
+<td>dotted</td>
+<td>定义点状边框。在大多数浏览器中呈现为实线。</td>
+</tr>
+<tr>
+<td>dashed</td>
+<td>定义虚线。在大多数浏览器中呈现为实线。</td>
+</tr>
+<tr>
+<td>solid</td>
+<td>定义实线。</td>
+</tr>
+<tr>
+<td>double</td>
+<td>定义双线。双线的宽度等于 border-width 的值。</td>
+</tr>
+<tr>
+<td>groove</td>
+<td>定义 3D 凹槽边框。其效果取决于 border-color 的值。</td>
+</tr>
+<tr>
+<td>ridge</td>
+<td>定义 3D 垄状边框。其效果取决于 border-color 的值。</td>
+</tr>
+<tr>
+<td>inset</td>
+<td>定义 3D inset 边框。其效果取决于 border-color 的值。</td>
+</tr>
+<tr>
+<td>outset</td>
+<td>定义 3D outset 边框。其效果取决于 border-color 的值。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承边框样式。</td>
+</tr>
+</tbody></table>
+<p>定义单边样式：</p>
+<pre class=" language-css"><code class="language-css">    <span class="token property">border-style</span><span class="token punctuation">:</span> solid solid none solid<span class="token punctuation">;</span></code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token selector">view</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/* 上、右、下、左 */</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span><span class="token number">10</span>px <span class="token number">0.25</span>em <span class="token number">2</span>ex <span class="token number">20%</span><span class="token punctuation">;</span>
+    <span class="token property">border-style</span><span class="token punctuation">:</span> outset<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.no2</span></span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">/* 文字悬挂 需要与padding-left配合使用*/</span>
-    <span class="token property">text-indent</span><span class="token punctuation">:</span> -<span class="token number">5</span>em<span class="token punctuation">;</span> 
-    <span class="token property">padding-left</span><span class="token punctuation">:</span> <span class="token number">5</span>em<span class="token punctuation">;</span> 
+<p><img src="/2020/08/24/CSS%E5%AD%A6%E4%B9%A0-day3/1.PNG" alt></p>
+<h2 id="边框的宽度"><a href="#边框的宽度" class="headerlink" title="边框的宽度"></a>边框的宽度</h2><pre class=" language-css"><code class="language-css"><span class="token selector">view</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/* 边宽 */</span>
+    <span class="token property">border-width</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.no3</span></span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">/* 文字靠右 */</span>
-    <span class="token property">text-align</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.no5</span></span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">/* 字母间隔 */</span>
-    <span class="token property">letter-spacing</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<h4 id="text-transform"><a href="#text-transform" class="headerlink" title="text-transform"></a>text-transform</h4><p><strong>none</strong> 对文本不做任何改动，将使用源文档中的原有大小写。<br><strong>uppercase</strong>和<strong>lowercase</strong> 将文本转换为全大写和全小写字符。<br><strong>capitalize</strong>只对每个单词的首字母大写。</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.no5</span></span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">/* 调整字母大小写 */</span>
-    <span class="token property">text-transform</span><span class="token punctuation">:</span> uppercase<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<h4 id="text-decoration"><a href="#text-decoration" class="headerlink" title="text-decoration"></a>text-decoration</h4><ul>
-<li>none</li>
-<li>underline:下划线</li>
-<li>overline:在文本的顶端画一个上划线</li>
-<li>line-through:则在文本中间画一个贯穿线</li>
-<li>blink: 会让文本闪烁</li>
-</ul>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.no5</span></span><span class="token punctuation">{</span>
-    <span class="token property">text-decoration</span><span class="token punctuation">:</span> underline overline<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<h2 id="CSS-字体"><a href="#CSS-字体" class="headerlink" title="CSS 字体"></a>CSS 字体</h2><h3 id="font-style"><a href="#font-style" class="headerlink" title="font-style"></a>font-style</h3><ul>
-<li>normal - 文本正常显示</li>
-<li>italic - 文本斜体显示</li>
-<li>oblique - 文本倾斜显示</li>
-</ul>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.no2</span></span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">/* 文本倾斜 */</span>
-    <span class="token property">font-style</span><span class="token punctuation">:</span>italic<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<h3 id="bold字体加粗"><a href="#bold字体加粗" class="headerlink" title="bold字体加粗"></a>bold字体加粗</h3><pre class=" language-css"><code class="language-css"><span class="token selector">p<span class="token class">.normal</span> </span><span class="token punctuation">{</span><span class="token property">font-weight</span><span class="token punctuation">:</span>normal<span class="token punctuation">;</span><span class="token punctuation">}</span>
-<span class="token selector">p<span class="token class">.thick</span> </span><span class="token punctuation">{</span><span class="token property">font-weight</span><span class="token punctuation">:</span>bold<span class="token punctuation">;</span><span class="token punctuation">}</span>
-<span class="token selector">p<span class="token class">.thicker</span> </span><span class="token punctuation">{</span><span class="token property">font-weight</span><span class="token punctuation">:</span><span class="token number">900</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
-<h3 id="font-size-属性设置文本的大小。"><a href="#font-size-属性设置文本的大小。" class="headerlink" title="font-size 属性设置文本的大小。"></a>font-size 属性设置文本的大小。</h3><pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.no4</span></span><span class="token punctuation">{</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<p>定义单边宽度</p>
+<pre class=" language-css"><code class="language-css">    <span class="token property">border-width</span><span class="token punctuation">:</span> <span class="token number">15</span>px <span class="token number">5</span>px <span class="token number">15</span>px <span class="token number">5</span>px<span class="token punctuation">;</span></code></pre>
+<p><img src="/2020/08/24/CSS%E5%AD%A6%E4%B9%A0-day3/2.PNG" alt></p>
+<h2 id="边框颜色"><a href="#边框颜色" class="headerlink" title="边框颜色"></a>边框颜色</h2><p><strong>border-color</strong></p>
+<pre class=" language-css"><code class="language-css"> <span class="token property">border-color</span><span class="token punctuation">:</span> blue <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">96</span>, <span class="token number">128</span>, <span class="token number">162</span><span class="token punctuation">)</span> <span class="token hexcode">#ffb3a7</span> red<span class="token punctuation">;</span></code></pre>
+<h2 id="CSS-外边距-margin"><a href="#CSS-外边距-margin" class="headerlink" title="CSS 外边距 margin"></a>CSS 外边距 margin</h2><pre class=" language-css"><code class="language-css"><span class="token property">margin</span> <span class="token punctuation">:</span> <span class="token number">10</span>px <span class="token number">5</span>px <span class="token number">15</span>px <span class="token number">5</span>px<span class="token punctuation">;</span></code></pre>
+<p><img src="/2020/08/24/CSS%E5%AD%A6%E4%B9%A0-day3/3.PNG" alt></p>
+<h2 id="CSS-position-属性"><a href="#CSS-position-属性" class="headerlink" title="CSS position 属性"></a>CSS position 属性</h2><table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>absolute</td>
+<td>生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。</td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。</td>
+</tr>
+<tr>
+<td>relative</td>
+<td>生成相对定位的元素，相对于其正常位置进行定位。因此，”left:20” 会向元素的 LEFT 位置添加 20 像素。</td>
+</tr>
+<tr>
+<td>static</td>
+<td>默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 position 属性的值。</td>
+</tr>
+</tbody></table>
+<p><img src="/2020/08/24/CSS%E5%AD%A6%E4%B9%A0-day3/4.PNG" alt></p>
 
             </div>
             <hr/>
@@ -692,9 +747,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/08/24/CSS%E5%AD%A6%E4%B9%A0-day3/">
                     <div class="card-image">
@@ -712,9 +768,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -727,6 +783,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -745,13 +802,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/20/CSS%E5%AD%A6%E4%B9%A0-day1/">
+                <a href="/2020/08/22/CSS%E5%AD%A6%E4%B9%A0-day2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="CSS学习-day1">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="CSS学习-day2">
                         
-                        <span class="card-title">CSS学习-day1</span>
+                        <span class="card-title">CSS学习-day2</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -762,7 +819,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
                             </span>
                         <span class="publish-author">
                             
@@ -781,10 +838,6 @@
                     
                     <a href="/tags/CSS/">
                         <span class="chip bg-color">CSS</span>
-                    </a>
-                    
-                    <a href="/tags/CSS3/">
-                        <span class="chip bg-color">CSS3</span>
                     </a>
                     
                 </div>
