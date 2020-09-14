@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CSS学习-day3, 小李·博客">
+    <meta name="keywords" content="AS study-1, 小李·博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>CSS学习-day3 | 小李·博客</title>
+    <title>AS study-1 | 小李·博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -223,12 +223,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">CSS学习-day3</h1>
+                    <h1 class="description center-align post-title">AS study-1</h1>
                 </div>
             </div>
         </div>
@@ -250,8 +250,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/CSS/">
-                                <span class="chip bg-color">CSS</span>
+                            <a href="/tags/Android-Studio/">
+                                <span class="chip bg-color">Android Studio</span>
                             </a>
                         
                     </div>
@@ -262,8 +262,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                CSS学习
+                            <a href="/categories/AS-%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                AS 学习
                             </a>
                         
                     </div>
@@ -275,7 +275,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-24
+                    2020-09-11
                 </div>
                 
 
@@ -296,119 +296,92 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="CSS-框模型"><a href="#CSS-框模型" class="headerlink" title="CSS 框模型"></a>CSS 框模型</h2><p><img src="/2020/08/24/CSS%E5%AD%A6%E4%B9%A0-day3/0.PNG" alt></p>
-<h2 id="CSS-内边距"><a href="#CSS-内边距" class="headerlink" title="CSS 内边距"></a>CSS 内边距</h2><p><strong>padding</strong> 属性定义元素的内边距</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">view</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">/* 设置各边边距 */</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">50</span>rpx<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<p>另一种设置方式</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector">view</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">/* 上、右、下、左 */</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span><span class="token number">10</span>px <span class="token number">0.25</span>em <span class="token number">2</span>ex <span class="token number">20%</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<h2 id="CSS-边框"><a href="#CSS-边框" class="headerlink" title="CSS 边框"></a>CSS 边框</h2><p><strong>border-style</strong></p>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>属性</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>none</td>
-<td>定义无边框。</td>
-</tr>
-<tr>
-<td>hidden</td>
-<td>与 “none” 相同。不过应用于表时除外，对于表，hidden 用于解决边框冲突。</td>
-</tr>
-<tr>
-<td>dotted</td>
-<td>定义点状边框。在大多数浏览器中呈现为实线。</td>
-</tr>
-<tr>
-<td>dashed</td>
-<td>定义虚线。在大多数浏览器中呈现为实线。</td>
-</tr>
-<tr>
-<td>solid</td>
-<td>定义实线。</td>
-</tr>
-<tr>
-<td>double</td>
-<td>定义双线。双线的宽度等于 border-width 的值。</td>
-</tr>
-<tr>
-<td>groove</td>
-<td>定义 3D 凹槽边框。其效果取决于 border-color 的值。</td>
-</tr>
-<tr>
-<td>ridge</td>
-<td>定义 3D 垄状边框。其效果取决于 border-color 的值。</td>
-</tr>
-<tr>
-<td>inset</td>
-<td>定义 3D inset 边框。其效果取决于 border-color 的值。</td>
-</tr>
-<tr>
-<td>outset</td>
-<td>定义 3D outset 边框。其效果取决于 border-color 的值。</td>
-</tr>
-<tr>
-<td>inherit</td>
-<td>规定应该从父元素继承边框样式。</td>
-</tr>
-</tbody></table>
-<p>定义单边样式：</p>
-<pre class=" language-css"><code class="language-css">    <span class="token property">border-style</span><span class="token punctuation">:</span> solid solid none solid<span class="token punctuation">;</span></code></pre>
-<pre class=" language-css"><code class="language-css"><span class="token selector">view</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">/* 上、右、下、左 */</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span><span class="token number">10</span>px <span class="token number">0.25</span>em <span class="token number">2</span>ex <span class="token number">20%</span><span class="token punctuation">;</span>
-    <span class="token property">border-style</span><span class="token punctuation">:</span> outset<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<p><img src="/2020/08/24/CSS%E5%AD%A6%E4%B9%A0-day3/1.PNG" alt></p>
-<h2 id="边框的宽度"><a href="#边框的宽度" class="headerlink" title="边框的宽度"></a>边框的宽度</h2><pre class=" language-css"><code class="language-css"><span class="token selector">view</span><span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">/* 边宽 */</span>
-    <span class="token property">border-width</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<p>定义单边宽度</p>
-<pre class=" language-css"><code class="language-css">    <span class="token property">border-width</span><span class="token punctuation">:</span> <span class="token number">15</span>px <span class="token number">5</span>px <span class="token number">15</span>px <span class="token number">5</span>px<span class="token punctuation">;</span></code></pre>
-<p><img src="/2020/08/24/CSS%E5%AD%A6%E4%B9%A0-day3/2.PNG" alt></p>
-<h2 id="边框颜色"><a href="#边框颜色" class="headerlink" title="边框颜色"></a>边框颜色</h2><p><strong>border-color</strong></p>
-<pre class=" language-css"><code class="language-css"> <span class="token property">border-color</span><span class="token punctuation">:</span> blue <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">96</span>, <span class="token number">128</span>, <span class="token number">162</span><span class="token punctuation">)</span> <span class="token hexcode">#ffb3a7</span> red<span class="token punctuation">;</span></code></pre>
-<h2 id="CSS-外边距-margin"><a href="#CSS-外边距-margin" class="headerlink" title="CSS 外边距 margin"></a>CSS 外边距 margin</h2><pre class=" language-css"><code class="language-css"><span class="token property">margin</span> <span class="token punctuation">:</span> <span class="token number">10</span>px <span class="token number">5</span>px <span class="token number">15</span>px <span class="token number">5</span>px<span class="token punctuation">;</span></code></pre>
-<p><img src="/2020/08/24/CSS%E5%AD%A6%E4%B9%A0-day3/3.PNG" alt></p>
-<h2 id="CSS-position-属性"><a href="#CSS-position-属性" class="headerlink" title="CSS position 属性"></a>CSS position 属性</h2><table>
-<thead>
-<tr>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>absolute</td>
-<td>生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。</td>
-</tr>
-<tr>
-<td>fixed</td>
-<td>生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。</td>
-</tr>
-<tr>
-<td>relative</td>
-<td>生成相对定位的元素，相对于其正常位置进行定位。因此，”left:20” 会向元素的 LEFT 位置添加 20 像素。</td>
-</tr>
-<tr>
-<td>static</td>
-<td>默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。</td>
-</tr>
-<tr>
-<td>inherit</td>
-<td>规定应该从父元素继承 position 属性的值。</td>
-</tr>
-</tbody></table>
-<p><img src="/2020/08/24/CSS%E5%AD%A6%E4%B9%A0-day3/4.PNG" alt></p>
+                <h1 id="Android-Studio-学习-Day1"><a href="#Android-Studio-学习-Day1" class="headerlink" title="Android Studio 学习 Day1"></a>Android Studio 学习 Day1</h1><blockquote>
+<p>《第一行代码（Android)》第二版 第三章</p>
+</blockquote>
+<h2 id="3-UI开发"><a href="#3-UI开发" class="headerlink" title="3.UI开发"></a>3.UI开发</h2><h3 id="3-2-常见控件的使用"><a href="#3-2-常见控件的使用" class="headerlink" title="3.2 常见控件的使用"></a>3.2 常见控件的使用</h3><h4 id="TextView"><a href="#TextView" class="headerlink" title="TextView"></a>TextView</h4><ul>
+<li><strong>修改文字对齐方式</strong><pre class=" language-java"><code class="language-java">android<span class="token operator">:</span>gravity<span class="token operator">=</span><span class="token string">"center"</span></code></pre>
+</li>
+<li><strong>修改文字大小颜色</strong><pre class=" language-java"><code class="language-java">      android<span class="token operator">:</span>textSize<span class="token operator">=</span><span class="token string">"24sp"</span>
+      android<span class="token operator">:</span>textColor<span class="token operator">=</span><span class="token string">"#065279"</span></code></pre>
+</li>
+</ul>
+<h4 id="Button"><a href="#Button" class="headerlink" title="Button"></a>Button</h4><ul>
+<li><p>系统会对text中的内容自动转换为大写，可任意禁用该属性</p>
+<pre class=" language-java"><code class="language-java">android<span class="token operator">:</span>textAllCaps<span class="token operator">=</span><span class="token string">"false"</span></code></pre>
+</li>
+<li><p><strong>注册监听器（匿名类）</strong></p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span>Bundle savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">setContentView</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>layout<span class="token punctuation">.</span>activity_main<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      Button button <span class="token operator">=</span><span class="token punctuation">(</span>Button<span class="token punctuation">)</span><span class="token function">findViewById</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>button<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      button<span class="token punctuation">.</span><span class="token function">setOnClickListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">View<span class="token punctuation">.</span>OnClickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token annotation punctuation">@Override</span>
+          <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span>View view<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token comment" spellcheck="true">//逻辑代码</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span></code></pre>
+</li>
+<li><p><strong>注册监听器（接口式）</strong></p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MainActivity</span> <span class="token keyword">extends</span> <span class="token class-name">AppCompatActivity</span> <span class="token keyword">implements</span> <span class="token class-name">View<span class="token punctuation">.</span>OnClickListener</span><span class="token punctuation">{</span>
 
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span>Bundle savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">setContentView</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>layout<span class="token punctuation">.</span>activity_main<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      Button button <span class="token operator">=</span> <span class="token punctuation">(</span>Button<span class="token punctuation">)</span> <span class="token function">findViewById</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>button<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      button<span class="token punctuation">.</span><span class="token function">setOnClickListener</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span>View v<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">switch</span> <span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token keyword">case</span> R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>button<span class="token operator">:</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token keyword">default</span><span class="token operator">:</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
+</ul>
+<h4 id="EditText"><a href="#EditText" class="headerlink" title="EditText"></a>EditText</h4><blockquote>
+<p>允许用户再控件李输入和编辑内容、并可以再程序中对这些内容进行处理。主要用于发短信、发微博、聊QQ等</p>
+</blockquote>
+<ul>
+<li><p>输入框中显示提示文字</p>
+<pre class=" language-java"><code class="language-java">android<span class="token operator">:</span>hint<span class="token operator">=</span><span class="token string">"Type something here"</span><span class="token operator">/</span><span class="token operator">></span></code></pre>
+</li>
+<li><p>设置最大行数，多余的向上滚动</p>
+<pre class=" language-java"><code class="language-java">android<span class="token operator">:</span>maxLines<span class="token operator">=</span><span class="token string">"2"</span></code></pre>
+<h4 id="EditText与Button结合"><a href="#EditText与Button结合" class="headerlink" title="EditText与Button结合"></a>EditText与Button结合</h4></li>
+<li><p>实现效果：点击按钮获取EditText中输入内容</p>
+</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MainActivity</span> <span class="token keyword">extends</span> <span class="token class-name">AppCompatActivity</span> <span class="token keyword">implements</span> <span class="token class-name">View<span class="token punctuation">.</span>OnClickListener</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> EditText editText<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onCreate</span><span class="token punctuation">(</span>Bundle savedInstanceState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setContentView</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>layout<span class="token punctuation">.</span>activity_main<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Button button <span class="token operator">=</span> <span class="token punctuation">(</span>Button<span class="token punctuation">)</span> <span class="token function">findViewById</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>button<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        editText <span class="token operator">=</span> <span class="token punctuation">(</span>EditText<span class="token punctuation">)</span><span class="token function">findViewById</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>edit_text<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        button<span class="token punctuation">.</span><span class="token function">setOnClickListener</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onClick</span><span class="token punctuation">(</span>View v<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">getId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">case</span> R<span class="token punctuation">.</span>id<span class="token punctuation">.</span>button<span class="token operator">:</span>
+                String inputText <span class="token operator">=</span>editText<span class="token punctuation">.</span><span class="token function">getText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                Toast<span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span> MainActivity<span class="token punctuation">.</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token string">"inputText"</span><span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">default</span><span class="token operator">:</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="ImageView"><a href="#ImageView" class="headerlink" title="ImageView"></a>ImageView</h4>
             </div>
             <hr/>
 
@@ -441,8 +414,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/CSS/">
-                                    <span class="chip bg-color">CSS</span>
+                                <a href="/tags/Android-Studio/">
+                                    <span class="chip bg-color">Android Studio</span>
                                 </a>
                             
                         </div>
@@ -747,9 +720,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/09/11/AS-study-1/">
                     <div class="card-image">
@@ -767,9 +741,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-09-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -782,6 +756,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -800,13 +775,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/22/CSS%E5%AD%A6%E4%B9%A0-day2/">
+                <a href="/2020/08/24/CSS%E5%AD%A6%E4%B9%A0-day3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="CSS学习-day2">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="CSS学习-day3">
                         
-                        <span class="card-title">CSS学习-day2</span>
+                        <span class="card-title">CSS学习-day3</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -817,7 +792,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-24
                             </span>
                         <span class="publish-author">
                             
