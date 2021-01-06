@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="计算机网络基础-Day1, 小李·博客">
+    <meta name="keywords" content="《计算机网络基础》复习4, 小李·博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>计算机网络基础-Day1 | 小李·博客</title>
+    <title>《计算机网络基础》复习4 | 小李·博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -223,12 +223,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/source/images/xxx.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计算机网络基础-Day1</h1>
+                    <h1 class="description center-align post-title">《计算机网络基础》复习4</h1>
                 </div>
             </div>
         </div>
@@ -248,12 +248,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">计算机网络基础</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%A4%8D%E4%B9%A0/">
+                                <span class="chip bg-color">复习</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/" class="post-category">
+                                计算机网络基础复习
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -262,7 +279,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-14
+                    2021-01-06
                 </div>
                 
 
@@ -283,7 +300,231 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="1-2-网络组件"><a href="#1-2-网络组件" class="headerlink" title="1.2 网络组件"></a>1.2 网络组件</h1><h2 id="1-2-1-主机角色"><a href="#1-2-1-主机角色" class="headerlink" title="1.2.1 主机角色"></a>1.2.1 主机角色</h2><p>1） 连接到网络并直接参与网络通信的所有计算机都属于主机<br>2） 主机可以被称为终端设备<br>3） IP地址表示主机和主机所连接的网络</p>
+                <h1 id="第四章-网络层"><a href="#第四章-网络层" class="headerlink" title="第四章 网络层"></a>第四章 网络层</h1><h2 id="4-1-网络层概述"><a href="#4-1-网络层概述" class="headerlink" title="4.1 网络层概述"></a>4.1 网络层概述</h2><ul>
+<li>提供主机到主机的数据传输服务</li>
+<li>网络层应该具备什么功能？<strong>路由和分组转发</strong></li>
+<li>为了标明网络中的路由，应该怎样标识网络中的节点？<strong>IP地址</strong></li>
+<li>路由器根据<strong><em>路由表</em></strong>信息转发分组</li>
+<li>路由器根据<strong>路由协议和路由算法</strong>获得网络中的路由信息</li>
+<li>路由器<strong>根据下一个网络的链路层协议封装数据帧，从对应的端口发送出去</strong>来转发分组</li>
+<li><strong>数据分片</strong></li>
+<li>分片之后在<strong>目的主机重组</strong></li>
+</ul>
+<h3 id="4-1-1-网络层作用"><a href="#4-1-1-网络层作用" class="headerlink" title="4.1.1 网络层作用"></a>4.1.1 网络层作用</h3><ul>
+<li>从发送主机向接受主机传送数据段</li>
+<li>发送主机：将数据段封装到数据报中</li>
+<li>接收主机：向传输层交付数据段</li>
+<li><strong>每个</strong>主机和路由器都运行网络层协议</li>
+<li>路由器检验所有穿越它的IP数据报的头部域<ul>
+<li>决策如何处理IP数据报</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-1-2-网络层主要功能"><a href="#4-1-2-网络层主要功能" class="headerlink" title="4.1.2 网络层主要功能"></a>4.1.2 网络层主要功能</h3><p><strong>转发与路由</strong></p>
+<blockquote>
+<p>路由协议确定通过网络的端到端路径，准发表确定在本路由器如何转发分组</p>
+</blockquote>
+<h3 id="4-1-3-数据平面和控制平面概念"><a href="#4-1-3-数据平面和控制平面概念" class="headerlink" title="4.1.3 数据平面和控制平面概念"></a>4.1.3 数据平面和控制平面概念</h3><p><strong>数据平面：</strong>  </p>
+<pre><code>    * 每个路由器都具备
+    * 决定输入端口到来的数据报怎样发送到输出端口
+    * 转发功能</code></pre><p><strong>控制平面:</strong></p>
+<pre><code>    * 全网逻辑
+    * 确定数据报如何在路由器之间沿着从源主机到目的主机之间的路由转发
+    * 两种控制平面的方法：
+        * 传统路由算法：路由器中实现
+        * software-defined networking(SDN):远程服务实现</code></pre><p>每个路由器中独立的路由算法组件在控制平面中相互作用</p>
+<h3 id="4-1-4-网络层服务类型"><a href="#4-1-4-网络层服务类型" class="headerlink" title="4.1.4 网络层服务类型"></a>4.1.4 网络层服务类型</h3><p><strong>无连接服务</strong></p>
+<ul>
+<li>不事先为系列分组的传输确定传输路径</li>
+<li>每个分组独立确定传输路径</li>
+<li>不同分组可能传输路径不同</li>
+<li><strong>数据报网络</strong></li>
+</ul>
+<p><strong>连接服务</strong></p>
+<ul>
+<li>首先为系列分组的传输确定从源到目的经过的路径（建立连接）</li>
+<li>然后沿该路径（连接）传输系列分组</li>
+<li>系列分组传输路径相同</li>
+<li>传输结束后拆除连接</li>
+<li><strong>虚电路网络</strong> ：H1发送给H2的所有分组都沿着同一条虚电路发送</li>
+</ul>
+<h2 id="4-2-IPv4协议"><a href="#4-2-IPv4协议" class="headerlink" title="4.2 IPv4协议"></a>4.2 IPv4协议</h2><h3 id="4-2-1-IP协议作用"><a href="#4-2-1-IP协议作用" class="headerlink" title="4.2.1 IP协议作用"></a>4.2.1 IP协议作用</h3><ul>
+<li><p><strong>IP协议</strong>：1.寻址规约</p>
+<pre><code>    2.数据报（分组）格式
+    3.分组处理规约</code></pre></li>
+<li><p><strong>ICMP协议</strong>：1.差错报告</p>
+<pre><code>      2.路由器“信令”</code></pre></li>
+</ul>
+<h3 id="4-2-2-IP首部格式"><a href="#4-2-2-IP首部格式" class="headerlink" title="4.2.2 IP首部格式"></a>4.2.2 IP首部格式</h3><p><img src="/2021/01/06/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A04/0.PNG" alt><br><strong>版本号</strong>：4位，IP协议的版本号<br><strong>首部长度</strong>：4位，以4字节位单位。e.g. 5-&gt;IP首部长度为20=5x4字节<br><strong>服务类型</strong>：8位<br><strong>总长度</strong>：16位，IP分组的总长度，首部+数据<br>       最大IP分组的总长度：65535B<br>       最小的IP分组首部：20B<br>       IP分组可以封装的最大数据：65535-20=65515B<br><strong>生存事件TTL</strong>：8位，IP分组在网络中可以通过的路由器数（或跳步数）<br>            路由器转发一次分组，TTL-1<br>            如果TTL=0，路由器则丢弃该IP分组<br><strong>协议</strong>：8位，指示IP分组封装的是哪个协议的数据包<br>        实现复用/分解<br>        6为TCP,17为UDP<br><strong>首部校验和</strong>：16位，计算校验和时，该字段全置0<br>            采用反码算数运算求和，和的反码作为首部校验和字段<br>            逐跳计算、逐跳校验<br><strong>源IP地址、目的IP地址</strong>：各32位<br><strong>选项字段</strong>：长度可变，在1 ~ 40B之间，携带安全、源 选路径、时间戳和路由记录等内容<br><strong>填充字段</strong>：0~3B，即保证首部长度是4字节的倍数<br><strong>标识</strong>：16位，IP协议利用计数器，每产生IP分组计数器+1，作为该IP分组的标识<br><strong>标志位</strong>：3位，DF（Don’t Fragment),DF=1  禁止分片；MF（More Fragment) MF=1 非最后一片<br><strong>片偏移</strong>：13位，片品阿姨字段以<code>8字节为单位</code></p>
+<h3 id="4-2-3-IP分片与重组"><a href="#4-2-3-IP分片与重组" class="headerlink" title="4.2.3 IP分片与重组"></a>4.2.3 IP分片与重组</h3><blockquote>
+<p>每段数据链路使用不同协议、不同长度</p>
+</blockquote>
+<p><strong>MTU</strong> (最大传输单元)—链路层数 据帧可封装数据的上限<br><img src="/2021/01/06/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A04/1.PNG" alt></p>
+<h3 id="4-2-4-IP地址概念"><a href="#4-2-4-IP地址概念" class="headerlink" title="4.2.4 IP地址概念"></a>4.2.4 IP地址概念</h3><p><strong>接口</strong>：主机/路由器与物理链路的连接<br>    实现网络层功能<br>    路由器通常有多个接口<br>    主机通常只有一个或两个接口（e.g. 有线的以太网接口，无线的802.11接口<br><strong>IP地址</strong>：32个比特(IPv4)<br><strong>网络号(NetID)</strong>-高位比特<br><strong>主机号（HostID)</strong>-低位比特<br>IP子网：<br>    IP地址具有相同网络号的设备接口<br>    不跨越路由器可以彼此来连通的接口</p>
+<p><strong>A类地址</strong>：NetID(0:8位)+HostID(24位) 0.0.0.0 ~ 127.255.255.255（01111111.1111111.11111111.11111111）<br><strong>B类地址</strong>：NetID(10:16位)+HostID(16位)128（1000 0000）.0.0.0 ~ 191（1011 1111）.255.255.255<br><strong>C类地址</strong>：NetID(110:24位)+HostID(8位)192（1100 0000）.0.0.0 ~ 223（1101 1111）.255.255.255<br><strong>D类地址</strong>：1110 224.0.0.0 ~ 239.255.255.255<br><strong>E类地址</strong>：1111 240.0.0.0 ~ 255.255.255.255<br><img src="/2021/01/06/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A04/2.PNG" alt></p>
+<p>私有IP地址</p>
+<table>
+<thead>
+<tr>
+<th>class</th>
+<th>NetIDs</th>
+<th>Blocks</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>10</td>
+<td>1</td>
+</tr>
+<tr>
+<td>B</td>
+<td>172.16 to 172.31</td>
+<td>32</td>
+</tr>
+<tr>
+<td>C</td>
+<td>192.168.0 to 192.168.255</td>
+<td>256</td>
+</tr>
+</tbody></table>
+<h3 id="4-2-5-子网划分（含变长子网）"><a href="#4-2-5-子网划分（含变长子网）" class="headerlink" title="4.2.5 子网划分（含变长子网）"></a>4.2.5 子网划分（含变长子网）</h3><p><strong>IP地址</strong>：</p>
+<ul>
+<li>网络号（NetID)-高位比特</li>
+<li>子网号（SubID)-原网络主机号部分比特</li>
+<li>主机号（HostID)-低位比特</li>
+</ul>
+<p><img src="/2021/01/06/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A04/3.PNG" alt><br>如何确定是否划分了子网？利用多少位划分子网？ <strong>子网掩码</strong><br><strong>子网掩码</strong>：有32位，点分十进制<br>        取值：NetID、SubID位全取1<br>            HostID位全取0<br>        e.g. A网的默认子网掩码为：255.0.0.0<br>             B类的默认子网掩码为：255.255.0.0<br>             C类的默认子网掩码为：255.255.255.0<br>             借用3比特划分子网的B网的子网掩码为：255.255.224.0</p>
+<p><img src="/2021/01/06/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A04/4.PNG" alt><br><img src="/2021/01/06/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A04/5.PNG" alt></p>
+<h3 id="4-2-6-CIDR与超网"><a href="#4-2-6-CIDR与超网" class="headerlink" title="4.2.6 CIDR与超网"></a>4.2.6 CIDR与超网</h3><p>无类域间路由CIDR</p>
+<ul>
+<li>NetID+SubID-&gt;Network Prefix(Prefix)可以任意长度</li>
+<li>融合子网地址与子网掩码，方便子网划分。无类地址格式：a.b.c.d/x，其中x为前缀长度<br><code>-------Prefix-----------</code>  –HostID–<br><code>11001000 00010111 000100</code>0 000000000</li>
+</ul>
+<p>200.23.16.0/23</p>
+<ul>
+<li>子网201.2.3.64，<code>255.255.255.192</code>-&gt;201.2.3.64/<code>26</code></li>
+</ul>
+<p>CIDR和超网</p>
+<ul>
+<li>提高IPv4地址空间分配效率</li>
+<li>提高路由效率<ul>
+<li>将多个子网聚合为一个较大的子网</li>
+<li>构造超网（supernetting)</li>
+<li>路由聚合(route aggregation)</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-2-7-路由转发分组原则"><a href="#4-2-7-路由转发分组原则" class="headerlink" title="4.2.7 路由转发分组原则"></a>4.2.7 路由转发分组原则</h3><ul>
+<li>路由算法确定去往目的网络的最佳路径</li>
+<li>转发表确定在本路由器如何转发分组</li>
+</ul>
+<h2 id="4-3-路由算法"><a href="#4-3-路由算法" class="headerlink" title="4.3 路由算法"></a>4.3 路由算法</h2><h3 id="4-3-1-控制平面两种实现方式"><a href="#4-3-1-控制平面两种实现方式" class="headerlink" title="4.3.1 控制平面两种实现方式"></a>4.3.1 控制平面两种实现方式</h3><ul>
+<li><p>传统路由算法：路由器中实现</p>
+</li>
+<li><p>SDN：远程服务实现</p>
+<h3 id="4-3-2-路由选择算法及其分类"><a href="#4-3-2-路由选择算法及其分类" class="headerlink" title="4.3.2 路由选择算法及其分类"></a>4.3.2 路由选择算法及其分类</h3></li>
+<li><p><strong>路由算法</strong>：寻找最小费用路径的算法</p>
+</li>
+<li><p>分类：<strong>静态路由、动态路由</strong></p>
+<ul>
+<li>静态路由：手工配置、路由更新慢、优先级高</li>
+<li>动态路由：路由更新快（定期更新、及时响应链路费用或网络拓扑变化</li>
+</ul>
+</li>
+<li><p><strong>全局信息和分散信息</strong></p>
+<ul>
+<li>所有路由器掌握完整的网络拓扑和链路费用信息</li>
+<li>e.g. 链路状态(LS)路由算法</li>
+</ul>
+</li>
+<li><p><strong>分散信息</strong></p>
+<ul>
+<li>路由器值掌握物理相连的邻居以及链路费用</li>
+<li>邻居间信息交换、运算的迭代过程</li>
+<li>e.g.距离向量（DV）的路由算法</li>
+</ul>
+</li>
+</ul>
+<p><strong>距离向量路由算法</strong><br>Bellman-Ford方程（动态规划）<br><img src="/2021/01/06/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A04/6.PNG" alt></p>
+<ul>
+<li>每个结点不定时地将其自身地DV估计发送给其邻居</li>
+<li>当x接收到邻居地新地DV估计时，即依据B-F更新其自身地距离向量估计:<br> Dx(y)&lt;-minv{c(x,v)+Dv(y)}  for each node y belong to N</li>
+<li>Dx(y)将最终收敛于实际地最小费用dx(y)</li>
+<li>异步迭代，引发每次迭代地因素：<ul>
+<li>局部链路费用改变</li>
+<li>来自邻居DV更新</li>
+</ul>
+</li>
+<li>分布式，每个节点只当DV变化时才通告给邻居</li>
+</ul>
+<h3 id="4-3-3-ICMP"><a href="#4-3-3-ICMP" class="headerlink" title="4.3.3 ICMP"></a>4.3.3 ICMP</h3><p><strong>ICMP</strong>：互联网控制报文协议，支持主机或路由器、差错（或异常）报告、网络探寻<br><strong>两类ICMP报文</strong>：</p>
+<ul>
+<li>差错报告报文（5种）<ul>
+<li>目的不可达</li>
+<li>源抑制</li>
+<li>超时/超期</li>
+<li>参数问题</li>
+<li>重定向</li>
+</ul>
+</li>
+<li>网络探询报文<ul>
+<li>回声请求与应答报文</li>
+<li>时间戳请求与应答报文</li>
+</ul>
+</li>
+</ul>
+<p><img src="/2021/01/06/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A04/9.PNG" alt></p>
+<p><strong>几种不发送ICMP差错报告报文的特殊情况</strong></p>
+<ul>
+<li>对ICMP差错报告报文不再发送ICMP差错报告报文</li>
+<li>除第1个IP数据报分片外，对所有后续分片均不发送ICMP差错报告报文</li>
+<li>对所有多播IP数据报均不发送ICMP差错报告报文</li>
+<li>对具有特殊地址（如127.0.00或0.0.0.0）的IP数据报不发送ICMP差错报告报文</li>
+</ul>
+<p><strong>几种ICMP报文不再使用</strong></p>
+<ul>
+<li>信息请求与应答报文</li>
+<li>子网掩码请求和应答报文</li>
+<li>路由器询问和通告报文</li>
+</ul>
+<p><img src="/2021/01/06/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A04/8.PNG" alt></p>
+<p><strong>停止准则</strong>：</p>
+<ul>
+<li>UDP数据报最终到达目的主机</li>
+<li>目的主机返回“目的端口不可达”ICMP报文（type=3,code=3)</li>
+<li>源主机停止</li>
+</ul>
+<h3 id="4-3-4-OSPF"><a href="#4-3-4-OSPF" class="headerlink" title="4.3.4 OSPF"></a>4.3.4 OSPF</h3><p><strong>概念</strong>：</p>
+<ul>
+<li>“开放”：公众可用</li>
+<li>采用链路状态路由算法<ul>
+<li>LS分组扩散（通告）</li>
+<li>每个路由器构造完整地网络(AS)拓扑图</li>
+<li>利用Dijkstra算法计算路由</li>
+</ul>
+</li>
+<li>OSPF通告中每个入口对应一个邻居</li>
+<li>OSPF通告在整个AS范围泛洪，OSPF报文直接封装到IP数据报中</li>
+<li>与OSPF极其相似地一个路由协议：IS-IS路由协议</li>
+</ul>
+<p><strong>优点（RIP不具备</strong>）：</p>
+<ul>
+<li>安全：所有OSPF报文可以被认证（预防恶意入侵）</li>
+<li>允许使用多条相同费用地路径（RIP只能选一条）</li>
+<li>对于每条链路，可以针对不同地TOS设置在多个不同地费用度量</li>
+<li>集成单播路由与多播路由：<ul>
+<li>多播OSPF协议(MOSPF)与OSPF利用相同地网络拓扑结构</li>
+</ul>
+</li>
+<li>OSPF支持带大规模AS分层</li>
+</ul>
+<p><strong>分层地OSPF</strong>：<br>两极分层：<strong>局部区</strong>、<strong>主干区</strong></p>
+<ul>
+<li>链路状态通告只限于区内</li>
+<li>每个路由器掌握所在区地详细拓扑结构</li>
+<li>只知道去往其他区网络的“方向”（最短路径）</li>
+</ul>
+<p><img src="/2021/01/06/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A04/7.PNG" alt><br><strong>区边界路由器</strong>：“汇总”到达所在区网络的距离，通告给其他区边界路由器<br><strong>主干路由器</strong>：在主干区内允许OSPF路由算法<br><strong>AS边界路由算法</strong>：连接其他AS</p>
 
             </div>
             <hr/>
@@ -316,7 +557,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">计算机网络基础</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%A4%8D%E4%B9%A0/">
+                                    <span class="chip bg-color">复习</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -619,9 +868,69 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/01/06/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A04/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="《计算机网络基础》复习4">
+                        
+                        <span class="card-title">《计算机网络基础》复习4</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            第四章 网络层4.1 网络层概述
+提供主机到主机的数据传输服务
+网络层应该具备什么功能？路由和分组转发
+为了标明网络中的路由，应该怎样标识网络中的节点？IP地址
+路由器根据路由表信息转发分组
+路由器根据路由协议和路由算法获得网络中的路由信息
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/" class="post-category">
+                                    计算机网络基础复习
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">计算机网络基础</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A4%8D%E4%B9%A0/">
+                        <span class="chip bg-color">复习</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/01/05/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A01/">
                     <div class="card-image">
@@ -645,9 +954,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -669,55 +978,6 @@
                     
                     <a href="/tags/%E5%A4%8D%E4%B9%A0/">
                         <span class="chip bg-color">复习</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/09/24/AS-study-3/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="AS-study-3">
-                        
-                        <span class="card-title">AS-study-3</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            学习Android Studio的第三天
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-24
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/AS-%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    AS 学习
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Android-Studio/">
-                        <span class="chip bg-color">Android Studio</span>
                     </a>
                     
                 </div>
