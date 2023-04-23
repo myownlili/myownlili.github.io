@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Keep Team">
+    
+    <title>
+        
+            【LeetCode】26.删除排序数组中的重复项 |
+        
+        Keep Theme
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               Keep Theme
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">【LeetCode】26.删除排序数组中的重复项</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Keep Team</span>
+                            
+                                <span class="author-label">Lv4</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2022-03-25 16:51:37</span>
+        <span class="mobile">2022-03-25 16:51</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2022-03-25 17:31:24</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/LeetCode/">LeetCode</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%88%B7%E9%A2%98/">刷题</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/LeetCode/">LeetCode</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9/">删除重复项</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给你一个 <strong>升序排列</strong> 的数组 <code>nums</code> ，请你 <strong><a target="_blank" rel="noopener" href="http://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a></strong> 删除重复出现的元素，使每个元素 <strong>只出现一次</strong> ，返回删除后数组的新长度。元素的 <strong>相对顺序</strong> 应该保持 <strong>一致</strong> 。</p>
+<p>由于在某些语言中不能改变数组的长度，所以必须将结果放在数组nums的第一部分。更规范地说，如果在删除重复项之后有 <code>k</code> 个元素，那么 <code>nums</code> 的前 <code>k</code> 个元素应该保存最终结果。</p>
+<p>将最终结果插入 <code>nums</code> 的前 <code>k</code> 个位置后返回 <code>k</code> 。</p>
+<p>不要使用额外的空间，你必须在 <strong><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a> 修改输入数组</strong> 并在使用 O(1) 额外空间的条件下完成。</p>
+<p><strong>判题标准:</strong></p>
+<p>系统会用下面的代码来测试你的题解:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] nums = [...]; <span class="comment">// 输入数组</span></span><br><span class="line"><span class="type">int</span>[] expectedNums = [...]; <span class="comment">// 长度正确的期望答案</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> removeDuplicates(nums); <span class="comment">// 调用</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">assert</span> k == expectedNums.length;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">    <span class="keyword">assert</span> nums[i] == expectedNums[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果所有断言都通过，那么您的题解将被 <strong>通过</strong>。</p>
+<p><strong>示例 1：</strong></p>
+<blockquote>
+<p><strong>输入：</strong>nums &#x3D; [1,1,2]<br><strong>输出：</strong>2, nums &#x3D; [1,2,_ ]<br><strong>解释：</strong>函数应该返回新的长度 <strong><code>2</code></strong> ，并且原数组 <em>nums</em> 的前两个元素被修改为 <strong><code>1</code></strong>, <strong><code>2</code></strong> <code>。</code>不需要考虑数组中超出新长度后面的元素。</p>
+</blockquote>
+<p><strong>示例 2：</strong></p>
+<blockquote>
+<p><strong>输入：</strong>nums &#x3D; [0,0,1,1,1,2,2,3,3,4]<br><strong>输出：</strong>5, nums &#x3D; [0,1,2,3,4]<br><strong>解释：</strong>函数应该返回新的长度 <strong><code>5</code></strong> ， 并且原数组 <em>nums</em> 的前五个元素被修改为 <strong><code>0</code></strong>, <strong><code>1</code></strong>, <strong><code>2</code></strong>, <strong><code>3</code></strong>, <strong><code>4</code></strong> 。不需要考虑数组中超出新长度后面的元素。</p>
+</blockquote>
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>0 &lt;= nums.length &lt;= 3 * 104</code></li>
+<li><code>-104 &lt;= nums[i] &lt;= 104</code></li>
+<li><code>nums</code> 已按 <strong>升序</strong> 排列</li>
+</ul>
+<h2 id="抄写"><a href="#抄写" class="headerlink" title="抄写"></a>抄写</h2><h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> removeDuplicates = <span class="keyword">function</span>(<span class="params">nums</span>)&#123;</span><br><span class="line">	<span class="keyword">const</span> n = nums.<span class="property">length</span>;</span><br><span class="line">	<span class="keyword">if</span>(n === <span class="number">0</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">let</span> fast = <span class="number">1</span>,slow = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(fast &lt; n)&#123;</span><br><span class="line">		<span class="keyword">if</span>(nums[fast] !== nums[fast-<span class="number">1</span>])&#123;</span><br><span class="line">			nums[slow] = nums[fast];</span><br><span class="line">			++slow;</span><br><span class="line">		&#125;</span><br><span class="line">		++fast;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> slow</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220325/%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9js.2ax1u2j4rx8g.webp"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220325/%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9JS2.itclqwmup7c.webp"></p>
+<h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span> <span class="title function_">removeDuplicates</span><span class="params">(<span class="type">int</span>[] nums)</span>&#123;</span><br><span class="line">		<span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> nums.length;</span><br><span class="line">		<span class="type">int</span> <span class="variable">fast</span> <span class="operator">=</span> <span class="number">1</span>,slow = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span>(num == <span class="number">0</span>)&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span>(fast &lt; num)&#123;</span><br><span class="line">			<span class="keyword">if</span>(nums[fast] != nums[fast-<span class="number">1</span>])&#123;</span><br><span class="line">				nums[slow] = nums[fast];</span><br><span class="line">				++slow;</span><br><span class="line">			&#125;</span><br><span class="line">			++fast;</span><br><span class="line">		&#125;		</span><br><span class="line">		<span class="keyword">return</span> slow;		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220325/%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9java.64zeyf5h7co0.webp"></p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E5%88%B7%E9%A2%98/">#刷题</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/LeetCode/">#LeetCode</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E9%A1%B9/">#删除重复项</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2022/03/25/%E3%80%90LeetCode%E3%80%91283.%E7%A7%BB%E5%8A%A8%E9%9B%B6/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">【LeetCode】283.移动零</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2022/03/24/%E3%80%90LeetCode%E3%80%9127.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【LeetCode】27.移除元素</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Keep Team</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+</body>
+</html>

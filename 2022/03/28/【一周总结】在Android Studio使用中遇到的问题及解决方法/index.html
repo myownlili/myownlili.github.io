@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Keep Team">
+    
+    <title>
+        
+            【一周总结】在Android Studio使用中遇到的问题及解决方法 |
+        
+        Keep Theme
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               Keep Theme
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">【一周总结】在Android Studio使用中遇到的问题及解决方法</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Keep Team</span>
+                            
+                                <span class="author-label">Lv4</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2022-03-28 11:40:05</span>
+        <span class="mobile">2022-03-28 11:40</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2022-03-28 12:03:09</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E4%B8%80%E5%91%A8%E6%80%BB%E7%BB%93/">一周总结</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Android-Studio/">Android Studio</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Android/">Android</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>就是在安装Android Studio阿里云依赖遇到的一些问题。比如在哪里安装依赖？安装哪些依赖？为什么会报错？</p>
+<h3 id="在哪里安装依赖"><a href="#在哪里安装依赖" class="headerlink" title="在哪里安装依赖"></a>在哪里安装依赖</h3><p>由于Android Studio最新版中gradle文件夹结果和内容做了一些修改，现在网上的教程大多不适用了，具体可以参考我的文章：<a target="_blank" rel="noopener" href="https://myownlili.github.io/2022/03/23/Android%20Studio(2021.1.1)%E5%AE%89%E8%A3%85%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F/">Android Studio(2021.1.1)安装阿里云镜像</a></p>
+<h3 id="安装哪些依赖"><a href="#安装哪些依赖" class="headerlink" title="安装哪些依赖"></a>安装哪些依赖</h3><p>具体解答如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">maven &#123; url <span class="string">&#x27;https://maven.aliyun.com/nexus/content/groups/public/&#x27;</span>&#125;  </span><br><span class="line">maven &#123; url <span class="string">&#x27;https://maven.aliyun.com/nexus/content/repositories/jcenter&#x27;</span>&#125;  </span><br><span class="line">maven &#123; url <span class="string">&#x27;https://maven.aliyun.com/nexus/content/repositories/google&#x27;</span>&#125;  </span><br><span class="line">maven &#123; url <span class="string">&#x27;https://maven.aliyun.com/nexus/content/repositories/gradle-plugin&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="为什么会报错？"><a href="#为什么会报错？" class="headerlink" title="为什么会报错？"></a>为什么会报错？</h3><p>如果您是参照网上的旧教程导入的依赖可能会产生如下错误：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Could not resolve all dependencies for configuration &#x27;:detachedConfiguration7&#x27;.</span><br><span class="line"></span><br><span class="line">Using insecure protocols with repositories, without explicit opt-in, is unsupported. Switch Maven repository &#x27;maven(http://maven.aliyun.com/nexus/content/groups/public/)&#x27; to redirect to a secure protocol (like HTTPS) or allow insecure protocols. See https://docs.gradle.org/7.0.2/dsl/org.gradle.api.artifacts.repositories.UrlArtifactRepository.html#org.gradle.api.artifacts.repositories.UrlArtifactRepository:allowInsecureProtocol for more details.</span><br></pre></td></tr></table></figure>
+
+<p>这是什么意思呢？就是说你得把<code>http</code> 换成 <code>https</code> 就行啦。<br>具体解答链接如下：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41053520/article/details/118244668">Gradle报错Could not resolve all dependencies for configuration ‘:detachedConfiguration7‘._qq_41053520的博客-CSDN博客</a></p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/Android-Studio/">#Android Studio</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/Android/">#Android</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2022/04/09/%E3%80%90chatApp%E8%A7%A3%E6%9E%90%E3%80%91build.gradle(Module)/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">【chatApp解析】build.gradle(Module)</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2022/03/28/%E3%80%90%E4%B8%80%E5%91%A8%E6%80%BB%E7%BB%93%E3%80%91%E5%9C%A8hexo%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【一周总结】在hexo使用中遇到的问题及解决方法</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Keep Team</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+</body>
+</html>

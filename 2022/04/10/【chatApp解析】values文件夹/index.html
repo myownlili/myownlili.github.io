@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Keep Team">
+    
+    <title>
+        
+            【chatApp解析】values文件夹 |
+        
+        Keep Theme
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               Keep Theme
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">【chatApp解析】values文件夹</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Keep Team</span>
+                            
+                                <span class="author-label">Lv4</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2022-04-10 14:53:23</span>
+        <span class="mobile">2022-04-10 14:53</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2022-04-10 14:58:57</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0/">项目学习</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Android/">Android</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/">即时通讯</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%8B%89%E9%A1%B9%E7%9B%AE/">拉项目</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>导语：老实说，这部分没什么好解读的。大家看看就好^-^</p>
+<h2 id="colors-xml"><a href="#colors-xml" class="headerlink" title="colors.xml"></a>colors.xml</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">color</span> <span class="attr">name</span>=<span class="string">&quot;primary&quot;</span>&gt;</span>#1C2E46<span class="tag">&lt;/<span class="name">color</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">color</span> <span class="attr">name</span>=<span class="string">&quot;primary_dark&quot;</span>&gt;</span>#142232<span class="tag">&lt;/<span class="name">color</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">color</span> <span class="attr">name</span>=<span class="string">&quot;primary_text&quot;</span>&gt;</span>#212121<span class="tag">&lt;/<span class="name">color</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">color</span> <span class="attr">name</span>=<span class="string">&quot;secondary_text&quot;</span>&gt;</span>#757575<span class="tag">&lt;/<span class="name">color</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">color</span> <span class="attr">name</span>=<span class="string">&quot;white&quot;</span>&gt;</span>#FFFFFF<span class="tag">&lt;/<span class="name">color</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">color</span> <span class="attr">name</span>=<span class="string">&quot;input_background&quot;</span>&gt;</span>#ECECEC<span class="tag">&lt;/<span class="name">color</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">color</span> <span class="attr">name</span>=<span class="string">&quot;Icon_background&quot;</span>&gt;</span>#20FFFFFF<span class="tag">&lt;/<span class="name">color</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">color</span> <span class="attr">name</span>=<span class="string">&quot;error&quot;</span>&gt;</span>#800020<span class="tag">&lt;/<span class="name">color</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">color</span> <span class="attr">name</span>=<span class="string">&quot;received_message_background&quot;</span>&gt;</span>#090D16<span class="tag">&lt;/<span class="name">color</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="strings-xml"><a href="#strings-xml" class="headerlink" title="strings.xml"></a>strings.xml</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">&quot;app_name&quot;</span>&gt;</span>ChatApp<span class="tag">&lt;/<span class="name">string</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">&quot;welcome_back&quot;</span>&gt;</span>welcome back<span class="tag">&lt;/<span class="name">string</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">&quot;log_to_continue&quot;</span>&gt;</span>Log to continue<span class="tag">&lt;/<span class="name">string</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">&quot;email&quot;</span>&gt;</span>email<span class="tag">&lt;/<span class="name">string</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span>&gt;</span>Password<span class="tag">&lt;/<span class="name">string</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">&quot;sign_in&quot;</span>&gt;</span>Sign In<span class="tag">&lt;/<span class="name">string</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">&quot;create_new_account&quot;</span>&gt;</span>Create New Account<span class="tag">&lt;/<span class="name">string</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">&quot;add_image&quot;</span>&gt;</span>Add Image<span class="tag">&lt;/<span class="name">string</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">&quot;name&quot;</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">string</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">&quot;confirm_password&quot;</span>&gt;</span>Confirm Password<span class="tag">&lt;/<span class="name">string</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">&quot;sign_up&quot;</span>&gt;</span>Sign Up<span class="tag">&lt;/<span class="name">string</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">&quot;select_users&quot;</span>&gt;</span>Select Users<span class="tag">&lt;/<span class="name">string</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span> <span class="attr">name</span>=<span class="string">&quot;type_a_message&quot;</span>&gt;</span>说点什么吧~<span class="tag">&lt;/<span class="name">string</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="themes-xml"><a href="#themes-xml" class="headerlink" title="themes.xml"></a>themes.xml</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resources</span> <span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span>&gt;</span>  </span><br><span class="line">    <span class="comment">&lt;!-- Base application theme. --&gt;</span>  </span><br><span class="line">    <span class="comment">&lt;!--NoActionBar就是不要app顶部的标题栏（写着App的名字）--&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">&quot;Theme.ChatApp&quot;</span> </span></span><br><span class="line"><span class="tag"><span class="attr">parent</span>=<span class="string">&quot;Theme.MaterialComponents.DayNight.NoActionBar&quot;</span>&gt;</span><span class="language-xml">  </span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">&quot;colorPrimary&quot;</span>&gt;</span>@color/primary<span class="tag">&lt;/<span class="name">item</span>&gt;</span>  </span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">&quot;android:statusBarColor&quot;</span> <span class="attr">tools:targetApi</span>=<span class="string">&quot;l&quot;</span>&gt;</span>@color/primary<span class="tag">&lt;/<span class="name">item</span>&gt;</span>  </span></span><br><span class="line"><span class="language-xml">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="themes-xml-night"><a href="#themes-xml-night" class="headerlink" title="themes.xml(night)"></a>themes.xml(night)</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resources</span> <span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span>&gt;</span>  </span><br><span class="line">    <span class="comment">&lt;!-- Base application theme. --&gt;</span>  </span><br><span class="line"> <span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">&quot;Theme.ChatApp&quot;</span> <span class="attr">parent</span>=<span class="string">&quot;Theme.MaterialComponents.DayNight.NoActionBar&quot;</span>&gt;</span><span class="language-xml">  </span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">&quot;colorPrimary&quot;</span>&gt;</span>@color/primary<span class="tag">&lt;/<span class="name">item</span>&gt;</span>  </span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">&quot;android:statusBarColor&quot;</span> <span class="attr">tools:targetApi</span>=<span class="string">&quot;l&quot;</span>&gt;</span>@color/primary<span class="tag">&lt;/<span class="name">item</span>&gt;</span>  </span></span><br><span class="line"><span class="language-xml">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/Android/">#Android</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/">#即时通讯</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%8B%89%E9%A1%B9%E7%9B%AE/">#拉项目</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2023/03/29/hello-world/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">Hello World</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2022/04/09/%E3%80%90chatApp%E8%A7%A3%E6%9E%90%E3%80%91build.gradle(Module)/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【chatApp解析】build.gradle(Module)</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Keep Team</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+</body>
+</html>

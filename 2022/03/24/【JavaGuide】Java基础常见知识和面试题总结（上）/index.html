@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Keep Team">
+    
+    <title>
+        
+            【JavaGuide】Java基础常见知识和面试题总结（上） |
+        
+        Keep Theme
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               Keep Theme
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">【JavaGuide】Java基础常见知识和面试题总结（上）</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Keep Team</span>
+                            
+                                <span class="author-label">Lv4</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2022-03-24 16:14:27</span>
+        <span class="mobile">2022-03-24 16:14</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2022-03-28 11:36:01</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/Java/">Java</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/JavaGuide/">JavaGuide</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>Java是一门<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1">面向对象</a>的编程语言，不仅吸收了<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/C%2B%2B">C++</a>语言的各种优点，还摒弃了C++里难以理解的多继承、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%8C%87%E9%92%88/2878304">指针</a>等概念，因此Java语言具有功能强大和简单易用两个特征。Java语言作为静态面向对象编程语言的代表，极好地实现了面向对象理论，允许程序员以优雅的思维方式进行复杂的编程</p>
+<p><strong>Java基础常见知识&amp;面试题总结(上)</strong></p>
+<h2 id="基础概念和常识"><a href="#基础概念和常识" class="headerlink" title="基础概念和常识"></a>基础概念和常识</h2><h3 id="JVM-VS-JDK-VS-JRE"><a href="#JVM-VS-JDK-VS-JRE" class="headerlink" title="JVM VS JDK VS JRE"></a>JVM VS JDK VS JRE</h3><h4 id="自我理解"><a href="#自我理解" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>20220324</code></p>
+<p>JVM：<del>能运行java程序的平台</del>， 每个人、公司都可以自己开发，不同的JDK（？）对应不同的JVM版本<br>JDK：包含java运行所需的各种SDK、以及一些相关文件。jdk包含JRE拥有的一切<br>JRE：包括java虚拟机等java需要的运行工具，如果只需要运行java程序，指安装JRE即可。如果需要编辑java 程序就需要安装JDK。<del>在运行web程序的时候也需要安装JDK</del>，因为什么呢（某种转化）</p>
+<h4 id="官方理解"><a href="#官方理解" class="headerlink" title="官方理解"></a>官方理解</h4><blockquote>
+<p>JVM：运行java字节码的虚拟机，有针对不同系统的特定实现。各个版本的JDK对应不同的JVM规范<br>JDK：java development kit的缩写，&#x3D;JRE+编译器(javac)+工具(javadoc+jdb)。可以创建和编译程序<br>JRE：是java运行环境，&#x3D;JVM+java类库+java命令+其他基础构建。使用JSP部署web应用的时候，应用程序服务器会将JSP转换为java servelt，并且需要使用JDK来编译servelt</p>
+</blockquote>
+<hr>
+<h3 id="什么是字节码？采用字节码的好处是什么？"><a href="#什么是字节码？采用字节码的好处是什么？" class="headerlink" title="什么是字节码？采用字节码的好处是什么？"></a>什么是字节码？采用字节码的好处是什么？</h3><h4 id="自我理解-1"><a href="#自我理解-1" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>20220324</code></p>
+<p><del>代码就是字节码</del>，使java能够在各个平台编译也能得到相同的结果。<br>java程序的编译过程：<br>java程序-&gt;javac-&gt;.class文件-&gt;解释器+JIT-&gt;机器码-&gt;os<br>.class文件需要翻译成机器码才可以运行，翻译过程很耗时，于是需要JIT辅助。有一部分代码会被经常使用，称之为热代码，JIT(just-in-time)就是记录这部分代码，提升每次解释代码的速度。<del>java9版本</del>加入了AOT，可以提前将热代码的翻译存储起来，但是这样效果没有JIT好</p>
+<h4 id="官方理解-1"><a href="#官方理解-1" class="headerlink" title="官方理解"></a>官方理解</h4><p><img src="https://javaguide.cn/assets/java%E7%A8%8B%E5%BA%8F%E8%BD%AC%E5%8F%98%E4%B8%BA%E6%9C%BA%E5%99%A8%E4%BB%A3%E7%A0%81%E7%9A%84%E8%BF%87%E7%A8%8B.a75e6fc0.png" alt="Java程序转变为机器代码的过程"></p>
+<blockquote>
+<p>JVM可以理解的代码叫字节码（扩展名为.class的文件），只面向虚拟机，保留了解释型语言可移植的特点<br>JIT属于运行时编译。当JIT完成第一次编译后，会将字节码对应的机器码保存下来，下次直接使用<br>JDK 9引入的AOT(Ahead of Time Compilation),JDK支持分层编译和AOT</p>
+</blockquote>
+<hr>
+<h3 id="为什么说Java语言“编译和解释共存”"><a href="#为什么说Java语言“编译和解释共存”" class="headerlink" title="为什么说Java语言“编译和解释共存”"></a>为什么说Java语言“编译和解释共存”</h3><h4 id="自我理解-2"><a href="#自我理解-2" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>20220324</code></p>
+<p>编译型：通过编译器一次性编译成机器可以理解的代码（有C\C++）<br>解释型：通过解释器一句句翻译成机器码（有JavaScript)<br>java先编译成.class文件，后翻译成机器码，所以说是编译和解释共存</p>
+<h4 id="官方理解-2"><a href="#官方理解-2" class="headerlink" title="官方理解"></a>官方理解</h4><p><img src="https://javaguide.cn/assets/%E7%BC%96%E8%AF%91%E5%9E%8B%E8%AF%AD%E8%A8%80%E5%92%8C%E8%A7%A3%E9%87%8A%E5%9E%8B%E8%AF%AD%E8%A8%80.df4a048c.png" alt="编译型语言和解释型语言"></p>
+<blockquote>
+<p>编译型：执行速度快、开发效率低。有C\C++\GO\Rust<br>解释型：执行速度较慢、开发效率高。有python\javascript\PHP</p>
+</blockquote>
+<hr>
+<h3 id="Oracle-JDK-vs-Open-JDK"><a href="#Oracle-JDK-vs-Open-JDK" class="headerlink" title="Oracle JDK vs Open JDK"></a>Oracle JDK vs Open JDK</h3><h4 id="自我理解-3"><a href="#自我理解-3" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>20220324</code></p>
+<p>就是Oracle JDK是基于OpenJDK开发的，但是又更多的类、更加的稳定，但是不开源。个人使用均免费，商用建议采用Oracle JDK。</p>
+<h4 id="官方理解-3"><a href="#官方理解-3" class="headerlink" title="官方理解"></a>官方理解</h4><blockquote>
+<p>比较简单，直接贴文字：</p>
+<ol>
+<li>Oracle JDK 大概每 6 个月发一次主要版本，而 OpenJDK 版本大概每三个月发布一次。但这不是固定的，我觉得了解这个没啥用处。详情参见：<a target="_blank" rel="noopener" href="https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence">https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadenceopen in new window</a> 。</li>
+<li>OpenJDK 是一个参考模型并且是完全开源的，而 Oracle JDK 是 OpenJDK 的一个实现，并不是完全开源的；</li>
+<li>Oracle JDK 比 OpenJDK 更稳定。OpenJDK 和 Oracle JDK 的代码几乎相同，但 Oracle JDK 有更多的类和一些错误修复。因此，如果您想开发企业&#x2F;商业软件，我建议您选择 Oracle JDK，因为它经过了彻底的测试和稳定。某些情况下，有些人提到在使用 OpenJDK 可能会遇到了许多应用程序崩溃的问题，但是，只需切换到 Oracle JDK 就可以解决问题；</li>
+<li>在响应性和 JVM 性能方面，Oracle JDK 与 OpenJDK 相比提供了更好的性能；</li>
+<li>Oracle JDK 不会为即将发布的版本提供长期支持，用户每次都必须通过更新到最新版本获得支持来获取最新版本；</li>
+<li>Oracle JDK 使用 BCL&#x2F;OTN 协议获得许可，而 OpenJDK 根据 GPL v2 许可获得许可。</li>
+</ol>
+</blockquote>
+<hr>
+<h3 id="Java和C-的区别"><a href="#Java和C-的区别" class="headerlink" title="Java和C++的区别"></a>Java和C++的区别</h3><h4 id="自我理解-4"><a href="#自我理解-4" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>20220324</code></p>
+<p>Java单继承、C++多继承<br>Java不提供操作符重载</p>
+<h4 id="官方理解-4"><a href="#官方理解-4" class="headerlink" title="官方理解"></a>官方理解</h4><blockquote>
+<p>如下</p>
+<ol>
+<li>java不提供指针直接访问内存</li>
+<li>类不能多继承，但是接口可以</li>
+<li>java有自动内存管理垃圾回收机制GC</li>
+<li>java只指出方法重载</li>
+</ol>
+</blockquote>
+<hr>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="字符型常量和字符串型常量的区别"><a href="#字符型常量和字符串型常量的区别" class="headerlink" title="字符型常量和字符串型常量的区别"></a>字符型常量和字符串型常量的区别</h3><h4 id="自我理解-5"><a href="#自我理解-5" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>20220325</code></p>
+<ul>
+<li>字符型常量用单引号引起来，’a’,’b’;字符串型常量用双引号引起来，”12345678”</li>
+<li>字符型常量可以赋值，字符串型常量只代表字符串的地址</li>
+</ul>
+<h4 id="官方理解-5"><a href="#官方理解-5" class="headerlink" title="官方理解"></a>官方理解</h4><blockquote>
+<p><strong>含义</strong>：字符常量相当于一个整型值（ASCII值），可以参加表达式运算；字符串常量代表地址值<br><strong>占内存大小</strong>：字符常量占两个字节，字符串常量占若干个字节</p>
+</blockquote>
+<hr>
+<h3 id="注释有哪几种形式"><a href="#注释有哪几种形式" class="headerlink" title="注释有哪几种形式"></a>注释有哪几种形式</h3><h4 id="自我理解-6"><a href="#自我理解-6" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>2022-03-25</code></p>
+<ul>
+<li>单行注释 &#x2F;&#x2F;</li>
+<li>多行注释   <code>/***/</code></li>
+<li>文档注释 <code>/** ***/</code></li>
+</ul>
+<h4 id="官方理解-6"><a href="#官方理解-6" class="headerlink" title="官方理解"></a>官方理解</h4><blockquote>
+<p>1.单行注释<img src="http://c.biancheng.net/uploads/allimg/190904/5-1ZZ4154KTa.png" alt="单行注释"><br>2.多行注释<img src="http://c.biancheng.net/uploads/allimg/190904/5-1ZZ4160001639.png" alt="多行注释"><br>3.文档注释<img src="http://c.biancheng.net/uploads/allimg/190904/5-1ZZ416092K28.png" alt="文档注释"></p>
+</blockquote>
+<hr>
+<h3 id="标识符和关键字的区别是什么"><a href="#标识符和关键字的区别是什么" class="headerlink" title="标识符和关键字的区别是什么"></a>标识符和关键字的区别是什么</h3><h4 id="自我理解-7"><a href="#自我理解-7" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>2022-03-25</code></p>
+<p>java编写过程中的类、方法都需要一个名字，这就是标识符。但有些标识符有其特定的意义，这就是关键字</p>
+<h4 id="官方理解-7"><a href="#官方理解-7" class="headerlink" title="官方理解"></a>官方理解</h4><blockquote>
+<p>比较简单直接贴文字：<br>在我们编写程序的时候，需要大量地为程序、类、变量、方法等取名字，于是就有了 <strong>标识符</strong> 。简单来说， <strong>标识符就是一个名字</strong> 。<br>有一些标识符，Java 语言已经赋予了其特殊的含义，只能用于特定的地方，这些特殊的标识符就是 <strong>关键字</strong> 。简单来说，<strong>关键字是被赋予特殊含义的标识</strong>符 。</p>
+</blockquote>
+<hr>
+<h3 id="Java语言关键字有哪些"><a href="#Java语言关键字有哪些" class="headerlink" title="Java语言关键字有哪些"></a>Java语言关键字有哪些</h3><h4 id="自我理解-8"><a href="#自我理解-8" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>2022-03-25</code></p>
+<ul>
+<li>访问控制：<del>privite</del>\protected&#x2F;public</li>
+<li>类，方法和变量修饰符：abstract\extends\final (<em>class\new\static\strctfp\synchronized</em>)</li>
+<li>程序控制 ：swtich\continue\break(<em>return\do\for\instanceof\case</em>)</li>
+<li>错误处理：catch\throw\throws\try</li>
+<li>包相关：impact\package</li>
+<li>基本类型：<del>const</del> (<em>boolean\byte\char\double\short</em>)</li>
+<li>变量引用：void (<em>super\this</em>)</li>
+<li>保留字：goto (<em>const</em>)</li>
+</ul>
+<h4 id="官方理解-8"><a href="#官方理解-8" class="headerlink" title="官方理解"></a>官方理解</h4><table>
+<thead>
+<tr>
+<th>分类</th>
+<th>关键字</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>——————–</td>
+<td>——–</td>
+<td>———</td>
+<td>——–</td>
+<td>————</td>
+<td>———-</td>
+<td>———-</td>
+<td>——</td>
+</tr>
+<tr>
+<td>访问控制</td>
+<td>private</td>
+<td>protected</td>
+<td>public</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>类，方法和变量修饰符</td>
+<td>abstract</td>
+<td>class</td>
+<td>extends</td>
+<td>final</td>
+<td>implements</td>
+<td>interface</td>
+<td>native</td>
+</tr>
+<tr>
+<td></td>
+<td>new</td>
+<td>static</td>
+<td>strictfp</td>
+<td>synchronized</td>
+<td>transient</td>
+<td>volatile</td>
+<td>enum</td>
+</tr>
+<tr>
+<td>程序控制</td>
+<td>break</td>
+<td>continue</td>
+<td>return</td>
+<td>do</td>
+<td>for</td>
+<td>instanceof</td>
+<td>switch</td>
+</tr>
+<tr>
+<td></td>
+<td>while</td>
+<td>if</td>
+<td>else</td>
+<td>case</td>
+<td>default</td>
+<td>assert</td>
+<td></td>
+</tr>
+<tr>
+<td>错误处理</td>
+<td>try</td>
+<td>catch</td>
+<td>throw</td>
+<td>throws</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>包相关</td>
+<td>import</td>
+<td>package</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>基本类型</td>
+<td>boolean</td>
+<td>byte</td>
+<td>chart</td>
+<td>double</td>
+<td>float</td>
+<td>int</td>
+<td>long</td>
+</tr>
+<tr>
+<td></td>
+<td>short</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>变量引用</td>
+<td>super</td>
+<td>this</td>
+<td>void</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>保留字</td>
+<td></td>
+<td>goto</td>
+<td>const</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注意 ⚠️：最然<code>true</code>，<code>false</code>，<code>null</code>看起来像关键字但实际上他们是字面值，但你不能把他们当标识符用</p>
+</blockquote>
+<hr>
+<h3 id="自增自减运算符"><a href="#自增自减运算符" class="headerlink" title="自增自减运算符"></a>自增自减运算符</h3><h4 id="自我理解-9"><a href="#自我理解-9" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>2022-03-25</code></p>
+<p>有一些整形变量+1、-1的需求，java提供了<code>++</code>、<code>--</code>两种运算符<br><code>b=a++</code>：意味着先把<code>a</code>的值赋给<code>b</code>，再让<code>a +1</code>。输出的结果就是<code>a</code><br><code>b=++a</code>：意味着<code>a</code>的值先<code>+1</code>，再把<code>+1</code>后的值赋给<code>b</code>。输出结果为<code>a+1</code></p>
+<h4 id="官方理解-9"><a href="#官方理解-9" class="headerlink" title="官方理解"></a>官方理解</h4><blockquote>
+<p><code> ++</code>就是自增运算符<br><code>--</code>就是自减运算符</p>
+</blockquote>
+<hr>
+<h3 id="continue、break和return的区别是什么？"><a href="#continue、break和return的区别是什么？" class="headerlink" title="continue、break和return的区别是什么？"></a>continue、break和return的区别是什么？</h3><h4 id="自我理解-10"><a href="#自我理解-10" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>2022-03-25</code></p>
+<ul>
+<li><code>contine</code>：跳出当前循环、进入下一循环</li>
+<li><code>break</code>：跳出整个循环</li>
+<li><code>return</code>：跳出这个方法。return;表示无返回值跳出，return XX;表示有返回值跳出</li>
+</ul>
+<h4 id="官方理解-10"><a href="#官方理解-10" class="headerlink" title="官方理解"></a>官方理解</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">boolean</span> <span class="variable">flag</span> <span class="operator">=</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt;= <span class="number">3</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;0&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i == <span class="number">1</span>) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i == <span class="number">2</span>) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;2&quot;</span>);</span><br><span class="line">                flag = <span class="literal">true</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i == <span class="number">3</span>) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;3&quot;</span>);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i == <span class="number">4</span>) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;4&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">&quot;xixi&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;haha&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;heihei&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>运行结果</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">0</span><br><span class="line">xixi</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">xixi</span><br><span class="line">3</span><br><span class="line">haha</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><h4 id="自我理解-11"><a href="#自我理解-11" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>2022-03-25</code></p>
+<p><strong>什么是方法的返回值?方法有哪几种类型？</strong></p>
+<p>方法执行代码后得到的结果，用返回值来接收。并不是所有的方法都需要传入参数，也不是所有的方法都有返回值</p>
+<p><strong>静态方法和实例方法的不同</strong></p>
+<ul>
+<li>调用方式不同。静态方法可以用<code>类名.方法名</code>，以及<code>对象名.方法名</code>。实例方法只能用<code>对象名.方法名</code>。一般不建议调用静态方法用<code>对象名.方法名</code>，容易混淆。(<em>调用静态方法无需创建对象</em>)</li>
+<li><del>用对象不同</del> 。静态方法只能调用静态成员、以及静态变量。实例方法就没有这个限制。(<em>访问类成员是否存在限制？ 静态方法再访问本类的成员时，只允许访问静态成员，即静态成员白能量和限制方法，不允许访问实例成员</em>)</li>
+</ul>
+<p><strong>重载和重写的区别</strong></p>
+<ul>
+<li>重载就是子类与父类，方法名相同，传参列表、返回结果可以不同。计算机再编译时自动寻找更合适的方法，找不到就返回错误，称为重载解析，java可以重载任何方法。</li>
+<li>重写就是“两同两小一大”，子类和父类的方法名和传参列表必须一致，子类的返回值和 (<em>方法申明抛出的异常类</em>) 异常类必须小于或接近父类的范围，子类可以降低父类访问控制的限制。java不能重写构造方法。(<em>如果方法的返回类型是void和基本数据欸i选哪个，则返回重写时不可修改。但是如果方法的返回值是引用类型，重写时是可以返回该引用类型的子类</em>)</li>
+<li>(<em>重写：如果父类方法访问修饰符为private&#x2F;fianl&#x2F;static则子类不能重写该方法，但是被static修饰的方法能够被再次声明</em>)</li>
+</ul>
+<h4 id="官方理解-11"><a href="#官方理解-11" class="headerlink" title="官方理解"></a>官方理解</h4><p><strong>1. 无参数无返回值的方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">f1</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">//......</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 下面这个方法也没有返回值，虽然用到了 return</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">f</span><span class="params">(<span class="type">int</span> a)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (...) &#123;</span><br><span class="line">        <span class="comment">// 表示结束方法的执行,下方的输出语句不会执行</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2. 有参数无返回值的方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">f2</span><span class="params">(Parameter <span class="number">1</span>, ..., Parameter n)</span> &#123;</span><br><span class="line">    <span class="comment">//......</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 有返回值无参数的方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">f3</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">//......</span></span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>4. 有返回值有参数的方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">f4</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a * b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<table>
+<thead>
+<tr>
+<th>区别点</th>
+<th>重载方法</th>
+<th>重写方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>发生范围</td>
+<td>同一个类</td>
+<td>子类</td>
+</tr>
+<tr>
+<td>参数列表</td>
+<td>必须修改</td>
+<td>一定不能修改</td>
+</tr>
+<tr>
+<td>返回类型</td>
+<td>可修改</td>
+<td>子类方法返回值类型应比父类方法返回值类型更小或者相等</td>
+</tr>
+<tr>
+<td>异常</td>
+<td>可修改</td>
+<td>子类方法声明抛出的异常类应比父类方法声明抛出的异常类更小或相等</td>
+</tr>
+<tr>
+<td>访问修饰符</td>
+<td>可修改</td>
+<td>一定不能做更严格的限制（可以降低限制）</td>
+</tr>
+<tr>
+<td>发生阶段</td>
+<td>编译期</td>
+<td>运行期</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="x3D-x3D-和equals-的区别"><a href="#x3D-x3D-和equals-的区别" class="headerlink" title="&#x3D; &#x3D;和equals()的区别"></a>&#x3D; &#x3D;和equals()的区别</h3><h4 id="自我理解-12"><a href="#自我理解-12" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>2022-03-26</code></p>
+<ul>
+<li>&#x3D; &#x3D;在基本数据类型中是比较两个对象的值，在引用数据类型中使用，就是比较两个对象的地址。<del>由于java只对值进行比较</del>，所以本质上还是比较两个对象的值。</li>
+<li>equals()。equals()<del>类</del> (<em>方法</em>) 在object类中，object类在间接或直接上是所有类的父类，所以所有类的包含equals()<del>类</del> (<em>方法</em>)。</li>
+<li>equals类重写和不重写是有区别的。不重写就类似&#x3D; &#x3D;，<del>用来比较两个变量的值。</del>重写就是是比较两个对象的属性等等各个方面。比如string类的equals()就是重写过的。</li>
+</ul>
+<h4 id="官方理解-12"><a href="#官方理解-12" class="headerlink" title="官方理解"></a>官方理解</h4><blockquote>
+<ol>
+<li>&#x3D; &#x3D; java只有值传递，只是引用类型变量存的值是对象的地址</li>
+<li>equals()不能用来判断基本数据类型的变量，只能用来比较两个对象是否相等</li>
+<li>类没有重写equals()方法：通过equals()比较两个对象，等同于&#x3D; &#x3D; ，使用默认Object类的equals()方法。<br>4.类重写了equals()方法：一般我们都重写equals()方法来比较两个对象的属性是否相等；若相等，返回true。<br>String中equals()方法是重写的，用来比较对象的值。Object类的equals()方法是比较的对象的内存地址。</li>
+</ol>
+</blockquote>
+<hr>
+<h3 id="hashCode-与equals"><a href="#hashCode-与equals" class="headerlink" title="hashCode()与equals()"></a>hashCode()与equals()</h3><h4 id="自我理解-13"><a href="#自我理解-13" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>2022-03-26</code></p>
+<p>一个对象经过hashCode()处理后，得到其hash值。可以确定该对象和其他hash值不同的对象肯定是不同的，接下来就要用equals()来对hash值相同的对象进行比较，如果发现还是不同，则就是真的不同。<del>如果相同，就不需要把本对象放进hashset中</del>。所以重写equals()方法，也要同时重写hashCode方法。</p>
+<h4 id="官方理解-13"><a href="#官方理解-13" class="headerlink" title="官方理解"></a>官方理解</h4><blockquote>
+<p>hashCode()的作用是获取哈希码(int整数)，也称散列码。这个哈希码的作用是确定该对象的哈希码的索引位置。hashCode()定义在JDK的Object类中。<br>两个相等的对象的hashCode值必须是相等。<br>HashSet通过计算对象hashCode值来判断对象加入的位置，同时和已加入对象的hashCode值惊醒比较，如果没有重复的，HasnSet假定对象没有城府出现。如果有相同hashCode值的对象，就调用equals()方法来检查是否真的相同。如果完全相同，就不会让其加入成功。如果不同的话，就会重新散列到其他位置。——《Head First Java》</p>
+</blockquote>
+<hr>
+<h3 id="什么是可变长参数"><a href="#什么是可变长参数" class="headerlink" title="什么是可变长参数"></a>什么是可变长参数</h3><h4 id="自我理解-14"><a href="#自我理解-14" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>2022-03-26</code></p>
+<p>java5之后允许传入0个或多个参数，(<em>遇到重载时</em>)系统会优先匹配固定参数的方法，然后才是可变长参数的方法。格式如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">printVarible</span><span class="params">(String... args)</span>&#123;</span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="官方理解-14"><a href="#官方理解-14" class="headerlink" title="官方理解"></a>官方理解</h4><blockquote>
+<ol>
+<li>Java5开始支持定义可变长参数，所谓可变长参数就是在调用方法时传入不定长参数。</li>
+<li>另外,可变长参数只能作为函数的最后一个参数，但其前面可以有也可以没有其他任何参数。</li>
+<li>Java的可变长参数百衲衣后实际会被转换成一个数组，可以通过class文件看出来。</li>
+</ol>
+</blockquote>
+<hr>
+<h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><h3 id="Java基本数据类型了解吗"><a href="#Java基本数据类型了解吗" class="headerlink" title="Java基本数据类型了解吗"></a>Java基本数据类型了解吗</h3><h4 id="自我理解-15"><a href="#自我理解-15" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>2022-03-28</code></p>
+<p>Java有8种基本数据类型：</p>
+<ul>
+<li><del>数值型</del>  (<em>数字类型</em>):<ul>
+<li>整数数据类型：byte&#x2F;short&#x2F;int&#x2F;long</li>
+<li>浮点数类型：float&#x2F;double</li>
+</ul>
+</li>
+<li>字符类型：char</li>
+<li>布尔类型：boolean</li>
+</ul>
+<p>java的long型数据后面要加L，<del>方便虚拟机辨认</del>  (<em>否则将作为整型解析</em>)。<br>8种基本数据类型对应的<del>包装型数据变量</del> (<em>包装类</em>)是Byte&#x2F;Short&#x2F;<del>Intager</del> (Integer)&#x2F;Long&#x2F;Float&#x2F;Double&#x2F;<del>Charater</del> (<em>Character</em>)&#x2F;Boolean<br><del>包装型数据变量的默认值是Null。</del></p>
+<p>byte  1字节 8位<br>short 2字节 16位…</p>
+<h4 id="官方理解-15"><a href="#官方理解-15" class="headerlink" title="官方理解"></a>官方理解</h4><table>
+<thead>
+<tr>
+<th>基本类型</th>
+<th>位数</th>
+<th>字节</th>
+<th>默认值</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>8</td>
+<td>1</td>
+<td>0</td>
+<td>-128~127</td>
+</tr>
+<tr>
+<td>short</td>
+<td>16</td>
+<td>2</td>
+<td>0</td>
+<td>-32768~32767</td>
+</tr>
+<tr>
+<td>int</td>
+<td>32</td>
+<td>4</td>
+<td>0</td>
+<td>-2147483648~2147483647</td>
+</tr>
+<tr>
+<td>long</td>
+<td>64</td>
+<td>8</td>
+<td>0L</td>
+<td>-92233372036854775808~9223372036854775807</td>
+</tr>
+<tr>
+<td>char</td>
+<td>16</td>
+<td>2</td>
+<td>‘u0000’</td>
+<td>0~65535</td>
+</tr>
+<tr>
+<td>float</td>
+<td>32</td>
+<td>4</td>
+<td>0f</td>
+<td>1.4E-45~3.4028235E38</td>
+</tr>
+<tr>
+<td>double</td>
+<td>64</td>
+<td>8</td>
+<td>0d</td>
+<td>4.9E-324~3.4028235E38</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>1</td>
+<td></td>
+<td>false</td>
+<td>true、false</td>
+</tr>
+</tbody></table>
+<blockquote>
+<ol>
+<li>Java的每种基本类型所占存储空间的大小不会像其他大多数语言那样随机器硬件架构的变化二变化。</li>
+<li><code>char a =  &#39;h&#39; </code>char单引号，<code>String a = &#39;hello&#39;</code> 双引号</li>
+<li>包装类型不赋值就是Null，而基本类型有默认值且不是Null</li>
+<li>基本数据类型直接存放在Java虚拟机栈种的局部变量表种，而包装类型属于对象类型，我们指导对象实例都存在堆中。</li>
+</ol>
+</blockquote>
+<hr>
+<h3 id="包装类型的常量池技术了解么？"><a href="#包装类型的常量池技术了解么？" class="headerlink" title="包装类型的常量池技术了解么？"></a>包装类型的常量池技术了解么？</h3><h4 id="自我理解-16"><a href="#自我理解-16" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>2022-03-28</code></p>
+<p>有些基本数据类型对应的包装类型都有常量池，如Byte、Short、<del>Character</del> (<em>Integer</em>)、Long 的常量池范围是-128 ~ 127。<del>Char</del> (<em>Character</em>)的常量池范围是：0 ~ 127。(<em>Boolean 直接返回true or false</em><br>而浮点数的包装类是没有常量池的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Integer</span> <span class="variable">i1</span> <span class="operator">=</span> <span class="number">33</span>;</span><br><span class="line"><span class="type">Integer</span> <span class="variable">i2</span> <span class="operator">=</span> <span class="number">33</span>;</span><br><span class="line">System.out.println(i1 == i2);<span class="comment">// 输出 true</span></span><br><span class="line"></span><br><span class="line"><span class="type">Float</span> <span class="variable">i11</span> <span class="operator">=</span> <span class="number">333f</span>;</span><br><span class="line"><span class="type">Float</span> <span class="variable">i22</span> <span class="operator">=</span> <span class="number">333f</span>;</span><br><span class="line">System.out.println(i11 == i22);<span class="comment">// 输出 false</span></span><br><span class="line"></span><br><span class="line"><span class="type">Double</span> <span class="variable">i3</span> <span class="operator">=</span> <span class="number">1.2</span>;</span><br><span class="line"><span class="type">Double</span> <span class="variable">i4</span> <span class="operator">=</span> <span class="number">1.2</span>;</span><br><span class="line">System.out.println(i3 == i4);<span class="comment">// 输出 false</span></span><br></pre></td></tr></table></figure>
+
+
+<p><del>常量池中的比较是用的equals()</del></p>
+<h4 id="官方理解-16"><a href="#官方理解-16" class="headerlink" title="官方理解"></a>官方理解</h4><p><strong>Integer缓存源码</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Integer <span class="title function_">valueOf</span><span class="params">(<span class="type">int</span> i)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(i &gt;= IntegerCache.low &amp;&amp; i&lt;= IntegerCache.high)</span><br><span class="line">		<span class="keyword">return</span> IntegerCache.cache[i + (-IntegerCache.low)];</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Integer</span>(i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">IntegerCache</span> &#123;</span><br><span class="line">	    <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">low</span> <span class="operator">=</span> -<span class="number">128</span>;</span><br><span class="line">	    <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> high;</span><br><span class="line">	    <span class="keyword">static</span> &#123;</span><br><span class="line">	        <span class="comment">// high value may be configured by property</span></span><br><span class="line">	        <span class="type">int</span> <span class="variable">h</span> <span class="operator">=</span> <span class="number">127</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Charcter缓存源码</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Character <span class="title function_">valueOf</span><span class="params">(<span class="type">char</span> c)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (c &lt;= <span class="number">127</span>) &#123; <span class="comment">// must cache</span></span><br><span class="line">      <span class="keyword">return</span> CharacterCache.cache[(<span class="type">int</span>)c];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Character</span>(c);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">CharacterCache</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">CharacterCache</span><span class="params">()</span>&#123;&#125;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> Character cache[] = <span class="keyword">new</span> <span class="title class_">Character</span>[<span class="number">127</span> + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; cache.length; i++)</span><br><span class="line">            cache[i] = <span class="keyword">new</span> <span class="title class_">Character</span>((<span class="type">char</span>)i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Boolean缓存源码</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Boolean <span class="title function_">valueOf</span><span class="params">(<span class="type">boolean</span> b)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (b ? TRUE : FALSE);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面我们来看一下问题。下面的代码的输出结果是 <code>true</code> 还是 <code>false</code> 呢？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Integer</span> <span class="variable">i1</span> <span class="operator">=</span> <span class="number">33</span>;</span><br><span class="line"><span class="type">Integer</span> <span class="variable">i2</span> <span class="operator">=</span> <span class="number">33</span>;</span><br><span class="line">System.out.println(i1 == i2);<span class="comment">// 输出 true</span></span><br><span class="line"></span><br><span class="line"><span class="type">Float</span> <span class="variable">i11</span> <span class="operator">=</span> <span class="number">333f</span>;</span><br><span class="line"><span class="type">Float</span> <span class="variable">i22</span> <span class="operator">=</span> <span class="number">333f</span>;</span><br><span class="line">System.out.println(i11 == i22);<span class="comment">// 输出 false</span></span><br><span class="line"></span><br><span class="line"><span class="type">Double</span> <span class="variable">i3</span> <span class="operator">=</span> <span class="number">1.2</span>;</span><br><span class="line"><span class="type">Double</span> <span class="variable">i4</span> <span class="operator">=</span> <span class="number">1.2</span>;</span><br><span class="line">System.out.println(i3 == i4);<span class="comment">// 输出 false</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Integer i1 &#x3D; 40 这一行代码会发生装箱，也就是说这行代码等价于Integer i1 &#x3D; Integer.valueOf(40)。因此，i1直接使用的是常量池中的对象。而Integer i2 &#x3D; new Integer(40)会直接创建新的对象。</p>
+<ol>
+<li>如果超出对应范围仍然去创建新的对象，缓存的范围区间的大小只是在性能和资源之间的权衡。</li>
+<li>所有整形包装对象之间值的比较，全部使用equals()方法比较</li>
+</ol>
+</blockquote>
+<hr>
+<h3 id="自动装箱与拆箱了解吗？原理是什么？"><a href="#自动装箱与拆箱了解吗？原理是什么？" class="headerlink" title="自动装箱与拆箱了解吗？原理是什么？"></a>自动装箱与拆箱了解吗？原理是什么？</h3><h4 id="自我理解-17"><a href="#自我理解-17" class="headerlink" title="自我理解"></a>自我理解</h4><p><code>2022-03-28</code></p>
+<p>装箱：将基本数据类型的值<del>用包装类</del> (<em>用对应的引用类型</em>)包装起来<br>拆箱：将包装类转化为基本数据类型<br>建议还是不要频繁使用，否则会增加系统负担。</p>
+<h4 id="官方理解-17"><a href="#官方理解-17" class="headerlink" title="官方理解"></a>官方理解</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Integer</span> <span class="variable">num</span> <span class="operator">=</span> <span class="number">10</span>; <span class="comment">//自动装箱，没有通过new方法实现</span></span><br><span class="line"><span class="type">Integer</span> <span class="variable">num2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Integer</span>(<span class="number">10</span>); <span class="comment">//非自动装箱</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ol>
+<li>引入包装类的就是提供一种机制，使得基本数据类型可以与引用数据类型相互转换</li>
+<li>装箱的过程是调用valueOf方法实现的</li>
+<li>拆箱过程是通过包装类的xxxValue方法实现的（xxx待变对应的基本数据类型类型</li>
+<li>自动装箱、自动拆箱：基本数据类型的自动装箱(boxing)拆箱(unboxing)自JDK5开始提供的功能。</li>
+<li>Java对于自动装箱和拆箱的设计，依赖于享元模式的设计模式</li>
+</ol>
+</blockquote>
+<hr>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a target="_blank" rel="noopener" href="https://javaguide.cn/java/basis/java-basic-questions-01.html#%E5%8C%85%E8%A3%85%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%B8%B8%E9%87%8F%E6%B1%A0%E6%8A%80%E6%9C%AF%E4%BA%86%E8%A7%A3%E4%B9%88">Java基础常见知识&amp;面试题总结(上) | JavaGuide</a></p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/JavaGuide/">#JavaGuide</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2022/03/24/%E3%80%90LeetCode%E3%80%9127.%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">【LeetCode】27.移除元素</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2022/03/23/Android%20Studio(2021.1.1)%E5%AE%89%E8%A3%85%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Android Studio(2021.1.1)安装阿里云镜像</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Keep Team</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+</body>
+</html>
