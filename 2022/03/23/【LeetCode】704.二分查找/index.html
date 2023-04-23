@@ -216,17 +216,17 @@
                 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个 <code>n</code> 个元素有序的（升序）整型数组 <code>nums</code> 和一个目标值 <code>target</code> ，写一个函数搜索 <code>nums</code> 中的 <code>target</code>，如果目标值存在返回下标，否则返回 <code>-1</code>。</p>
 <p><strong>示例 1:</strong></p>
 <blockquote>
-<p><strong>输入:</strong> <code>nums</code> &#x3D; [-1,0,3,5,9,12], <code>target</code> &#x3D; 9<br><strong>输出:</strong> 4<br><strong>解释:</strong> 9 出现在 <code>nums</code> 中并且下标为 4</p>
+<p><strong>输入:</strong> <code>nums</code> = [-1,0,3,5,9,12], <code>target</code> = 9<br><strong>输出:</strong> 4<br><strong>解释:</strong> 9 出现在 <code>nums</code> 中并且下标为 4</p>
 </blockquote>
 <p><strong>示例 2:</strong></p>
 <blockquote>
-<p><strong>输入:</strong> <code>nums</code> &#x3D; [-1,0,3,5,9,12], <code>target</code> &#x3D; 2<br><strong>输出:</strong> -1<br><strong>解释:</strong> 2 不存在 <code>nums</code> 中因此返回 -1</p>
+<p><strong>输入:</strong> <code>nums</code> = [-1,0,3,5,9,12], <code>target</code> = 2<br><strong>输出:</strong> -1<br><strong>解释:</strong> 2 不存在 <code>nums</code> 中因此返回 -1</p>
 </blockquote>
 <p><strong>提示：</strong></p>
 <ol>
-<li>你可以假设 <code>nums</code> 中的所有元素是不重复的。</li>
-<li><code>n</code> 将在 <code>[1, 10000]</code>之间。</li>
-<li><code>nums</code> 的每个元素都将在 <code>[-9999, 9999]</code>之间。</li>
+<li> 你可以假设 <code>nums</code> 中的所有元素是不重复的。</li>
+<li> <code>n</code> 将在 <code>[1, 10000]</code>之间。</li>
+<li> <code>nums</code> 的每个元素都将在 <code>[-9999, 9999]</code>之间。</li>
 </ol>
 <hr>
 <h2 id="抄写"><a href="#抄写" class="headerlink" title="抄写"></a>抄写</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义函数 函数名 需要传入的参数：数组和目标值</span></span><br><span class="line"><span class="keyword">var</span> search = <span class="keyword">function</span>(<span class="params">nums,target</span>)&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 确定数组的最小下标和最大下标</span></span><br><span class="line">	<span class="keyword">let</span> low = <span class="number">0</span>,high = nums.<span class="property">length</span> - <span class="number">1</span>;</span><br><span class="line">	<span class="comment">//当数组有效时</span></span><br><span class="line">		<span class="keyword">while</span> (low &lt;= high)&#123;</span><br><span class="line">			<span class="comment">//Math.floor()为向下取整</span></span><br><span class="line">			<span class="keyword">const</span> mid = <span class="title class_">Math</span>.<span class="title function_">floor</span>((hign - low) / <span class="number">2</span>) + low;</span><br><span class="line">			<span class="comment">//用num取出中间值的具体值</span></span><br><span class="line">			<span class="keyword">const</span> num = nums[mid];</span><br><span class="line">			<span class="comment">//当中间值和目标值相等时</span></span><br><span class="line">			<span class="keyword">if</span>(num === target)&#123;</span><br><span class="line">				<span class="comment">//返回中间值的下标</span></span><br><span class="line">				<span class="keyword">return</span> mid;</span><br><span class="line">			&#125; <span class="keyword">else</span> <span class="keyword">if</span>(num &gt; target)&#123;</span><br><span class="line">				<span class="comment">//中间值大于目标值时，需要在中间值的左边区间			</span></span><br><span class="line">				high = mid -<span class="number">1</span>;					</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				low = mid + <span class="number">1</span>;					</span><br><span class="line">			&#125;			</span><br><span class="line">		&#125;								</span><br><span class="line">		<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>

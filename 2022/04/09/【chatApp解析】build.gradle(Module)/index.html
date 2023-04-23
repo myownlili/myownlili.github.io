@@ -218,12 +218,12 @@
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">buildFeatures&#123;  </span><br><span class="line"> viewBinding <span class="literal">true</span>  </span><br><span class="line">&#125;  </span><br><span class="line">buildToolsVersion <span class="string">&#x27;32.0.0&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="BuildFeatures"><a href="#BuildFeatures" class="headerlink" title="BuildFeatures"></a>BuildFeatures</h2><h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p><a target="_blank" rel="noopener" href="https://developer.android.com/reference/tools/gradle-api/7.0/com/android/build/api/dsl/BuildFeatures">BuildFeatures</a></p>
+<h2 id="BuildFeatures"><a href="#BuildFeatures" class="headerlink" title="BuildFeatures"></a>BuildFeatures</h2><h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p><a class="link"   target="_blank" rel="noopener" href="https://developer.android.com/reference/tools/gradle-api/7.0/com/android/build/api/dsl/BuildFeatures" >BuildFeatures<i class="fas fa-external-link-alt"></i></a></p>
 <blockquote>
 <p>Flag to enable View Binding.<br>Setting the value to <code>null</code> resets to the default value. Default value is <code>false</code>.<br>You can override the default for this for all projects in your build by adding the line <code>android.defaults.buildfeatures.viewbinding=true</code> in the gradle.properties file at the root project of your build.<br>More information about this feature at: TBD</p>
 </blockquote>
-<p>&#x3D;&#x3D;总结&#x3D;&#x3D;    用来构建功能列表，viewBinding(视图绑定)是其中一种方法</p>
-<h2 id="viewBinding"><a href="#viewBinding" class="headerlink" title="viewBinding"></a>viewBinding</h2><h3 id="官方文档-1"><a href="#官方文档-1" class="headerlink" title="官方文档"></a>官方文档</h3><p><a target="_blank" rel="noopener" href="https://developer.android.com/topic/libraries/view-binding#java">viewBinding</a></p>
+<p>==总结==    用来构建功能列表，viewBinding(视图绑定)是其中一种方法</p>
+<h2 id="viewBinding"><a href="#viewBinding" class="headerlink" title="viewBinding"></a>viewBinding</h2><h3 id="官方文档-1"><a href="#官方文档-1" class="headerlink" title="官方文档"></a>官方文档</h3><p><a class="link"   target="_blank" rel="noopener" href="https://developer.android.com/topic/libraries/view-binding#java" >viewBinding<i class="fas fa-external-link-alt"></i></a></p>
 <h3 id="主要内容摘要"><a href="#主要内容摘要" class="headerlink" title="主要内容摘要"></a>主要内容摘要</h3><h4 id="怎样产生作用的"><a href="#怎样产生作用的" class="headerlink" title="怎样产生作用的"></a>怎样产生作用的</h4><blockquote>
 <p>在模块中启用视图绑定之后，系统会为该模块中的每个 XML 布局文件生成一个绑定类。<br>在大多数情况下，视图绑定会替代 <code>findViewById</code>。</p>
 </blockquote>
@@ -240,27 +240,27 @@
 
 <h2 id="SDP-and-SSP"><a href="#SDP-and-SSP" class="headerlink" title="SDP and SSP"></a>SDP and SSP</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//scalable size unit  </span></span><br><span class="line">implementation <span class="string">&#x27;com.intuit.sdp:sdp-android:1.0.6&#x27;</span>  </span><br><span class="line">implementation <span class="string">&#x27;com.intuit.ssp:ssp-android:1.0.6&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="SDP"><a href="#SDP" class="headerlink" title="SDP"></a>SDP</h3><p><a target="_blank" rel="noopener" href="https://github.com/intuit/sdp">SDP - a scalable size unit</a></p>
+<h3 id="SDP"><a href="#SDP" class="headerlink" title="SDP"></a>SDP</h3><p><a class="link"   target="_blank" rel="noopener" href="https://github.com/intuit/sdp" >SDP - a scalable size unit<i class="fas fa-external-link-alt"></i></a></p>
 <blockquote>
-<p>An android lib that provides a new size unit - sdp (scalable dp). This size unit scales with the screen size. It can help Android developers with supporting multiple screens.<br>for text views please refer to <a target="_blank" rel="noopener" href="https://github.com/intuit/ssp">ssp</a> which is based on the sp size unit for texts.</p>
+<p>An android lib that provides a new size unit - sdp (scalable dp). This size unit scales with the screen size. It can help Android developers with supporting multiple screens.<br>for text views please refer to <a class="link"   target="_blank" rel="noopener" href="https://github.com/intuit/ssp" >ssp<i class="fas fa-external-link-alt"></i></a> which is based on the sp size unit for texts.</p>
 </blockquote>
 <p><strong>总结</strong>：就是一个可伸缩的尺寸单位</p>
-<h3 id="SSP"><a href="#SSP" class="headerlink" title="SSP"></a>SSP</h3><p><a target="_blank" rel="noopener" href="https://github.com/intuit/ssp">SSP - a scalable size unit for texts</a></p>
+<h3 id="SSP"><a href="#SSP" class="headerlink" title="SSP"></a>SSP</h3><p><a class="link"   target="_blank" rel="noopener" href="https://github.com/intuit/ssp" >SSP - a scalable size unit for texts<i class="fas fa-external-link-alt"></i></a></p>
 <blockquote>
-<p>An android lib that provides a new size unit - ssp (scalable sp). This size unit scales with the screen size based on the sp size unit (for texts). It can help Android developers with supporting multiple screens.<br>This is the sibling of the <a target="_blank" rel="noopener" href="https://github.com/intuit/sdp">sdp</a> size unit that should be used for non text views.</p>
+<p>An android lib that provides a new size unit - ssp (scalable sp). This size unit scales with the screen size based on the sp size unit (for texts). It can help Android developers with supporting multiple screens.<br>This is the sibling of the <a class="link"   target="_blank" rel="noopener" href="https://github.com/intuit/sdp" >sdp<i class="fas fa-external-link-alt"></i></a> size unit that should be used for non text views.</p>
 </blockquote>
 <p><strong>总结</strong>：就素一个用于text的可扩展（可伸缩）的尺寸单位</p>
-<h2 id="RoundedImageview"><a href="#RoundedImageview" class="headerlink" title="RoundedImageview"></a>RoundedImageview</h2><p>[RoundedImageView]<a target="_blank" rel="noopener" href="https://github.com/vinc3m1/RoundedImageView">https://github.com/vinc3m1/RoundedImageView</a></p>
+<h2 id="RoundedImageview"><a href="#RoundedImageview" class="headerlink" title="RoundedImageview"></a>RoundedImageview</h2><p>[RoundedImageView]<a class="link"   target="_blank" rel="noopener" href="https://github.com/vinc3m1/RoundedImageView" >https://github.com/vinc3m1/RoundedImageView<i class="fas fa-external-link-alt"></i></a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation <span class="string">&#x27;com.makeramen:roundedimageview:2.3.0&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>A fast ImageView (and Drawable) that supports rounded corners (and ovals or circles) based on the original <a target="_blank" rel="noopener" href="http://www.curious-creature.org/2012/12/11/android-recipe-1-image-with-rounded-corners/">example from Romain Guy</a>. It supports many additional features including ovals, rounded rectangles, ScaleTypes and TileModes.</p>
+<p>A fast ImageView (and Drawable) that supports rounded corners (and ovals or circles) based on the original <a class="link"   target="_blank" rel="noopener" href="http://www.curious-creature.org/2012/12/11/android-recipe-1-image-with-rounded-corners/" >example from Romain Guy<i class="fas fa-external-link-alt"></i></a>. It supports many additional features including ovals, rounded rectangles, ScaleTypes and TileModes.</p>
 </blockquote>
 <p><strong>总结</strong>：是一个快速生成各种椭圆啊、圆角的东西，作者自称是Android最棒的圆角生成器（狗头）</p>
-<h2 id="MultDex"><a href="#MultDex" class="headerlink" title="MultDex"></a>MultDex</h2><p><a target="_blank" rel="noopener" href="https://developer.android.com/studio/build/multidex#avoid">为方法数超过 64K 的应用启用 MultiDex</a></p>
+<h2 id="MultDex"><a href="#MultDex" class="headerlink" title="MultDex"></a>MultDex</h2><p><a class="link"   target="_blank" rel="noopener" href="https://developer.android.com/studio/build/multidex#avoid" >为方法数超过 64K 的应用启用 MultiDex<i class="fas fa-external-link-alt"></i></a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//MultDex  </span></span><br><span class="line">implementation <span class="string">&#x27;androidx.multidex:multidex:2.0.1&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<p>Android 应用 (APK) 文件包含 <a target="_blank" rel="noopener" href="https://source.android.com/devices/tech/dalvik/">Dalvik</a> Executable (DEX) 文件形式的可执行字节码文件，这些文件包含用来运行应用的已编译代码。Dalvik Executable 规范将可在单个 DEX 文件内引用的方法总数限制为 65536，其中包括 Android 框架方法、库方法以及您自己的代码中的方法。在计算机科学领域内，术语<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Kilo-">千（简称 K）</a>表示 1024（即 2^10）。由于 65536 等于 64 X 1024，因此这一限制称为“64K 引用限制”</p>
+<p>Android 应用 (APK) 文件包含 <a class="link"   target="_blank" rel="noopener" href="https://source.android.com/devices/tech/dalvik/" >Dalvik<i class="fas fa-external-link-alt"></i></a> Executable (DEX) 文件形式的可执行字节码文件，这些文件包含用来运行应用的已编译代码。Dalvik Executable 规范将可在单个 DEX 文件内引用的方法总数限制为 65536，其中包括 Android 框架方法、库方法以及您自己的代码中的方法。在计算机科学领域内，术语<a class="link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Kilo-" >千（简称 K）<i class="fas fa-external-link-alt"></i></a>表示 1024（即 2^10）。由于 65536 等于 64 X 1024，因此这一限制称为“64K 引用限制”</p>
 <p>如果您的 <code>minSdkVersion</code> 为 21 或更高版本，系统会默认启用 MultiDex，并且您不需要 MultiDex 库</p>
 <h3 id="小问题"><a href="#小问题" class="headerlink" title="小问题"></a>小问题</h3><ul>
 <li><input disabled="" type="checkbox"> <code>getName</code> 是啥？</li>

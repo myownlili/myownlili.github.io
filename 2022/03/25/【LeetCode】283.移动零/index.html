@@ -217,16 +217,16 @@
 <p><strong>请注意</strong> ，必须在不复制数组的情况下原地对数组进行操作。</p>
 <p><strong>示例 1:</strong></p>
 <blockquote>
-<p><strong>输入:</strong> nums &#x3D; <code>[0,1,0,3,12]</code><br><strong>输出:</strong> <code>[1,3,12,0,0]</code></p>
+<p><strong>输入:</strong> nums = <code>[0,1,0,3,12]</code><br><strong>输出:</strong> <code>[1,3,12,0,0]</code></p>
 </blockquote>
 <p><strong>示例 2:</strong></p>
 <blockquote>
-<p><strong>输入:</strong> nums &#x3D; <code>[0]</code><br><strong>输出:</strong> <code>[0]</code></p>
+<p><strong>输入:</strong> nums = <code>[0]</code><br><strong>输出:</strong> <code>[0]</code></p>
 </blockquote>
 <p><strong>提示</strong>:</p>
 <ul>
-<li><code>1 &lt;= nums.length &lt;= 104</code></li>
-<li><code>-231 &lt;= nums[i] &lt;= 231 - 1</code></li>
+<li>  <code>1 &lt;= nums.length &lt;= 104</code></li>
+<li>  <code>-231 &lt;= nums[i] &lt;= 231 - 1</code></li>
 </ul>
 <h2 id="抄写"><a href="#抄写" class="headerlink" title="抄写"></a>抄写</h2><h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> moveZeroes = <span class="keyword">function</span>(<span class="params">nums</span>)&#123;</span><br><span class="line">	<span class="keyword">let</span> left = <span class="number">0</span>;right = <span class="number">0</span>;a = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">const</span> n = nums.<span class="property">length</span>;</span><br><span class="line">	<span class="keyword">while</span>(right &lt; n)&#123;</span><br><span class="line">		<span class="keyword">if</span>(nums[right] !== <span class="number">0</span>)&#123;</span><br><span class="line">			a = nums[left];</span><br><span class="line">			nums[left] = nums[right];</span><br><span class="line">			nums[right] = a;</span><br><span class="line">			++left;</span><br><span class="line">		&#125;</span><br><span class="line">		++right;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 

@@ -248,7 +248,9 @@
 </tr>
 </tbody></table>
 <ul>
-<li>创建Menu资源文件：1.在res目录下创建menu文件夹(res-&gt;New-&gt;Directory-&gt;menu)<br>             2.在menu文件夹创建main的菜单文件(menu-&gt;New-&gt; Menu resource file)</li>
+<li>创建Menu资源文件：1.在res目录下创建menu文件夹(res-&gt;New-&gt;Directory-&gt;menu)<pre><code>             2.在menu文件夹创建main的菜单文件(menu-&gt;New-&gt; Menu resource file)
+</code></pre>
+</li>
 <li>添加菜单：在上一条的基础上的main.xml中添加雷士代码：</li>
 </ul>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">menu</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">item</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/add_item&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:title</span>=<span class="string">&quot;Add&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">item</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/remove_item&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:title</span>=<span class="string">&quot;Remove&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">menu</span>&gt;</span></span><br></pre></td></tr></table></figure>

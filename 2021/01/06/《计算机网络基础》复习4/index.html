@@ -262,17 +262,22 @@
 <li><strong>虚电路网络</strong> ：H1发送给H2的所有分组都沿着同一条虚电路发送</li>
 </ul>
 <h2 id="4-2-IPv4协议"><a href="#4-2-IPv4协议" class="headerlink" title="4.2 IPv4协议"></a>4.2 IPv4协议</h2><h3 id="4-2-1-IP协议作用"><a href="#4-2-1-IP协议作用" class="headerlink" title="4.2.1 IP协议作用"></a>4.2.1 IP协议作用</h3><ul>
-<li><p><strong>IP协议</strong>：1.寻址规约<br>    2.数据报（分组）格式<br>    3.分组处理规约</p>
+<li><p><strong>IP协议</strong>：1.寻址规约</p>
+<pre><code>    2.数据报（分组）格式
+    3.分组处理规约
+</code></pre>
 </li>
-<li><p><strong>ICMP协议</strong>：1.差错报告<br>      2.路由器“信令”</p>
+<li><p><strong>ICMP协议</strong>：1.差错报告</p>
+<pre><code>      2.路由器“信令”
+</code></pre>
 </li>
 </ul>
-<h3 id="4-2-2-IP首部格式"><a href="#4-2-2-IP首部格式" class="headerlink" title="4.2.2 IP首部格式"></a>4.2.2 IP首部格式</h3><p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/0.7au40oma5xc0.webp"><br><strong>版本号</strong>：4位，IP协议的版本号<br><strong>首部长度</strong>：4位，以4字节位单位。e.g. 5-&gt;IP首部长度为20&#x3D;5x4字节<br><strong>服务类型</strong>：8位<br><strong>总长度</strong>：16位，IP分组的总长度，首部+数据<br>       最大IP分组的总长度：65535B<br>       最小的IP分组首部：20B<br>       IP分组可以封装的最大数据：65535-20&#x3D;65515B<br><strong>生存事件TTL</strong>：8位，IP分组在网络中可以通过的路由器数（或跳步数）<br>            路由器转发一次分组，TTL-1<br>            如果TTL&#x3D;0，路由器则丢弃该IP分组<br><strong>协议</strong>：8位，指示IP分组封装的是哪个协议的数据包<br>        实现复用&#x2F;分解<br>        6为TCP,17为UDP<br><strong>首部校验和</strong>：16位，计算校验和时，该字段全置0<br>            采用反码算数运算求和，和的反码作为首部校验和字段<br>            逐跳计算、逐跳校验<br><strong>源IP地址、目的IP地址</strong>：各32位<br><strong>选项字段</strong>：长度可变，在1 ~ 40B之间，携带安全、源 选路径、时间戳和路由记录等内容<br><strong>填充字段</strong>：0~3B，即保证首部长度是4字节的倍数<br><strong>标识</strong>：16位，IP协议利用计数器，每产生IP分组计数器+1，作为该IP分组的标识<br><strong>标志位</strong>：3位，DF（Don’t Fragment),DF&#x3D;1  禁止分片；MF（More Fragment) MF&#x3D;1 非最后一片<br><strong>片偏移</strong>：13位，片品阿姨字段以<code>8字节为单位</code></p>
+<h3 id="4-2-2-IP首部格式"><a href="#4-2-2-IP首部格式" class="headerlink" title="4.2.2 IP首部格式"></a>4.2.2 IP首部格式</h3><p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/0.7au40oma5xc0.webp"><br><strong>版本号</strong>：4位，IP协议的版本号<br><strong>首部长度</strong>：4位，以4字节位单位。e.g. 5-&gt;IP首部长度为20=5x4字节<br><strong>服务类型</strong>：8位<br><strong>总长度</strong>：16位，IP分组的总长度，首部+数据<br>       最大IP分组的总长度：65535B<br>       最小的IP分组首部：20B<br>       IP分组可以封装的最大数据：65535-20=65515B<br><strong>生存事件TTL</strong>：8位，IP分组在网络中可以通过的路由器数（或跳步数）<br>            路由器转发一次分组，TTL-1<br>            如果TTL=0，路由器则丢弃该IP分组<br><strong>协议</strong>：8位，指示IP分组封装的是哪个协议的数据包<br>        实现复用/分解<br>        6为TCP,17为UDP<br><strong>首部校验和</strong>：16位，计算校验和时，该字段全置0<br>            采用反码算数运算求和，和的反码作为首部校验和字段<br>            逐跳计算、逐跳校验<br><strong>源IP地址、目的IP地址</strong>：各32位<br><strong>选项字段</strong>：长度可变，在1 ~ 40B之间，携带安全、源 选路径、时间戳和路由记录等内容<br><strong>填充字段</strong>：0~3B，即保证首部长度是4字节的倍数<br><strong>标识</strong>：16位，IP协议利用计数器，每产生IP分组计数器+1，作为该IP分组的标识<br><strong>标志位</strong>：3位，DF（Don’t Fragment),DF=1  禁止分片；MF（More Fragment) MF=1 非最后一片<br><strong>片偏移</strong>：13位，片品阿姨字段以<code>8字节为单位</code></p>
 <h3 id="4-2-3-IP分片与重组"><a href="#4-2-3-IP分片与重组" class="headerlink" title="4.2.3 IP分片与重组"></a>4.2.3 IP分片与重组</h3><blockquote>
 <p>每段数据链路使用不同协议、不同长度</p>
 </blockquote>
 <p><strong>MTU</strong> (最大传输单元)—链路层数 据帧可封装数据的上限<br><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/1.3r2d5xa9qh20.webp"></p>
-<h3 id="4-2-4-IP地址概念"><a href="#4-2-4-IP地址概念" class="headerlink" title="4.2.4 IP地址概念"></a>4.2.4 IP地址概念</h3><p><strong>接口</strong>：主机&#x2F;路由器与物理链路的连接<br>    实现网络层功能<br>    路由器通常有多个接口<br>    主机通常只有一个或两个接口（e.g. 有线的以太网接口，无线的802.11接口<br><strong>IP地址</strong>：32个比特(IPv4)<br><strong>网络号(NetID)</strong>-高位比特<br><strong>主机号（HostID)</strong>-低位比特<br>IP子网：<br>    IP地址具有相同网络号的设备接口<br>    不跨越路由器可以彼此来连通的接口</p>
+<h3 id="4-2-4-IP地址概念"><a href="#4-2-4-IP地址概念" class="headerlink" title="4.2.4 IP地址概念"></a>4.2.4 IP地址概念</h3><p><strong>接口</strong>：主机/路由器与物理链路的连接<br>    实现网络层功能<br>    路由器通常有多个接口<br>    主机通常只有一个或两个接口（e.g. 有线的以太网接口，无线的802.11接口<br><strong>IP地址</strong>：32个比特(IPv4)<br><strong>网络号(NetID)</strong>-高位比特<br><strong>主机号（HostID)</strong>-低位比特<br>IP子网：<br>    IP地址具有相同网络号的设备接口<br>    不跨越路由器可以彼此来连通的接口</p>
 <p><strong>A类地址</strong>：NetID(0:8位)+HostID(24位) 0.0.0.0 ~ 127.255.255.255（01111111.1111111.11111111.11111111）<br><strong>B类地址</strong>：NetID(10:16位)+HostID(16位)128（1000 0000）.0.0.0 ~ 191（1011 1111）.255.255.255<br><strong>C类地址</strong>：NetID(110:24位)+HostID(8位)192（1100 0000）.0.0.0 ~ 223（1101 1111）.255.255.255<br><strong>D类地址</strong>：1110 224.0.0.0 ~ 239.255.255.255<br><strong>E类地址</strong>：1111 240.0.0.0 ~ 255.255.255.255<br><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/2.6w0qcu5y48g0.webp"></p>
 <p>私有IP地址</p>
 <table>
@@ -310,8 +315,11 @@
 <h3 id="4-2-6-CIDR与超网"><a href="#4-2-6-CIDR与超网" class="headerlink" title="4.2.6 CIDR与超网"></a>4.2.6 CIDR与超网</h3><p>无类域间路由CIDR</p>
 <ul>
 <li>NetID+SubID-&gt;Network Prefix(Prefix)可以任意长度</li>
-<li>融合子网地址与子网掩码，方便子网划分。无类地址格式：a.b.c.d&#x2F;x，其中x为前缀长度<br><code>-------Prefix-----------</code>  –HostID–<br><code>11001000 00010111 000100</code>0 000000000<br>200.23.16.0&#x2F;23</li>
-<li>子网201.2.3.64，<code>255.255.255.192</code>-&gt;201.2.3.64&#x2F;<code>26</code></li>
+<li>融合子网地址与子网掩码，方便子网划分。无类地址格式：a.b.c.d/x，其中x为前缀长度<br><code>-------Prefix-----------</code>  –HostID–<br><code>11001000 00010111 000100</code>0 000000000</li>
+</ul>
+<p>200.23.16.0/23</p>
+<ul>
+<li>子网201.2.3.64，<code>255.255.255.192</code>-&gt;201.2.3.64/<code>26</code></li>
 </ul>
 <p>CIDR和超网</p>
 <ul>
@@ -328,10 +336,10 @@
 <li>转发表确定在本路由器如何转发分组</li>
 </ul>
 <h2 id="4-3-路由算法"><a href="#4-3-路由算法" class="headerlink" title="4.3 路由算法"></a>4.3 路由算法</h2><h3 id="4-3-1-控制平面两种实现方式"><a href="#4-3-1-控制平面两种实现方式" class="headerlink" title="4.3.1 控制平面两种实现方式"></a>4.3.1 控制平面两种实现方式</h3><ul>
-<li>传统路由算法：路由器中实现</li>
-<li>SDN：远程服务实现</li>
-</ul>
-<h3 id="4-3-2-路由选择算法及其分类"><a href="#4-3-2-路由选择算法及其分类" class="headerlink" title="4.3.2 路由选择算法及其分类"></a>4.3.2 路由选择算法及其分类</h3><ul>
+<li><p>传统路由算法：路由器中实现</p>
+</li>
+<li><p>SDN：远程服务实现</p>
+<h3 id="4-3-2-路由选择算法及其分类"><a href="#4-3-2-路由选择算法及其分类" class="headerlink" title="4.3.2 路由选择算法及其分类"></a>4.3.2 路由选择算法及其分类</h3></li>
 <li><p><strong>路由算法</strong>：寻找最小费用路径的算法</p>
 </li>
 <li><p>分类：<strong>静态路由、动态路由</strong></p>
@@ -371,7 +379,7 @@
 <li>差错报告报文（5种）<ul>
 <li>目的不可达</li>
 <li>源抑制</li>
-<li>超时&#x2F;超期</li>
+<li>超时/超期</li>
 <li>参数问题</li>
 <li>重定向</li>
 </ul>
@@ -400,7 +408,7 @@
 <p><strong>停止准则</strong>：</p>
 <ul>
 <li>UDP数据报最终到达目的主机</li>
-<li>目的主机返回“目的端口不可达”ICMP报文（type&#x3D;3,code&#x3D;3)</li>
+<li>目的主机返回“目的端口不可达”ICMP报文（type=3,code=3)</li>
 <li>源主机停止</li>
 </ul>
 <h3 id="4-3-4-OSPF"><a href="#4-3-4-OSPF" class="headerlink" title="4.3.4 OSPF"></a>4.3.4 OSPF</h3><p><strong>概念</strong>：</p>

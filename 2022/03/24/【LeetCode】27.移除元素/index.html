@@ -213,24 +213,24 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-element/">27. 移除元素 - 力扣（LeetCode） (leetcode-cn.com)</a></p>
-<p>给你一个数组 <code>nums</code> 和一个值 <code>val</code>，你需要 <strong><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a></strong> 移除所有数值等于 <code>val</code> 的元素，并返回移除后数组的新长度。<br>不要使用额外的数组空间，你必须仅使用 <code>O(1)</code> 额外空间并 <strong><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95">原地</a> 修改输入数组</strong>。<br>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
+                <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a class="link"   target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-element/" >27. 移除元素 - 力扣（LeetCode） (leetcode-cn.com)<i class="fas fa-external-link-alt"></i></a></p>
+<p>给你一个数组 <code>nums</code> 和一个值 <code>val</code>，你需要 <strong><a class="link"   target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" >原地<i class="fas fa-external-link-alt"></i></a></strong> 移除所有数值等于 <code>val</code> 的元素，并返回移除后数组的新长度。<br>不要使用额外的数组空间，你必须仅使用 <code>O(1)</code> 额外空间并 <strong><a class="link"   target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95" >原地<i class="fas fa-external-link-alt"></i></a> 修改输入数组</strong>。<br>元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。</p>
 <p><strong>说明:</strong><br>为什么返回数值是整数，但输出的答案是数组呢?<br>请注意，输入数组是以<strong>「引用」</strong>方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。<br>你可以想象内部操作如下:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// **nums** 是以“引用”方式传递的。也就是说，不对实参作任何拷贝</span></span><br><span class="line"><span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> removeElement(nums, val);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在函数里修改输入数组对于调用者是可见的。</span></span><br><span class="line"><span class="comment">// 根据你的函数返回的长度, 它会打印出数组中 **该长度范围内** 的所有元素。</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">    print(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>示例 1：</strong></p>
 <blockquote>
-<p><strong>输入：</strong>nums &#x3D; [3,2,2,3], val &#x3D; 3<br><strong>输出：</strong>2, nums &#x3D; [2,2]<br><strong>解释：</strong>函数应该返回新的长度 <strong>2</strong>, 并且 nums 中的前两个元素均为 <strong>2</strong>。你不需要考虑数组中超出新长度后面的元素。例如，函数返回的新长度为 2 ，而 nums &#x3D; [2,2,3,3] 或 nums &#x3D; [2,2,0,0]，也会被视作正确答案。</p>
+<p><strong>输入：</strong>nums = [3,2,2,3], val = 3<br><strong>输出：</strong>2, nums = [2,2]<br><strong>解释：</strong>函数应该返回新的长度 <strong>2</strong>, 并且 nums 中的前两个元素均为 <strong>2</strong>。你不需要考虑数组中超出新长度后面的元素。例如，函数返回的新长度为 2 ，而 nums = [2,2,3,3] 或 nums = [2,2,0,0]，也会被视作正确答案。</p>
 </blockquote>
 <p><strong>示例 2：</strong></p>
 <blockquote>
-<p><strong>输入：</strong>nums &#x3D; [0,1,2,2,3,0,4,2], val &#x3D; 2<br><strong>输出：</strong>5, nums &#x3D; [0,1,4,0,3]<br><strong>解释：</strong>函数应该返回新的长度 <strong><code>5</code></strong>, 并且 nums 中的前五个元素为 <strong><code>0</code></strong>, <strong><code>1</code></strong>, <strong><code>3</code></strong>, <strong><code>0</code></strong>, <strong>4</strong>。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。</p>
+<p><strong>输入：</strong>nums = [0,1,2,2,3,0,4,2], val = 2<br><strong>输出：</strong>5, nums = [0,1,4,0,3]<br><strong>解释：</strong>函数应该返回新的长度 <strong><code>5</code></strong>, 并且 nums 中的前五个元素为 <strong><code>0</code></strong>, <strong><code>1</code></strong>, <strong><code>3</code></strong>, <strong><code>0</code></strong>, <strong>4</strong>。注意这五个元素可为任意顺序。你不需要考虑数组中超出新长度后面的元素。</p>
 </blockquote>
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>0 &lt;= nums.length &lt;= 100</code></li>
-<li><code>0 &lt;= nums[i] &lt;= 50</code></li>
-<li><code>0 &lt;= val &lt;= 100</code></li>
+<li>  <code>0 &lt;= nums.length &lt;= 100</code></li>
+<li>  <code>0 &lt;= nums[i] &lt;= 50</code></li>
+<li>  <code>0 &lt;= val &lt;= 100</code></li>
 </ul>
 <hr>
 <h2 id="抄写"><a href="#抄写" class="headerlink" title="抄写"></a>抄写</h2><h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> removeElement = <span class="keyword">function</span>(<span class="params">nums,val</span>)&#123;</span><br><span class="line">	<span class="keyword">const</span> n = nums.<span class="property">length</span>;</span><br><span class="line">	<span class="keyword">let</span> left = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">let</span> right = <span class="number">0</span>;right &lt; n;right++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(nums[right] != val)&#123;</span><br><span class="line">				nums[left] = nums[right];</span><br><span class="line">				left++;</span><br><span class="line">		     &#125;</span><br><span class="line">		&#125;</span><br><span class="line">	 <span class="keyword">return</span> left;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -239,13 +239,13 @@
 
 
 <h2 id="相关题目推荐"><a href="#相关题目推荐" class="headerlink" title="相关题目推荐"></a>相关题目推荐</h2><ul>
-<li><p><a target="_blank" rel="noopener" href="https://myownlili.github.io/2022/03/25/%E3%80%90LeetCode%E3%80%9126.%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/">26.删除排序数组中的重复项</a></p>
+<li><p>  <a class="link"   target="_blank" rel="noopener" href="https://myownlili.github.io/2022/03/25/%E3%80%90LeetCode%E3%80%9126.%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/" >26.删除排序数组中的重复项<i class="fas fa-external-link-alt"></i></a></p>
 </li>
-<li><p><a target="_blank" rel="noopener" href="https://myownlili.github.io/2022/03/25/%E3%80%90LeetCode%E3%80%91283.%E7%A7%BB%E5%8A%A8%E9%9B%B6/">283.移动零</a></p>
+<li><p> <a class="link"   target="_blank" rel="noopener" href="https://myownlili.github.io/2022/03/25/%E3%80%90LeetCode%E3%80%91283.%E7%A7%BB%E5%8A%A8%E9%9B%B6/" >283.移动零<i class="fas fa-external-link-alt"></i></a></p>
 </li>
-<li><p>[[844.比较含退格的字符串]]</p>
+<li><p>  [[844.比较含退格的字符串]]</p>
 </li>
-<li><p>[[977.有序数组的平方]]</p>
+<li><p>  [[977.有序数组的平方]]</p>
 </li>
 </ul>
 

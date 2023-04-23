@@ -242,9 +242,10 @@
 <li>连接相邻结点的通信信道：链路<ul>
 <li>有线链路</li>
 <li>无线链路</li>
-<li>局域网<br>*链路层数据分组：帧，封装网络层数据报</li>
+<li>局域网</li>
 </ul>
 </li>
+<li>链路层数据分组：帧，封装网络层数据报</li>
 </ul>
 <h2 id="5-3-Mac协议、Mac地址"><a href="#5-3-Mac协议、Mac地址" class="headerlink" title="5.3 Mac协议、Mac地址"></a>5.3 Mac协议、Mac地址</h2><p><strong>MAC：多路访问控制协议</strong></p>
 <ul>
@@ -304,7 +305,7 @@
 <li>FDMA(frequency)<ul>
 <li>信道频谱划分为若干频带</li>
 <li>每个站点分配一个固定频带</li>
-<li>无传输频带空闲<br>  CDMA\WDMA</li>
+<li>无传输频带空闲<br>CDMA\WDMA</li>
 </ul>
 </li>
 </ul>
@@ -318,7 +319,7 @@
 <li><p>轮转MAC协议</p>
 <ul>
 <li>结点轮流使用通道</li>
-<li>CSMA&#x2F;CD</li>
+<li>CSMA/CD</li>
 </ul>
 </li>
 </ul>
@@ -332,25 +333,28 @@
 <li>冲突可能仍然发生 ：信号传播延迟</li>
 <li>继续发送冲突帧：浪费信道资源</li>
 </ul>
-<h3 id="5-4-2-CSMA-x2F-CD协议"><a href="#5-4-2-CSMA-x2F-CD协议" class="headerlink" title="5.4.2 CSMA&#x2F;CD协议"></a>5.4.2 CSMA&#x2F;CD协议</h3><p>Collsion Detection</p>
+<h3 id="5-4-2-CSMA-CD协议"><a href="#5-4-2-CSMA-CD协议" class="headerlink" title="5.4.2 CSMA/CD协议"></a>5.4.2 CSMA/CD协议</h3><p>Collsion Detection</p>
 <ul>
 <li>短时间内可以检测到冲突</li>
 <li>冲突后传输中止，减少信道浪费</li>
 <li>冲突检测<ul>
 <li>有线局域网易于实现:测量信号强度，比较发射信号与接收信号</li>
-<li>无线局域网很难实现：接收信号强度淹没在本地发射信号强度下<br>** 边发边听，不发不听**</li>
+<li>无线局域网很难实现：接收信号强度淹没在本地发射信号强度下</li>
 </ul>
 </li>
+<li><ul>
+<li>边发边听，不发不听**<h2 id="5-5-局域网与以太网"><a href="#5-5-局域网与以太网" class="headerlink" title="5.5 局域网与以太网"></a>5.5 局域网与以太网</h2></li>
 </ul>
-<h2 id="5-5-局域网与以太网"><a href="#5-5-局域网与以太网" class="headerlink" title="5.5 局域网与以太网"></a>5.5 局域网与以太网</h2><p><strong>局域网</strong>：LAN，是一个地址范围小的计算机网络。计算机网络的一个分支<br><strong>特点</strong>：</p>
-<ul>
+</li>
+<li>*局域网**：LAN，是一个地址范围小的计算机网络。计算机网络的一个分支</li>
+<li>*特点**：</li>
 <li>地理范围小：几公里</li>
-<li>使用多路访问协议：如CSMA&#x2F;CD</li>
-<li>数据传输率R高：10Mb&#x2F;s、100Mb&#x2F;s、1Gb&#x2F;s、10Gb&#x2F;s</li>
+<li>使用多路访问协议：如CSMA/CD</li>
+<li>数据传输率R高：10Mb/s、100Mb/s、1Gb/s、10Gb/s</li>
 <li>单位拥有</li>
 </ul>
 <p><strong>局域网拓扑结构</strong><br><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A05.3h8aepccnt80.webp"></p>
-<p><strong>局域网协议标准</strong><br>IEEE 802.3 CSMA&#x2F;CD以太网<br><strong>以太网</strong></p>
+<p><strong>局域网协议标准</strong><br>IEEE 802.3 CSMA/CD以太网<br><strong>以太网</strong></p>
 <blockquote>
 <p>“统治地位”的有线LAN技术</p>
 </blockquote>
@@ -376,11 +380,13 @@
 <li>差错帧直接丢弃，丢弃帧中的数据恢复依靠高层协议（e.g.TCP）否则，发生数据丢失</li>
 </ul>
 </li>
-<li>以太网的MAC协议：采用二进制指数退避算法的CSMA&#x2F;CD</li>
+<li>以太网的MAC协议：采用二进制指数退避算法的CSMA/CD</li>
 </ul>
 <h2 id="5-6-交换机工作原理、地址学习"><a href="#5-6-交换机工作原理、地址学习" class="headerlink" title="5.6 交换机工作原理、地址学习"></a>5.6 交换机工作原理、地址学习</h2><h2 id="5-7-交换式以太网特点"><a href="#5-7-交换式以太网特点" class="headerlink" title="5.7 交换式以太网特点"></a>5.7 交换式以太网特点</h2><h2 id="5-8-ARP交换式以太网特点"><a href="#5-8-ARP交换式以太网特点" class="headerlink" title="5.8 ARP交换式以太网特点"></a>5.8 ARP交换式以太网特点</h2><p>ARP：地址解析协议<br>ARP表：LAN中每个IP结点（主机、路由器）维护一个表</p>
 <ul>
-<li>存储<br>某些LAN结点的IP&#x2F;MAC地址映射关系：&lt;IP地址；MAC地址；TTL&gt;</li>
+<li>存储<pre><code>某些LAN结点的IP/MAC地址映射关系：&lt;IP地址；MAC地址；TTL&gt;
+</code></pre>
+</li>
 <li>TTL：经过这个时间以后该映射关系被遗弃（典型值为20min)</li>
 </ul>
 <h2 id="5-9-分组在链路层转发过程"><a href="#5-9-分组在链路层转发过程" class="headerlink" title="5.9 分组在链路层转发过程"></a>5.9 分组在链路层转发过程</h2><ul>
