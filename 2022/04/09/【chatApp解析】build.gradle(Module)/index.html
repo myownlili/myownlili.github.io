@@ -1,229 +1,371 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="Hexo Theme Keep">
-    <meta name="description" content="Hexo Theme Keep">
-    <meta name="author" content="Keep Team">
-    
-    <title>
-        
-            【chatApp解析】build.gradle(Module) |
-        
-        Keep Theme
-    </title>
-    
-<link rel="stylesheet" href="/css/style.css">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="导语：内含buildFeatures、viewBinding、SDP、SSP、RoundImageView、MultDex #buildFeatures #viewBinding 代码1234buildFeatures&amp;#123;   viewBinding true  &amp;#125;  buildToolsVersion &amp;#x27;32.0.0&amp;#x27;   BuildFeatures官方文档">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【chatApp解析】build.gradle(Module)">
+<meta property="og:url" content="http://example.com/2022/04/09/%E3%80%90chatApp%E8%A7%A3%E6%9E%90%E3%80%91build.gradle(Module)/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="导语：内含buildFeatures、viewBinding、SDP、SSP、RoundImageView、MultDex #buildFeatures #viewBinding 代码1234buildFeatures&amp;#123;   viewBinding true  &amp;#125;  buildToolsVersion &amp;#x27;32.0.0&amp;#x27;   BuildFeatures官方文档">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-04-09T14:00:44.000Z">
+<meta property="article:modified_time" content="2022-04-10T07:09:05.035Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="即时通讯">
+<meta property="article:tag" content="拉项目">
+<meta name="twitter:card" content="summary">
 
-    <link rel="shortcut icon" href="/images/logo.svg">
-    
-<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+<title >【chatApp解析】build.gradle(Module)</title>
+
+<!-- Favicon -->
+
+    <link href='/img/favicon.svg?v=2.0.8' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/img/favicon.svg?v=2.0.8' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+
+
+<!-- Plugin -->
+
+
+
 
     
-<link rel="stylesheet" href="/font/css/regular.min.css">
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
 
     
-<link rel="stylesheet" href="/font/css/solid.min.css">
+<link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
 
     
-<link rel="stylesheet" href="/font/css/brands.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
 
-    <script id="hexo-configurations">
-    let KEEP = window.KEEP || {}
-    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"}
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
-    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
-    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
-    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
-  </script>
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"John Doe","root":"/","typed_text":null,"theme_version":"2.0.8","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","appleTouchIcon":null,"webmanifest":null,"visibilitychange":true,"hidden":"/failure.ico","showText":"今天吃什么？","hideText":"吃肉！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"covers":["https://s1.ax1x.com/2023/04/23/p9eVUaV.jpg","https://s1.ax1x.com/2023/04/23/p9eV6q1.jpg","https://s1.ax1x.com/2023/04/23/p9eVsM9.jpg","https://s1.ax1x.com/2023/04/23/p9eV2a6.jpg","https://s1.ax1x.com/2023/04/23/p9eVgVx.jpg","https://s1.ax1x.com/2023/04/23/p9eVfPO.jpg","https://s1.ax1x.com/2023/04/23/p9eVRIK.jpg","https://s1.ax1x.com/2023/04/23/p9eVhGD.jpg","https://s1.ax1x.com/2023/04/23/p9eV5xH.jpg","https://s1.ax1x.com/2023/04/23/p9eVoMd.jpg","https://s1.ax1x.com/2023/04/23/p9eV7qI.jpg","https://s1.ax1x.com/2023/04/23/p9eVbZt.jpg","https://s1.ax1x.com/2023/04/23/p9eVTsA.jpg","https://s1.ax1x.com/2023/04/23/p9eVLIf.jpg","https://s1.ax1x.com/2023/04/23/p9eVXi8.jpg"]};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2022-04-10 15:09:05"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.8" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+ 
 <meta name="generator" content="Hexo 5.4.2"></head>
 
-
 <body>
-<div class="progress-bar-container">
-    
 
-    
-</div>
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
 
-
-<main class="page-container">
-
-    
-
-    <div class="page-main-content">
-
-        <div class="page-main-content-top">
-            
-<header class="header-wrapper">
-
-    <div class="header-content">
-        <div class="left">
-            
-                <a class="logo-image" href="/">
-                    <img src="/images/logo.svg">
-                </a>
-            
-            <a class="logo-title" href="/">
-               Keep Theme
-            </a>
-        </div>
-
-        <div class="right">
-            <div class="pc">
-                <ul class="menu-list">
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/"
-                            >
-                                HOME
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/archives"
-                            >
-                                ARCHIVES
-                            </a>
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-            <div class="mobile">
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
+</div>
+    <!-- page preloader end -->
 
-    <div class="header-drawer">
-        <ul class="drawer-menu-list">
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
+          <div data-scroll-section id="content" class="trm-scroll-section">
+
+            <div class="locomotive-scroll__sticky-target" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
+
+            <!-- top bar -->
+            <header class="trm-top-bar" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="/img/favicon.svg">
+    
+    
+        <div class="trm-logo-text">
+            小李<span>快乐</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
             
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/">HOME</a>
-                </li>
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+            </li>
             
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/archives">ARCHIVES</a>
-                </li>
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/about/" target="">
+                    关于
+                </a>
+                
+            </li>
             
         </ul>
-    </div>
-
-    <div class="window-mask"></div>
-
-</header>
-
-
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
         </div>
+    </div>
+    <!-- mode switcher place end -->
 
-        <div class="page-main-content-middle">
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
 
-            <div class="main-content">
-
-                
-                    <div class="fade-in-down-animation">
-    <div class="post-page-container">
-        <div class="article-content-container">
-
-            <div class="article-title">
-                <span class="title-hover-animation">【chatApp解析】build.gradle(Module)</span>
-            </div>
-
+            <!-- body -->
             
-                <div class="article-header">
-                    <div class="avatar">
-                        <img src="/images/avatar.svg">
-                    </div>
-                    <div class="info">
-                        <div class="author">
-                            <span class="name">Keep Team</span>
-                            
-                                <span class="author-label">Lv4</span>
-                            
-                        </div>
-                        <div class="meta-info">
-                            
-<div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        
-            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
-        
-        <span class="pc">2022-04-09 22:00:44</span>
-        <span class="mobile">2022-04-09 22:00</span>
-    </span>
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner" data-scroll data-scroll-direction="vertical">
     
-        <span class="article-update-date article-meta-item">
-        <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2022-04-10 15:09:05</span>
-    </span>
-    
-    
-        <span class="article-categories article-meta-item">
-            <i class="fas fa-folder"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/categories/%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0/">项目学习</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fas fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/Android/">Android</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/">即时通讯</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/%E6%8B%89%E9%A1%B9%E7%9B%AE/">拉项目</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="https://s1.ax1x.com/2023/04/23/p9eVUaV.jpg">
+    <!-- banner cover end -->
     
 
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container" data-scroll data-scroll-direction="vertical" data-scroll-speed="0">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            NEWS LETTER
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            【chatApp解析】build.gradle(Module)
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2022
+                                    </span
+                                ></li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <a href="#about-triger" data-scroll-to="#about-triger" data-scroll-offset="-130" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </a>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div id="page-sidebar" class="col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    
+
+<div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
     
+        <div class="trm-user-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item">
+                    <i class="iconfont fas fa-user-alt"></i>
+                </div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active">
+                    <i class="iconfont fas fa-th-list"></i>
+                </div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="https://pic1.zhimg.com/v2-18962bed49ad57cbb500229504097cf4_b.webp?consumer=ZHI_MENG">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        快乐小李
+    </h5>
     
+</div>
+<!-- card header end -->
+                <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
     
+        <a href="https://github.com" title="Github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
     
 </div>
 
-                        </div>
-                    </div>
+<!-- sidebar social end -->
+                <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                Residence:
+            </div>
+            <div class="trm-label trm-label-light">
+                Mars
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+                
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#代码"  data-scroll-to="#代码"><span class="toc-number">1.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#BuildFeatures"  data-scroll-to="#BuildFeatures"><span class="toc-number">2.</span> <span class="toc-text">BuildFeatures</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#官方文档"  data-scroll-to="#官方文档"><span class="toc-number">2.1.</span> <span class="toc-text">官方文档</span></a></li></ol></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#viewBinding"  data-scroll-to="#viewBinding"><span class="toc-number">3.</span> <span class="toc-text">viewBinding</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#官方文档-1"  data-scroll-to="#官方文档-1"><span class="toc-number">3.1.</span> <span class="toc-text">官方文档</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#主要内容摘要"  data-scroll-to="#主要内容摘要"><span class="toc-number">3.2.</span> <span class="toc-text">主要内容摘要</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a rel="nofollow" class="toc-link" href="#怎样产生作用的"  data-scroll-to="#怎样产生作用的"><span class="toc-number">3.2.1.</span> <span class="toc-text">怎样产生作用的</span></a></li><li class="toc-item toc-level-4"><a rel="nofollow" class="toc-link" href="#生成绑定类时如何忽略某个布局文件"  data-scroll-to="#生成绑定类时如何忽略某个布局文件"><span class="toc-number">3.2.2.</span> <span class="toc-text">生成绑定类时如何忽略某个布局文件</span></a></li><li class="toc-item toc-level-4"><a rel="nofollow" class="toc-link" href="#具体用法（Activity"  data-scroll-to="#具体用法（Activity"><span class="toc-number">3.2.3.</span> <span class="toc-text">具体用法（Activity)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#SDP-and-SSP"  data-scroll-to="#SDP-and-SSP"><span class="toc-number">4.</span> <span class="toc-text">SDP and SSP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#SDP"  data-scroll-to="#SDP"><span class="toc-number">4.1.</span> <span class="toc-text">SDP</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#SSP"  data-scroll-to="#SSP"><span class="toc-number">4.2.</span> <span class="toc-text">SSP</span></a></li></ol></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#RoundedImageview"  data-scroll-to="#RoundedImageview"><span class="toc-number">5.</span> <span class="toc-text">RoundedImageview</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#MultDex"  data-scroll-to="#MultDex"><span class="toc-number">6.</span> <span class="toc-text">MultDex</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#小问题"  data-scroll-to="#小问题"><span class="toc-number">6.1.</span> <span class="toc-text">小问题</span></a></li></ol></li></ol>
+</div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+                    <!-- main card end -->
                 </div>
             
+            <div id="page-content" class="col-lg-8">
+                <div class="trm-content" id="trm-content">
+                    <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
 
-            <div class="article-content keep-markdown-body">
-                
-
-                <p>导语：内含buildFeatures、viewBinding、SDP、SSP、RoundImageView、MultDex</p>
+                    <div id="post-info" class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            04/09
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            22:00
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            John Doe
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <p>导语：内含buildFeatures、viewBinding、SDP、SSP、RoundImageView、MultDex</p>
 <p>#buildFeatures #viewBinding</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">buildFeatures&#123;  </span><br><span class="line"> viewBinding <span class="literal">true</span>  </span><br><span class="line">&#125;  </span><br><span class="line">buildToolsVersion <span class="string">&#x27;32.0.0&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="BuildFeatures"><a href="#BuildFeatures" class="headerlink" title="BuildFeatures"></a>BuildFeatures</h2><h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p><a class="link"   target="_blank" rel="noopener" href="https://developer.android.com/reference/tools/gradle-api/7.0/com/android/build/api/dsl/BuildFeatures" >BuildFeatures<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="BuildFeatures"><a href="#BuildFeatures" class="headerlink" title="BuildFeatures"></a>BuildFeatures</h2><h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p><a target="_blank" rel="noopener" href="https://developer.android.com/reference/tools/gradle-api/7.0/com/android/build/api/dsl/BuildFeatures">BuildFeatures</a></p>
 <blockquote>
 <p>Flag to enable View Binding.<br>Setting the value to <code>null</code> resets to the default value. Default value is <code>false</code>.<br>You can override the default for this for all projects in your build by adding the line <code>android.defaults.buildfeatures.viewbinding=true</code> in the gradle.properties file at the root project of your build.<br>More information about this feature at: TBD</p>
 </blockquote>
 <p>==总结==    用来构建功能列表，viewBinding(视图绑定)是其中一种方法</p>
-<h2 id="viewBinding"><a href="#viewBinding" class="headerlink" title="viewBinding"></a>viewBinding</h2><h3 id="官方文档-1"><a href="#官方文档-1" class="headerlink" title="官方文档"></a>官方文档</h3><p><a class="link"   target="_blank" rel="noopener" href="https://developer.android.com/topic/libraries/view-binding#java" >viewBinding<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="viewBinding"><a href="#viewBinding" class="headerlink" title="viewBinding"></a>viewBinding</h2><h3 id="官方文档-1"><a href="#官方文档-1" class="headerlink" title="官方文档"></a>官方文档</h3><p><a target="_blank" rel="noopener" href="https://developer.android.com/topic/libraries/view-binding#java">viewBinding</a></p>
 <h3 id="主要内容摘要"><a href="#主要内容摘要" class="headerlink" title="主要内容摘要"></a>主要内容摘要</h3><h4 id="怎样产生作用的"><a href="#怎样产生作用的" class="headerlink" title="怎样产生作用的"></a>怎样产生作用的</h4><blockquote>
 <p>在模块中启用视图绑定之后，系统会为该模块中的每个 XML 布局文件生成一个绑定类。<br>在大多数情况下，视图绑定会替代 <code>findViewById</code>。</p>
 </blockquote>
@@ -240,227 +382,180 @@
 
 <h2 id="SDP-and-SSP"><a href="#SDP-and-SSP" class="headerlink" title="SDP and SSP"></a>SDP and SSP</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//scalable size unit  </span></span><br><span class="line">implementation <span class="string">&#x27;com.intuit.sdp:sdp-android:1.0.6&#x27;</span>  </span><br><span class="line">implementation <span class="string">&#x27;com.intuit.ssp:ssp-android:1.0.6&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="SDP"><a href="#SDP" class="headerlink" title="SDP"></a>SDP</h3><p><a class="link"   target="_blank" rel="noopener" href="https://github.com/intuit/sdp" >SDP - a scalable size unit<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="SDP"><a href="#SDP" class="headerlink" title="SDP"></a>SDP</h3><p><a target="_blank" rel="noopener" href="https://github.com/intuit/sdp">SDP - a scalable size unit</a></p>
 <blockquote>
-<p>An android lib that provides a new size unit - sdp (scalable dp). This size unit scales with the screen size. It can help Android developers with supporting multiple screens.<br>for text views please refer to <a class="link"   target="_blank" rel="noopener" href="https://github.com/intuit/ssp" >ssp<i class="fas fa-external-link-alt"></i></a> which is based on the sp size unit for texts.</p>
+<p>An android lib that provides a new size unit - sdp (scalable dp). This size unit scales with the screen size. It can help Android developers with supporting multiple screens.<br>for text views please refer to <a target="_blank" rel="noopener" href="https://github.com/intuit/ssp">ssp</a> which is based on the sp size unit for texts.</p>
 </blockquote>
 <p><strong>总结</strong>：就是一个可伸缩的尺寸单位</p>
-<h3 id="SSP"><a href="#SSP" class="headerlink" title="SSP"></a>SSP</h3><p><a class="link"   target="_blank" rel="noopener" href="https://github.com/intuit/ssp" >SSP - a scalable size unit for texts<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="SSP"><a href="#SSP" class="headerlink" title="SSP"></a>SSP</h3><p><a target="_blank" rel="noopener" href="https://github.com/intuit/ssp">SSP - a scalable size unit for texts</a></p>
 <blockquote>
-<p>An android lib that provides a new size unit - ssp (scalable sp). This size unit scales with the screen size based on the sp size unit (for texts). It can help Android developers with supporting multiple screens.<br>This is the sibling of the <a class="link"   target="_blank" rel="noopener" href="https://github.com/intuit/sdp" >sdp<i class="fas fa-external-link-alt"></i></a> size unit that should be used for non text views.</p>
+<p>An android lib that provides a new size unit - ssp (scalable sp). This size unit scales with the screen size based on the sp size unit (for texts). It can help Android developers with supporting multiple screens.<br>This is the sibling of the <a target="_blank" rel="noopener" href="https://github.com/intuit/sdp">sdp</a> size unit that should be used for non text views.</p>
 </blockquote>
 <p><strong>总结</strong>：就素一个用于text的可扩展（可伸缩）的尺寸单位</p>
-<h2 id="RoundedImageview"><a href="#RoundedImageview" class="headerlink" title="RoundedImageview"></a>RoundedImageview</h2><p>[RoundedImageView]<a class="link"   target="_blank" rel="noopener" href="https://github.com/vinc3m1/RoundedImageView" >https://github.com/vinc3m1/RoundedImageView<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="RoundedImageview"><a href="#RoundedImageview" class="headerlink" title="RoundedImageview"></a>RoundedImageview</h2><p>[RoundedImageView]<a target="_blank" rel="noopener" href="https://github.com/vinc3m1/RoundedImageView">https://github.com/vinc3m1/RoundedImageView</a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation <span class="string">&#x27;com.makeramen:roundedimageview:2.3.0&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>A fast ImageView (and Drawable) that supports rounded corners (and ovals or circles) based on the original <a class="link"   target="_blank" rel="noopener" href="http://www.curious-creature.org/2012/12/11/android-recipe-1-image-with-rounded-corners/" >example from Romain Guy<i class="fas fa-external-link-alt"></i></a>. It supports many additional features including ovals, rounded rectangles, ScaleTypes and TileModes.</p>
+<p>A fast ImageView (and Drawable) that supports rounded corners (and ovals or circles) based on the original <a target="_blank" rel="noopener" href="http://www.curious-creature.org/2012/12/11/android-recipe-1-image-with-rounded-corners/">example from Romain Guy</a>. It supports many additional features including ovals, rounded rectangles, ScaleTypes and TileModes.</p>
 </blockquote>
 <p><strong>总结</strong>：是一个快速生成各种椭圆啊、圆角的东西，作者自称是Android最棒的圆角生成器（狗头）</p>
-<h2 id="MultDex"><a href="#MultDex" class="headerlink" title="MultDex"></a>MultDex</h2><p><a class="link"   target="_blank" rel="noopener" href="https://developer.android.com/studio/build/multidex#avoid" >为方法数超过 64K 的应用启用 MultiDex<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="MultDex"><a href="#MultDex" class="headerlink" title="MultDex"></a>MultDex</h2><p><a target="_blank" rel="noopener" href="https://developer.android.com/studio/build/multidex#avoid">为方法数超过 64K 的应用启用 MultiDex</a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//MultDex  </span></span><br><span class="line">implementation <span class="string">&#x27;androidx.multidex:multidex:2.0.1&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<p>Android 应用 (APK) 文件包含 <a class="link"   target="_blank" rel="noopener" href="https://source.android.com/devices/tech/dalvik/" >Dalvik<i class="fas fa-external-link-alt"></i></a> Executable (DEX) 文件形式的可执行字节码文件，这些文件包含用来运行应用的已编译代码。Dalvik Executable 规范将可在单个 DEX 文件内引用的方法总数限制为 65536，其中包括 Android 框架方法、库方法以及您自己的代码中的方法。在计算机科学领域内，术语<a class="link"   target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Kilo-" >千（简称 K）<i class="fas fa-external-link-alt"></i></a>表示 1024（即 2^10）。由于 65536 等于 64 X 1024，因此这一限制称为“64K 引用限制”</p>
+<p>Android 应用 (APK) 文件包含 <a target="_blank" rel="noopener" href="https://source.android.com/devices/tech/dalvik/">Dalvik</a> Executable (DEX) 文件形式的可执行字节码文件，这些文件包含用来运行应用的已编译代码。Dalvik Executable 规范将可在单个 DEX 文件内引用的方法总数限制为 65536，其中包括 Android 框架方法、库方法以及您自己的代码中的方法。在计算机科学领域内，术语<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Kilo-">千（简称 K）</a>表示 1024（即 2^10）。由于 65536 等于 64 X 1024，因此这一限制称为“64K 引用限制”</p>
 <p>如果您的 <code>minSdkVersion</code> 为 21 或更高版本，系统会默认启用 MultiDex，并且您不需要 MultiDex 库</p>
 <h3 id="小问题"><a href="#小问题" class="headerlink" title="小问题"></a>小问题</h3><ul>
 <li><input disabled="" type="checkbox"> <code>getName</code> 是啥？</li>
 </ul>
 
-            </div>
+</article>
+    
+    
 
-            
-
-            
-                <ul class="post-tags-box">
-                    
-                        <li class="tag-item">
-                            <a href="/tags/Android/">#Android</a>&nbsp;
-                        </li>
-                    
-                        <li class="tag-item">
-                            <a href="/tags/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/">#即时通讯</a>&nbsp;
-                        </li>
-                    
-                        <li class="tag-item">
-                            <a href="/tags/%E6%8B%89%E9%A1%B9%E7%9B%AE/">#拉项目</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            
-
-            
-                <div class="article-nav">
-                    
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2022/04/10/%E3%80%90chatApp%E8%A7%A3%E6%9E%90%E3%80%91values%E6%96%87%E4%BB%B6%E5%A4%B9/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">【chatApp解析】values文件夹</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                            </a>
-                        </div>
-                    
-                    
-                        <div class="article-next">
-                            <a class="next"
-                               rel="next"
-                               href="/2022/03/28/%E3%80%90%E4%B8%80%E5%91%A8%E6%80%BB%E7%BB%93%E3%80%91%E5%9C%A8Android%20Studio%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"
-                            >
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">【一周总结】在Android Studio使用中遇到的问题及解决方法</span>
-                                <span class="post-nav-item">Next posts</span>
-                            </span>
-                                <span class="right arrow-icon flex-center">
-                              <i class="fas fa-chevron-right"></i>
-                            </span>
-                            </a>
-                        </div>
-                    
-                </div>
-            
-
-            
-        </div>
-
-        
+</div>
+<div id="post-next-prev" class="row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
     </div>
+    
+    
 </div>
 
+    
 
-                
-            </div>
 
-        </div>
 
-        <div class="page-main-content-bottom">
-            
-<footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-                <span>2020</span> -
-            
-            2023
-            
-                &nbsp;<i class="fas fa-heart icon-animate"></i>
-                &nbsp;<a href="/">Keep Team</a>
-            
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
+
+    
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v5.4.2
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.0.8
+            </span>
         </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+      
+
+    
+        <div class="trm-footer-item">
+            博客已萌萌哒运行 <span id="since" class="trm-accent-color"></span> 天
         </div>
-        
-        
-    </div>
+     
+
+     
 </footer>
 
+<script>
+    function show_date_time () {
+        var BirthDay = new Date("04/10/2022 17:00:00");
+        var today = new Date();
+        var timeold = (today.getTime() - BirthDay.getTime());
+        var msPerDay = 24 * 60 * 60 * 1000
+        var day = Math.floor(timeold / msPerDay)
+        since.innerHTML = day
+    }
+    show_date_time()
+</script>
+ 
+                    <!-- footer end -->
+
+                </div>
+            </div>
         </div>
     </div>
-
-    
-        <div class="post-tools">
-            <div class="post-tools-container">
-    <ul class="tools-list">
-        <!-- TOC aside toggle -->
-        
-
-        <!-- go comment -->
-        
-    </ul>
 </div>
+            <!-- body end -->
 
+            <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
         </div>
     
-
-    <div class="right-bottom-side-tools">
-        <div class="side-tools-container">
-    <ul class="side-tools-list">
-        <li class="tools-item tool-font-adjust-plus flex-center">
-            <i class="fas fa-search-plus"></i>
-        </li>
-
-        <li class="tools-item tool-font-adjust-minus flex-center">
-            <i class="fas fa-search-minus"></i>
-        </li>
-
-        <li class="tools-item tool-dark-light-toggle flex-center">
-            <i class="fas fa-moon"></i>
-        </li>
-
-        <!-- rss -->
-        
-
-        
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
-            </li>
-        
-
-        <li class="tools-item tool-scroll-to-bottom flex-center">
-            <i class="fas fa-arrow-down"></i>
-        </li>
-    </ul>
-
-    <ul class="exposed-tools-list">
-        <li class="tools-item tool-toggle-show flex-center">
-            <i class="fas fa-cog fa-spin"></i>
-        </li>
-        
-    </ul>
-</div>
-
+    
+        <div class="trm-fixed-btn" data-title="单栏和双栏切换" onclick="asyncFun.switchSingleColumn()">
+            <i class="iconfont fas fa-arrows-alt-h"></i>
+        </div>
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
     </div>
-
-    <div class="zoom-in-image-mask">
-    <img class="zoom-in-image">
 </div>
+          </div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+
+
+<!-- CDN -->
 
 
     
 
-</main>
-
-
-
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/main.js"></script>
-
-<script src="/js/header-shrink.js"></script>
-
-<script src="/js/back2top.js"></script>
-
-<script src="/js/dark-light-toggle.js"></script>
-
-
-
-
-
-
-
-
-
-
-<div class="post-scripts">
     
-        
-<script src="/js/post-helper.js"></script>
 
-        
-        
     
-</div>
 
 
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.0.8"></script>
 
 </body>
+
 </html>

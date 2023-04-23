@@ -1,215 +1,354 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="Hexo Theme Keep">
-    <meta name="description" content="Hexo Theme Keep">
-    <meta name="author" content="Keep Team">
-    
-    <title>
-        
-            《计算机网络基础》复习4 |
-        
-        Keep Theme
-    </title>
-    
-<link rel="stylesheet" href="/css/style.css">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="第四章 网络层4.1 网络层概述 提供主机到主机的数据传输服务 网络层应该具备什么功能？路由和分组转发 为了标明网络中的路由，应该怎样标识网络中的节点？IP地址 路由器根据路由表信息转发分组 路由器根据路由协议和路由算法获得网络中的路由信息 路由器根据下一个网络的链路层协议封装数据帧，从对应的端口发送出去来转发分组 数据分片 分片之后在目的主机重组  4.1.1 网络层作用 从发送主机向接受主机传">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《计算机网络基础》复习4">
+<meta property="og:url" content="http://example.com/2021/01/06/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A04/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第四章 网络层4.1 网络层概述 提供主机到主机的数据传输服务 网络层应该具备什么功能？路由和分组转发 为了标明网络中的路由，应该怎样标识网络中的节点？IP地址 路由器根据路由表信息转发分组 路由器根据路由协议和路由算法获得网络中的路由信息 路由器根据下一个网络的链路层协议封装数据帧，从对应的端口发送出去来转发分组 数据分片 分片之后在目的主机重组  4.1.1 网络层作用 从发送主机向接受主机传">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="article:published_time" content="2021-01-06T01:19:35.000Z">
+<meta property="article:modified_time" content="2022-03-23T09:08:16.094Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="计算机网络基础">
+<meta property="article:tag" content="复习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/404.jpg">
 
-    <link rel="shortcut icon" href="/images/logo.svg">
-    
-<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+<title >《计算机网络基础》复习4</title>
+
+<!-- Favicon -->
+
+    <link href='/img/favicon.svg?v=2.0.8' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/img/favicon.svg?v=2.0.8' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+
+
+<!-- Plugin -->
+
+
+
 
     
-<link rel="stylesheet" href="/font/css/regular.min.css">
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
 
     
-<link rel="stylesheet" href="/font/css/solid.min.css">
+<link rel="stylesheet" href="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
 
     
-<link rel="stylesheet" href="/font/css/brands.min.css">
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
 
-    <script id="hexo-configurations">
-    let KEEP = window.KEEP || {}
-    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"en","path":"search.json"}
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
-    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
-    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
-    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
-  </script>
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"John Doe","root":"/","typed_text":null,"theme_version":"2.0.8","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","appleTouchIcon":null,"webmanifest":null,"visibilitychange":true,"hidden":"/failure.ico","showText":"今天吃什么？","hideText":"吃肉！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"covers":["https://s1.ax1x.com/2023/04/23/p9eVUaV.jpg","https://s1.ax1x.com/2023/04/23/p9eV6q1.jpg","https://s1.ax1x.com/2023/04/23/p9eVsM9.jpg","https://s1.ax1x.com/2023/04/23/p9eV2a6.jpg","https://s1.ax1x.com/2023/04/23/p9eVgVx.jpg","https://s1.ax1x.com/2023/04/23/p9eVfPO.jpg","https://s1.ax1x.com/2023/04/23/p9eVRIK.jpg","https://s1.ax1x.com/2023/04/23/p9eVhGD.jpg","https://s1.ax1x.com/2023/04/23/p9eV5xH.jpg","https://s1.ax1x.com/2023/04/23/p9eVoMd.jpg","https://s1.ax1x.com/2023/04/23/p9eV7qI.jpg","https://s1.ax1x.com/2023/04/23/p9eVbZt.jpg","https://s1.ax1x.com/2023/04/23/p9eVTsA.jpg","https://s1.ax1x.com/2023/04/23/p9eVLIf.jpg","https://s1.ax1x.com/2023/04/23/p9eVXi8.jpg"]};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2022-03-23 17:08:16"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.8" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+ 
 <meta name="generator" content="Hexo 5.4.2"></head>
 
-
 <body>
-<div class="progress-bar-container">
-    
 
-    
-</div>
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
 
-
-<main class="page-container">
-
-    
-
-    <div class="page-main-content">
-
-        <div class="page-main-content-top">
-            
-<header class="header-wrapper">
-
-    <div class="header-content">
-        <div class="left">
-            
-                <a class="logo-image" href="/">
-                    <img src="/images/logo.svg">
-                </a>
-            
-            <a class="logo-title" href="/">
-               Keep Theme
-            </a>
-        </div>
-
-        <div class="right">
-            <div class="pc">
-                <ul class="menu-list">
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/"
-                            >
-                                HOME
-                            </a>
-                        </li>
-                    
-                        <li class="menu-item">
-                            <a class=""
-                               href="/archives"
-                            >
-                                ARCHIVES
-                            </a>
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-            <div class="mobile">
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
+</div>
+    <!-- page preloader end -->
 
-    <div class="header-drawer">
-        <ul class="drawer-menu-list">
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" data-scroll-container style="opacity: 0">
+          <div data-scroll-section id="content" class="trm-scroll-section">
+
+            <div class="locomotive-scroll__sticky-target" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none;"></div>
+
+            <!-- top bar -->
+            <header class="trm-top-bar" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="/img/favicon.svg">
+    
+    
+        <div class="trm-logo-text">
+            小李<span>快乐</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
             
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/">HOME</a>
-                </li>
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+            </li>
             
-                <li class="drawer-menu-item flex-center">
-                    <a class=""
-                       href="/archives">ARCHIVES</a>
-                </li>
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/about/" target="">
+                    关于
+                </a>
+                
+            </li>
             
         </ul>
-    </div>
-
-    <div class="window-mask"></div>
-
-</header>
-
-
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
         </div>
+    </div>
+    <!-- mode switcher place end -->
 
-        <div class="page-main-content-middle">
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
 
-            <div class="main-content">
-
-                
-                    <div class="fade-in-down-animation">
-    <div class="post-page-container">
-        <div class="article-content-container">
-
-            <div class="article-title">
-                <span class="title-hover-animation">《计算机网络基础》复习4</span>
-            </div>
-
+            <!-- body -->
             
-                <div class="article-header">
-                    <div class="avatar">
-                        <img src="/images/avatar.svg">
-                    </div>
-                    <div class="info">
-                        <div class="author">
-                            <span class="name">Keep Team</span>
-                            
-                                <span class="author-label">Lv4</span>
-                            
-                        </div>
-                        <div class="meta-info">
-                            
-<div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        
-            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
-        
-        <span class="pc">2021-01-06 09:19:35</span>
-        <span class="mobile">2021-01-06 09:19</span>
-    </span>
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner" data-scroll data-scroll-direction="vertical">
     
-        <span class="article-update-date article-meta-item">
-        <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2022-03-23 17:08:16</span>
-    </span>
-    
-    
-        <span class="article-categories article-meta-item">
-            <i class="fas fa-folder"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/">计算机网络基础复习</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fas fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/">计算机网络基础</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/%E5%A4%8D%E4%B9%A0/">复习</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="/true">
+    <!-- banner cover end -->
     
 
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container" data-scroll data-scroll-direction="vertical" data-scroll-speed="0">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            NEWS LETTER
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            《计算机网络基础》复习4
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2021
+                                    </span
+                                ></li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <a href="#about-triger" data-scroll-to="#about-triger" data-scroll-offset="-130" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </a>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div id="page-sidebar" class="col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    
+
+<div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
     
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="https://pic1.zhimg.com/v2-18962bed49ad57cbb500229504097cf4_b.webp?consumer=ZHI_MENG">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        快乐小李
+    </h5>
     
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
     
+        <a href="https://github.com" title="Github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
     
 </div>
 
-                        </div>
-                    </div>
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                Residence:
+            </div>
+            <div class="trm-label trm-label-light">
+                Mars
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    
+    </div>
+</div>
+                    <!-- main card end -->
                 </div>
             
+            <div id="page-content" class="col-lg-8">
+                <div class="trm-content" id="trm-content">
+                    <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
 
-            <div class="article-content keep-markdown-body">
-                
-
-                <h1 id="第四章-网络层"><a href="#第四章-网络层" class="headerlink" title="第四章 网络层"></a>第四章 网络层</h1><h2 id="4-1-网络层概述"><a href="#4-1-网络层概述" class="headerlink" title="4.1 网络层概述"></a>4.1 网络层概述</h2><ul>
+                    <div id="post-info" class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            01/06
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            09:19
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            没能早起的小李
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h1 id="第四章-网络层"><a href="#第四章-网络层" class="headerlink" title="第四章 网络层"></a>第四章 网络层</h1><h2 id="4-1-网络层概述"><a href="#4-1-网络层概述" class="headerlink" title="4.1 网络层概述"></a>4.1 网络层概述</h2><ul>
 <li>提供主机到主机的数据传输服务</li>
 <li>网络层应该具备什么功能？<strong>路由和分组转发</strong></li>
 <li>为了标明网络中的路由，应该怎样标识网络中的节点？<strong>IP地址</strong></li>
@@ -272,13 +411,13 @@
 </code></pre>
 </li>
 </ul>
-<h3 id="4-2-2-IP首部格式"><a href="#4-2-2-IP首部格式" class="headerlink" title="4.2.2 IP首部格式"></a>4.2.2 IP首部格式</h3><p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/0.7au40oma5xc0.webp"><br><strong>版本号</strong>：4位，IP协议的版本号<br><strong>首部长度</strong>：4位，以4字节位单位。e.g. 5-&gt;IP首部长度为20=5x4字节<br><strong>服务类型</strong>：8位<br><strong>总长度</strong>：16位，IP分组的总长度，首部+数据<br>       最大IP分组的总长度：65535B<br>       最小的IP分组首部：20B<br>       IP分组可以封装的最大数据：65535-20=65515B<br><strong>生存事件TTL</strong>：8位，IP分组在网络中可以通过的路由器数（或跳步数）<br>            路由器转发一次分组，TTL-1<br>            如果TTL=0，路由器则丢弃该IP分组<br><strong>协议</strong>：8位，指示IP分组封装的是哪个协议的数据包<br>        实现复用/分解<br>        6为TCP,17为UDP<br><strong>首部校验和</strong>：16位，计算校验和时，该字段全置0<br>            采用反码算数运算求和，和的反码作为首部校验和字段<br>            逐跳计算、逐跳校验<br><strong>源IP地址、目的IP地址</strong>：各32位<br><strong>选项字段</strong>：长度可变，在1 ~ 40B之间，携带安全、源 选路径、时间戳和路由记录等内容<br><strong>填充字段</strong>：0~3B，即保证首部长度是4字节的倍数<br><strong>标识</strong>：16位，IP协议利用计数器，每产生IP分组计数器+1，作为该IP分组的标识<br><strong>标志位</strong>：3位，DF（Don’t Fragment),DF=1  禁止分片；MF（More Fragment) MF=1 非最后一片<br><strong>片偏移</strong>：13位，片品阿姨字段以<code>8字节为单位</code></p>
+<h3 id="4-2-2-IP首部格式"><a href="#4-2-2-IP首部格式" class="headerlink" title="4.2.2 IP首部格式"></a>4.2.2 IP首部格式</h3><p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/0.7au40oma5xc0.webp" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br><strong>版本号</strong>：4位，IP协议的版本号<br><strong>首部长度</strong>：4位，以4字节位单位。e.g. 5-&gt;IP首部长度为20=5x4字节<br><strong>服务类型</strong>：8位<br><strong>总长度</strong>：16位，IP分组的总长度，首部+数据<br>       最大IP分组的总长度：65535B<br>       最小的IP分组首部：20B<br>       IP分组可以封装的最大数据：65535-20=65515B<br><strong>生存事件TTL</strong>：8位，IP分组在网络中可以通过的路由器数（或跳步数）<br>            路由器转发一次分组，TTL-1<br>            如果TTL=0，路由器则丢弃该IP分组<br><strong>协议</strong>：8位，指示IP分组封装的是哪个协议的数据包<br>        实现复用/分解<br>        6为TCP,17为UDP<br><strong>首部校验和</strong>：16位，计算校验和时，该字段全置0<br>            采用反码算数运算求和，和的反码作为首部校验和字段<br>            逐跳计算、逐跳校验<br><strong>源IP地址、目的IP地址</strong>：各32位<br><strong>选项字段</strong>：长度可变，在1 ~ 40B之间，携带安全、源 选路径、时间戳和路由记录等内容<br><strong>填充字段</strong>：0~3B，即保证首部长度是4字节的倍数<br><strong>标识</strong>：16位，IP协议利用计数器，每产生IP分组计数器+1，作为该IP分组的标识<br><strong>标志位</strong>：3位，DF（Don’t Fragment),DF=1  禁止分片；MF（More Fragment) MF=1 非最后一片<br><strong>片偏移</strong>：13位，片品阿姨字段以<code>8字节为单位</code></p>
 <h3 id="4-2-3-IP分片与重组"><a href="#4-2-3-IP分片与重组" class="headerlink" title="4.2.3 IP分片与重组"></a>4.2.3 IP分片与重组</h3><blockquote>
 <p>每段数据链路使用不同协议、不同长度</p>
 </blockquote>
-<p><strong>MTU</strong> (最大传输单元)—链路层数 据帧可封装数据的上限<br><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/1.3r2d5xa9qh20.webp"></p>
+<p><strong>MTU</strong> (最大传输单元)—链路层数 据帧可封装数据的上限<br><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/1.3r2d5xa9qh20.webp" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <h3 id="4-2-4-IP地址概念"><a href="#4-2-4-IP地址概念" class="headerlink" title="4.2.4 IP地址概念"></a>4.2.4 IP地址概念</h3><p><strong>接口</strong>：主机/路由器与物理链路的连接<br>    实现网络层功能<br>    路由器通常有多个接口<br>    主机通常只有一个或两个接口（e.g. 有线的以太网接口，无线的802.11接口<br><strong>IP地址</strong>：32个比特(IPv4)<br><strong>网络号(NetID)</strong>-高位比特<br><strong>主机号（HostID)</strong>-低位比特<br>IP子网：<br>    IP地址具有相同网络号的设备接口<br>    不跨越路由器可以彼此来连通的接口</p>
-<p><strong>A类地址</strong>：NetID(0:8位)+HostID(24位) 0.0.0.0 ~ 127.255.255.255（01111111.1111111.11111111.11111111）<br><strong>B类地址</strong>：NetID(10:16位)+HostID(16位)128（1000 0000）.0.0.0 ~ 191（1011 1111）.255.255.255<br><strong>C类地址</strong>：NetID(110:24位)+HostID(8位)192（1100 0000）.0.0.0 ~ 223（1101 1111）.255.255.255<br><strong>D类地址</strong>：1110 224.0.0.0 ~ 239.255.255.255<br><strong>E类地址</strong>：1111 240.0.0.0 ~ 255.255.255.255<br><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/2.6w0qcu5y48g0.webp"></p>
+<p><strong>A类地址</strong>：NetID(0:8位)+HostID(24位) 0.0.0.0 ~ 127.255.255.255（01111111.1111111.11111111.11111111）<br><strong>B类地址</strong>：NetID(10:16位)+HostID(16位)128（1000 0000）.0.0.0 ~ 191（1011 1111）.255.255.255<br><strong>C类地址</strong>：NetID(110:24位)+HostID(8位)192（1100 0000）.0.0.0 ~ 223（1101 1111）.255.255.255<br><strong>D类地址</strong>：1110 224.0.0.0 ~ 239.255.255.255<br><strong>E类地址</strong>：1111 240.0.0.0 ~ 255.255.255.255<br><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/2.6w0qcu5y48g0.webp" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <p>私有IP地址</p>
 <table>
 <thead>
@@ -310,8 +449,8 @@
 <li>子网号（SubID)-原网络主机号部分比特</li>
 <li>主机号（HostID)-低位比特</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/3.28ws0t028n9c.webp"><br>如何确定是否划分了子网？利用多少位划分子网？ <strong>子网掩码</strong><br><strong>子网掩码</strong>：有32位，点分十进制<br>        取值：NetID、SubID位全取1<br>            HostID位全取0<br>        e.g. A网的默认子网掩码为：255.0.0.0<br>             B类的默认子网掩码为：255.255.0.0<br>             C类的默认子网掩码为：255.255.255.0<br>             借用3比特划分子网的B网的子网掩码为：255.255.224.0</p>
-<p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/4.7c6nk3cpc4c0.webp"><br><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/5.1ugow7zibmio.webp"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/3.28ws0t028n9c.webp" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>如何确定是否划分了子网？利用多少位划分子网？ <strong>子网掩码</strong><br><strong>子网掩码</strong>：有32位，点分十进制<br>        取值：NetID、SubID位全取1<br>            HostID位全取0<br>        e.g. A网的默认子网掩码为：255.0.0.0<br>             B类的默认子网掩码为：255.255.0.0<br>             C类的默认子网掩码为：255.255.255.0<br>             借用3比特划分子网的B网的子网掩码为：255.255.224.0</p>
+<p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/4.7c6nk3cpc4c0.webp" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/5.1ugow7zibmio.webp" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <h3 id="4-2-6-CIDR与超网"><a href="#4-2-6-CIDR与超网" class="headerlink" title="4.2.6 CIDR与超网"></a>4.2.6 CIDR与超网</h3><p>无类域间路由CIDR</p>
 <ul>
 <li>NetID+SubID-&gt;Network Prefix(Prefix)可以任意长度</li>
@@ -362,7 +501,7 @@
 </ul>
 </li>
 </ul>
-<p><strong>距离向量路由算法</strong><br>Bellman-Ford方程（动态规划）<br><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/6.5dargl0ciu00.webp"></p>
+<p><strong>距离向量路由算法</strong><br>Bellman-Ford方程（动态规划）<br><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/6.5dargl0ciu00.webp" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <ul>
 <li>每个结点不定时地将其自身地DV估计发送给其邻居</li>
 <li>当x接收到邻居地新地DV估计时，即依据B-F更新其自身地距离向量估计:<br> Dx(y)&lt;-minv{c(x,v)+Dv(y)}  for each node y belong to N</li>
@@ -390,7 +529,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/9.39u1j0txm7o0.webp"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/9.39u1j0txm7o0.webp" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <p><strong>几种不发送ICMP差错报告报文的特殊情况</strong></p>
 <ul>
 <li>对ICMP差错报告报文不再发送ICMP差错报告报文</li>
@@ -404,7 +543,7 @@
 <li>子网掩码请求和应答报文</li>
 <li>路由器询问和通告报文</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/8.2wuqd1tmi5a0.webp"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/8.2wuqd1tmi5a0.webp" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <p><strong>停止准则</strong>：</p>
 <ul>
 <li>UDP数据报最终到达目的主机</li>
@@ -441,199 +580,156 @@
 <li>每个路由器掌握所在区地详细拓扑结构</li>
 <li>只知道去往其他区网络的“方向”（最短路径）</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/7.1iqru5qoiwg0.webp"><br><strong>区边界路由器</strong>：“汇总”到达所在区网络的距离，通告给其他区边界路由器<br><strong>主干路由器</strong>：在主干区内允许OSPF路由算法<br><strong>AS边界路由算法</strong>：连接其他AS</p>
+<p><img src="https://cdn.jsdelivr.net/gh/myownlili/hexo-image@master/20220323/7.1iqru5qoiwg0.webp" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br><strong>区边界路由器</strong>：“汇总”到达所在区网络的距离，通告给其他区边界路由器<br><strong>主干路由器</strong>：在主干区内允许OSPF路由算法<br><strong>AS边界路由算法</strong>：连接其他AS</p>
 
-            </div>
+</article>
+    
+    
 
-            
-
-            
-                <ul class="post-tags-box">
-                    
-                        <li class="tag-item">
-                            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/">#计算机网络基础</a>&nbsp;
-                        </li>
-                    
-                        <li class="tag-item">
-                            <a href="/tags/%E5%A4%8D%E4%B9%A0/">#复习</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            
-
-            
-                <div class="article-nav">
-                    
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2021/01/06/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A05/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">《计算机网络基础》复习5</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                            </a>
-                        </div>
-                    
-                    
-                        <div class="article-next">
-                            <a class="next"
-                               rel="next"
-                               href="/2021/01/05/%E3%80%8A%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E3%80%8B%E5%A4%8D%E4%B9%A01/"
-                            >
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">《计算机网络基础》复习1</span>
-                                <span class="post-nav-item">Next posts</span>
-                            </span>
-                                <span class="right arrow-icon flex-center">
-                              <i class="fas fa-chevron-right"></i>
-                            </span>
-                            </a>
-                        </div>
-                    
-                </div>
-            
-
-            
-        </div>
-
-        
+</div>
+<div id="post-next-prev" class="row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
     </div>
+    
+    
 </div>
 
+    
 
-                
-            </div>
 
-        </div>
 
-        <div class="page-main-content-bottom">
-            
-<footer class="footer">
-    <div class="info-container">
-        <div class="copyright-info info-item">
-            &copy;
-            
-                <span>2020</span> -
-            
-            2023
-            
-                &nbsp;<i class="fas fa-heart icon-animate"></i>
-                &nbsp;<a href="/">Keep Team</a>
-            
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-scroll-animation" data-scroll data-scroll-offset="50">
+
+    
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v5.4.2
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.0.8
+            </span>
         </div>
-        
-        <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+      
+
+    
+        <div class="trm-footer-item">
+            博客已萌萌哒运行 <span id="since" class="trm-accent-color"></span> 天
         </div>
-        
-        
-    </div>
+     
+
+     
 </footer>
 
+<script>
+    function show_date_time () {
+        var BirthDay = new Date("04/10/2022 17:00:00");
+        var today = new Date();
+        var timeold = (today.getTime() - BirthDay.getTime());
+        var msPerDay = 24 * 60 * 60 * 1000
+        var day = Math.floor(timeold / msPerDay)
+        since.innerHTML = day
+    }
+    show_date_time()
+</script>
+ 
+                    <!-- footer end -->
+
+                </div>
+            </div>
         </div>
     </div>
-
-    
-        <div class="post-tools">
-            <div class="post-tools-container">
-    <ul class="tools-list">
-        <!-- TOC aside toggle -->
-        
-
-        <!-- go comment -->
-        
-    </ul>
 </div>
+            <!-- body end -->
 
+            <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
         </div>
     
-
-    <div class="right-bottom-side-tools">
-        <div class="side-tools-container">
-    <ul class="side-tools-list">
-        <li class="tools-item tool-font-adjust-plus flex-center">
-            <i class="fas fa-search-plus"></i>
-        </li>
-
-        <li class="tools-item tool-font-adjust-minus flex-center">
-            <i class="fas fa-search-minus"></i>
-        </li>
-
-        <li class="tools-item tool-dark-light-toggle flex-center">
-            <i class="fas fa-moon"></i>
-        </li>
-
-        <!-- rss -->
-        
-
-        
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
-            </li>
-        
-
-        <li class="tools-item tool-scroll-to-bottom flex-center">
-            <i class="fas fa-arrow-down"></i>
-        </li>
-    </ul>
-
-    <ul class="exposed-tools-list">
-        <li class="tools-item tool-toggle-show flex-center">
-            <i class="fas fa-cog fa-spin"></i>
-        </li>
-        
-    </ul>
-</div>
-
+    
+        <div class="trm-fixed-btn" data-title="单栏和双栏切换" onclick="asyncFun.switchSingleColumn()">
+            <i class="iconfont fas fa-arrows-alt-h"></i>
+        </div>
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
     </div>
-
-    <div class="zoom-in-image-mask">
-    <img class="zoom-in-image">
 </div>
+          </div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+
+
+<!-- CDN -->
 
 
     
 
-</main>
-
-
-
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/main.js"></script>
-
-<script src="/js/header-shrink.js"></script>
-
-<script src="/js/back2top.js"></script>
-
-<script src="/js/dark-light-toggle.js"></script>
-
-
-
-
-
-
-
-
-
-
-<div class="post-scripts">
     
-        
-<script src="/js/post-helper.js"></script>
 
-        
-        
     
-</div>
 
 
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.0.8"></script>
 
 </body>
+
 </html>
